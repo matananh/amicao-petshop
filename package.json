@@ -1,0 +1,23 @@
+{
+  "name": "amicao-petshop",
+  "version": "1.0.0",
+  "description": "Website da Petshop Amicão",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch assets/sass/main.scss:assets/css/main.css",
+    "build": "sass assets/sass/main.scss:assets/css/main-min.css --style=compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matananh/amicao-petshop.git"
+  },
+  "author": "Clã Azul",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matananh/amicao-petshop/issues"
+  },
+  "homepage": "https://github.com/matananh/amicao-petshop#readme",
+  "dependencies": {
+    "sass": "^1.27.0"
+  }
+}
