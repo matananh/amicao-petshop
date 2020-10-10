@@ -1,3 +1,236 @@
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans Light"), url("../fonts/OpenSans-Light.ttf") format(truetype);
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans Regular"), url("../fonts/OpenSans-Regular.ttf") format(truetype);
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans SemiBold"), url("../fonts/OpenSans-SemiBold.ttf") format(truetype);
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans Bold"), url("../fonts/OpenSans-Bold.ttf") format(truetype);
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Nothing";
+  src: local("Nothing You Could Do"), url("../fonts/NothingYouCouldDo-Regular.ttf") format(truetype);
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Quiet Meows";
+  src: local("Quiet Meows"), url("../fonts/quiet-meows.ttf") format(truetype);
+  font-style: normal;
+  font-weight: 400;
+}
+:root {
+  --white: #fff;
+  --black: #000;
+  --black-hover: #111;
+  --black-active: #222;
+  --black-10: #0000001a;
+  --black-50: rgba(0, 0, 0, .5);
+  --black-75: #000000bf;
+  --header: #D5C7A1;
+  --button-header: #AE632C;
+  --button: #AC9043;
+}
 
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+}
+
+body, div, article, aside, footer, header, main, nav, section, ul, ol, li, button, figure, picture, hr, form {
+  display: flex;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  background-color: var(--white);
+}
+
+#header {
+  min-width: 320px;
+  width: 100%;
+  height: 110px;
+  background-color: var(--header);
+  position: relative;
+}
+#header .logo {
+  position: absolute;
+  z-index: 6;
+  width: 80px;
+  margin-top: 10px;
+  margin-left: calc(50vw - 40px);
+}
+#header .btn-open, #header .btn-close {
+  background: none;
+  border: none;
+  outline: none;
+}
+#header .btn-open {
+  position: fixed;
+  right: 0;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 34px;
+  margin-right: 20px;
+}
+#header nav {
+  transition: right 0.5s ease-in-out;
+  flex-direction: column;
+  background-color: var(--header);
+  position: fixed;
+  width: 267px;
+  height: 100vh;
+  padding-bottom: 50px;
+  z-index: 4;
+  right: -300px;
+}
+#header.open-menu .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--black-75);
+  z-index: 2;
+  flex-direction: column;
+}
+#header.open-menu .logo {
+  width: 150px;
+  margin-top: 20px;
+}
+#header.open-menu nav {
+  flex-direction: column;
+  right: 0;
+}
+#header.open-menu nav div.menu {
+  width: 100%;
+  flex-direction: column;
+}
+#header.open-menu nav div.menu button {
+  height: 150px;
+}
+#header.open-menu nav div.menu button.btn-close {
+  position: fixed;
+  width: 40px;
+  right: 20px;
+  top: 20px;
+}
+#header.open-menu nav div.menu ul {
+  flex-direction: column;
+  position: absolute;
+  top: 300px;
+  padding: 0;
+  margin: 0;
+}
+#header.open-menu nav div.menu ul li {
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 55px;
+  padding: 0;
+}
+#header.open-menu nav div.menu ul li a {
+  text-decoration: none;
+  color: var(--button-header);
+  font-size: 20px;
+  padding: 0 13px;
+}
+#header.open-menu nav div.footer {
+  position: fixed;
+  bottom: 0;
+  height: 75px;
+  width: 100%;
+  flex-direction: row;
+}
+#header.open-menu nav div.footer ul {
+  flex-direction: row;
+  margin: 0;
+  padding: 7px 0;
+}
+#header.open-menu nav div.footer ul li {
+  flex-direction: row;
+  margin: 0;
+}
+#header.open-menu nav div.footer ul li img {
+  width: 36px;
+  margin-left: 5px;
+}
+#header.open-menu nav div.footer ul li.desktop {
+  display: none;
+}
+#header.open-menu nav div.footer div {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  flex-direction: column;
+  width: 58px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+#header.open-menu nav div.footer div img {
+  margin: 0;
+  padding: 0;
+  width: 40px;
+}
+#header.open-menu nav div.footer div span {
+  font-size: 20px;
+  color: var(--button-header);
+}
+
+@media (min-width: 768px) {
+  #header.open-menu .logo {
+    right: 78px;
+  }
+}
+@media (min-width: 1200px) {
+  #header {
+    width: 100vw;
+  }
+  #header .btn-open {
+    display: none;
+  }
+  #header nav {
+    flex-direction: column-reverse;
+    right: 0;
+    height: 210px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  #header nav div.menu {
+    height: 60px;
+    width: 100%;
+    background-color: var(--white);
+    flex-direction: row;
+  }
+  #header nav div.menu button.btn-close {
+    display: none;
+  }
+  #header nav div.footer {
+    height: 150px;
+    width: 100%;
+    flex-direction: row;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
