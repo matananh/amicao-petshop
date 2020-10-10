@@ -10,6 +10,7 @@
       width: 80px;
       margin-top: 10px;
       margin-left: calc(50vw - 40px);
+      font-family: 'QuietMeows';
     }
     .btn-open, .btn-close {
       background: none;
@@ -49,6 +50,8 @@
       .logo {
         width: 150px;
         margin-top: 20px;
+        padding: 0;
+        margin: 0;
       }
       nav {
         flex-direction: column;
@@ -146,18 +149,42 @@
     .btn-open {
       display: none;
     }
+    .logo {
+      width: 110px;
+    }
     nav{
       flex-direction: column-reverse;
       right: 0;
-      height: 210px;
+      height: 140px;
       width: 100%;
       margin: 0;
       padding: 0;
       div.menu {
-        height: 60px;
+        height: 40px;
         width: 100%;
         background-color: var(--white);
         flex-direction: row;
+        position: relative;
+        align-items: center;
+        border-bottom: var(--button-header) 2px solid;
+        ul{
+          width: 100%;
+          justify-content: space-between;
+          padding: 0 90px;
+          li{
+            a{
+              text-decoration: none;
+              color: var(--button-header);
+              font-size: 25px;
+            }
+            &:nth-child(2) {
+              padding-right: 200px;
+            }
+            &:nth-child(3) {
+              padding-right: 100px;
+            }
+          }
+        }
         button{
           &.btn-close {
             display: none;
@@ -165,10 +192,74 @@
         }
       }
       div.footer {
-        height: 150px;
+        height: 100px;
+        position: fixed;
+        top: 0;
         width: 100%;
         flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 90px;
+        ul{
+          padding: 0;
+          li{
+            img {
+              width: 40px;
+            }
+            &.mobile {
+              display: none;
+            }
+            &.desktop {
+              display: flex;
+              img{
+                color: var(--button-header);
+              }
+            }
+          }
+        }
+        div {
+          flex-direction: row;
+          img{
+            width: 40px;
+            margin-right: 5px;
+          }
+          span {
+            font-size: 25px;
+            color: var(--button-header);
+          }
+        }
 
+      }
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  #header {
+    .logo {
+      width: 156px;
+      height: 190px;
+    }
+    nav {
+      height: 210px;
+      div.menu {
+        height: 60px;
+        ul{
+          padding: 0 150px;
+          li{
+            font-size: 30px;
+          }
+        }
+      }
+      div.footer {
+        padding: 0 150px;
+        font-size: 30px;
+        height: 150px;
+        div{
+          span {
+            font-size: 30px;
+          }
+        }
       }
     }
   }
