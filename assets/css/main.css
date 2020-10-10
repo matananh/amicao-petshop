@@ -29,8 +29,8 @@
   font-weight: 300;
 }
 @font-face {
-  font-family: "Quiet Meows";
-  src: local("Quiet Meows"), url("../fonts/quiet-meows.ttf") format(truetype);
+  font-family: "QuietMeows";
+  src: local("QuietMeows"), url("../fonts/quiet-meows.ttf") format(truetype);
   font-style: normal;
   font-weight: 400;
 }
@@ -79,6 +79,7 @@ body {
   width: 80px;
   margin-top: 10px;
   margin-left: calc(50vw - 40px);
+  font-family: "QuietMeows";
 }
 #header .btn-open, #header .btn-close {
   background: none;
@@ -117,6 +118,8 @@ body {
 #header.open-menu .logo {
   width: 150px;
   margin-top: 20px;
+  padding: 0;
+  margin: 0;
 }
 #header.open-menu nav {
   flex-direction: column;
@@ -209,27 +212,106 @@ body {
   #header .btn-open {
     display: none;
   }
+  #header .logo {
+    width: 110px;
+  }
   #header nav {
     flex-direction: column-reverse;
     right: 0;
-    height: 210px;
+    height: 140px;
     width: 100%;
     margin: 0;
     padding: 0;
   }
   #header nav div.menu {
-    height: 60px;
+    height: 40px;
     width: 100%;
     background-color: var(--white);
     flex-direction: row;
+    position: relative;
+    align-items: center;
+    border-bottom: var(--button-header) 2px solid;
+  }
+  #header nav div.menu ul {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 90px;
+  }
+  #header nav div.menu ul li a {
+    text-decoration: none;
+    color: var(--button-header);
+    font-size: 25px;
+  }
+  #header nav div.menu ul li:nth-child(2) {
+    padding-right: 200px;
+  }
+  #header nav div.menu ul li:nth-child(3) {
+    padding-right: 100px;
   }
   #header nav div.menu button.btn-close {
     display: none;
   }
   #header nav div.footer {
-    height: 150px;
+    height: 100px;
+    position: fixed;
+    top: 0;
     width: 100%;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 90px;
+  }
+  #header nav div.footer ul {
+    padding: 0;
+  }
+  #header nav div.footer ul li img {
+    width: 40px;
+  }
+  #header nav div.footer ul li.mobile {
+    display: none;
+  }
+  #header nav div.footer ul li.desktop {
+    display: flex;
+  }
+  #header nav div.footer ul li.desktop img {
+    color: var(--button-header);
+  }
+  #header nav div.footer div {
+    flex-direction: row;
+  }
+  #header nav div.footer div img {
+    width: 40px;
+    margin-right: 5px;
+  }
+  #header nav div.footer div span {
+    font-size: 25px;
+    color: var(--button-header);
+  }
+}
+@media (min-width: 1920px) {
+  #header .logo {
+    width: 156px;
+    height: 190px;
+  }
+  #header nav {
+    height: 210px;
+  }
+  #header nav div.menu {
+    height: 60px;
+  }
+  #header nav div.menu ul {
+    padding: 0 150px;
+  }
+  #header nav div.menu ul li {
+    font-size: 30px;
+  }
+  #header nav div.footer {
+    padding: 0 150px;
+    font-size: 30px;
+    height: 150px;
+  }
+  #header nav div.footer div span {
+    font-size: 30px;
   }
 }
 
