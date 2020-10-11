@@ -43,6 +43,8 @@
   --black-50: rgba(0, 0, 0, .5);
   --black-75: #000000bf;
   --header: #D5C7A1;
+  --footer:#C1AC72;
+  --hr:#EBE6D9;
   --button-header: #AE632C;
   --button: #AC9043;
 }
@@ -76,7 +78,7 @@ body {
 #header .logo {
   position: absolute;
   z-index: 6;
-  width: 80px;
+  width: 90px;
   margin-top: 10px;
   margin-left: calc(50vw - 40px);
   font-family: "QuietMeows";
@@ -312,6 +314,370 @@ body {
   }
   #header nav div.footer div span {
     font-size: 30px;
+  }
+}
+.conteudo {
+  position: relative;
+  height: 500px;
+}
+
+#footer {
+  width: 100%;
+  min-width: 320px;
+  height: 680px;
+  flex-direction: column;
+  background-color: var(--footer);
+}
+#footer .footer-colums {
+  width: 100%;
+  min-width: 320px;
+  flex-direction: column;
+}
+#footer .footer-colums .links {
+  display: none;
+}
+#footer .footer-colums .social-icons {
+  justify-content: space-between;
+  padding: 10px 40px 0 25px;
+}
+#footer .footer-colums .social-icons div {
+  position: relative;
+}
+#footer .footer-colums .social-icons div span {
+  display: none;
+}
+#footer .footer-colums .contact-footer {
+  flex-direction: column;
+  justify-content: center;
+}
+#footer .footer-colums .contact-footer .contact {
+  padding: 10px;
+  align-items: center;
+  margin-left: 15px;
+}
+#footer .footer-colums .contact-footer .contact span {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--white);
+  padding: 0 10px;
+}
+#footer .footer-colums .logo-footer {
+  flex-direction: column;
+  align-items: center;
+}
+#footer .copy {
+  flex-direction: column;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+#footer .copy div {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#footer .copy hr {
+  width: 309px;
+  height: 1px;
+  background-color: var(--hr);
+  border: none;
+}
+#footer .copy p {
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--white);
+}
+
+@media (min-width: 768px) {
+  #footer {
+    height: 370px;
+  }
+  #footer .footer-colums {
+    flex-direction: row;
+  }
+  #footer .footer-colums .links {
+    display: none;
+  }
+  #footer .footer-colums .social-icons {
+    flex-direction: column;
+    margin: 0;
+  }
+  #footer .footer-colums .social-icons div {
+    padding: 4px;
+  }
+  #footer .footer-colums .social-icons div span {
+    display: flex;
+    align-items: center;
+  }
+  #footer .footer-colums .social-icons div span a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 25px;
+    padding-left: 20px;
+  }
+  #footer .footer-colums .contact-footer .contact {
+    margin: 0;
+    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  #footer .footer-colums .contact-footer .contact span {
+    font-size: 18px;
+  }
+  #footer .footer-colums .logo-footer {
+    width: 300px;
+    justify-content: center;
+  }
+  #footer .copy {
+    background-color: var(--footer);
+    padding-bottom: 20px;
+    flex-direction: column;
+  }
+  #footer .copy hr {
+    width: 700px;
+  }
+  #footer .copy div {
+    flex-direction: row;
+  }
+  #footer .copy div P {
+    font-size: 20px;
+  }
+  #footer .copy div svg {
+    padding-left: 10px;
+  }
+}
+@media (min-width: 992px) {
+  #footer {
+    height: 370px;
+  }
+  #footer .footer-colums {
+    flex-direction: row;
+  }
+  #footer .footer-colums .links {
+    display: flex;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 25px;
+  }
+  #footer .footer-colums .links h4 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--white);
+    padding: 0;
+    margin: 0;
+    padding-bottom: 10px;
+  }
+  #footer .footer-colums .links a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--white);
+    padding: 2px;
+    font-size: 20px;
+  }
+  #footer .footer-colums .social-icons {
+    flex-direction: column;
+    margin: 0;
+  }
+  #footer .footer-colums .social-icons div {
+    padding: 4px;
+  }
+  #footer .footer-colums .social-icons div span {
+    display: flex;
+    align-items: center;
+  }
+  #footer .footer-colums .social-icons div span a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 25px;
+    padding-left: 20px;
+  }
+  #footer .footer-colums .contact-footer .contact {
+    margin: 0;
+    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  #footer .footer-colums .contact-footer .contact span {
+    font-size: 18px;
+  }
+  #footer .footer-colums .logo-footer {
+    width: 300px;
+    justify-content: center;
+  }
+  #footer .copy {
+    background-color: var(--footer);
+    padding-bottom: 20px;
+    flex-direction: column;
+  }
+  #footer .copy hr {
+    width: 940px;
+  }
+  #footer .copy div {
+    flex-direction: row;
+  }
+  #footer .copy div P {
+    font-size: 20px;
+  }
+  #footer .copy div svg {
+    padding-left: 10px;
+  }
+}
+@media (min-width: 1200px) {
+  #footer {
+    width: initial;
+    min-width: 1200px;
+    height: 450px;
+  }
+  #footer .footer-colums {
+    height: 450px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #footer .footer-colums .links {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 30px;
+  }
+  #footer .footer-colums .links h4 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 35px;
+    color: var(--white);
+    padding: 0;
+    margin: 0;
+    padding-bottom: 10px;
+  }
+  #footer .footer-colums .links a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--white);
+    padding: 2px;
+    font-size: 25px;
+  }
+  #footer .footer-colums .social-icons {
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+  }
+  #footer .footer-colums .social-icons div {
+    padding: 0;
+    padding: 10px;
+  }
+  #footer .footer-colums .social-icons div span {
+    display: flex;
+    align-items: center;
+  }
+  #footer .footer-colums .social-icons div span a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 25px;
+    padding-left: 20px;
+  }
+  #footer .footer-colums .contact-footer {
+    justify-content: center;
+    font-size: 32px;
+    font-weight: bold;
+  }
+  #footer .footer-colums .contact-footer .contact {
+    padding: 20px;
+  }
+  #footer .footer-colums .contact-footer .contact span {
+    font-size: 25px;
+  }
+  #footer .footer-colums .logo-footer {
+    width: 300px;
+    justify-content: center;
+  }
+  #footer .copy {
+    background-color: var(--footer);
+    padding-bottom: 20px;
+    flex-direction: column;
+  }
+  #footer .copy hr {
+    width: 1740px;
+  }
+  #footer .copy div {
+    flex-direction: row;
+  }
+  #footer .copy div P {
+    font-size: 20px;
+  }
+  #footer .copy div svg {
+    padding-left: 10px;
+  }
+}
+@media (min-width: 1920px) {
+  #footer {
+    width: initial;
+    height: 450px;
+    min-width: 1920px;
+  }
+  #footer .footer-colums {
+    height: 450px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #footer .footer-colums .links {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 30px;
+  }
+  #footer .footer-colums .links h4 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 35px;
+    color: var(--white);
+    padding: 0;
+    margin: 0;
+    padding-bottom: 10px;
+  }
+  #footer .footer-colums .links a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--white);
+    padding: 2px;
+    font-size: 25px;
+  }
+  #footer .footer-colums .social-icons {
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+  }
+  #footer .footer-colums .social-icons div {
+    padding: 0;
+    padding: 10px;
+  }
+  #footer .footer-colums .social-icons div span {
+    display: flex;
+    align-items: center;
+  }
+  #footer .footer-colums .social-icons div span a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 25px;
+    padding-left: 20px;
+  }
+  #footer .footer-colums .contact-footer {
+    justify-content: center;
+    font-size: 32px;
+    font-weight: bold;
+  }
+  #footer .footer-colums .contact-footer .contact {
+    padding: 20px;
+  }
+  #footer .footer-colums .contact-footer .contact span {
+    font-size: 25px;
+  }
+  #footer .footer-colums .logo-footer {
+    width: 400px;
+    justify-content: center;
   }
 }
 

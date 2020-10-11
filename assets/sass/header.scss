@@ -4,10 +4,10 @@
   height: 110px;
   background-color: var(--header);
   position: relative;
-    .logo {
+   .logo {
       position: absolute;
       z-index: 6;
-      width: 80px;
+      width: 90px;
       margin-top: 10px;
       margin-left: calc(50vw - 40px);
       font-family: 'QuietMeows';
@@ -146,11 +146,13 @@
 @media (min-width: 1200px) {
   #header {
     width: 100vw;
+    
     .btn-open {
       display: none;
     }
     .logo {
       width: 110px;
+
     }
     nav{
       flex-direction: column-reverse;
