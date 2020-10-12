@@ -47,6 +47,7 @@
   --hr:#EBE6D9;
   --button-header: #AE632C;
   --button: #AC9043;
+  --font: #BA3825;
 }
 
 * {
@@ -89,7 +90,7 @@ body {
   outline: none;
 }
 #header .btn-open {
-  position: fixed;
+  position: absolute;
   right: 0;
   justify-content: flex-end;
   align-items: center;
@@ -100,7 +101,7 @@ body {
   transition: right 0.5s ease-in-out;
   flex-direction: column;
   background-color: var(--header);
-  position: fixed;
+  position: absolute;
   width: 267px;
   height: 100vh;
   padding-bottom: 50px;
@@ -108,7 +109,7 @@ body {
   right: -300px;
 }
 #header.open-menu .overlay {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
@@ -135,7 +136,7 @@ body {
   height: 150px;
 }
 #header.open-menu nav div.menu button.btn-close {
-  position: fixed;
+  position: absolute;
   width: 40px;
   right: 20px;
   top: 20px;
@@ -160,7 +161,7 @@ body {
   padding: 0 13px;
 }
 #header.open-menu nav div.footer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   height: 75px;
   width: 100%;
@@ -183,7 +184,7 @@ body {
   display: none;
 }
 #header.open-menu nav div.footer div {
-  position: fixed;
+  position: absolute;
   right: 10px;
   bottom: 10px;
   flex-direction: column;
@@ -255,7 +256,7 @@ body {
   }
   #header nav div.footer {
     height: 100px;
-    position: fixed;
+    position: absolute;
     top: 0;
     width: 100%;
     flex-direction: row;
@@ -316,21 +317,209 @@ body {
     font-size: 30px;
   }
 }
-.conteudo {
+#login {
+  background-color: var(--footer);
+  flex-direction: column;
+  align-content: space-between;
   position: relative;
-  height: 500px;
+  min-height: 800px;
+}
+#login .header-login {
+  justify-content: center;
+}
+#login .header-login img {
+  width: 177px;
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+}
+#login .main-login {
+  flex-direction: column;
+  padding: 10px;
+}
+#login .main-login form {
+  flex-direction: column;
+  color: var(--white);
+  justify-content: center;
+  align-items: center;
+}
+#login .main-login form header {
+  width: 100%;
+  justify-content: center;
+}
+#login .main-login form header h2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--font);
+  justify-content: center;
+}
+#login .main-login form div.input {
+  padding-bottom: 10px;
+  flex-direction: column;
+}
+#login .main-login form div.input span {
+  color: var(--font);
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+#login .main-login form div.input input {
+  width: 350px;
+  height: 75px;
+  border-radius: 20px;
+  border: 2px solid var(--button);
+  padding-left: 10px;
+  font-size: 25px;
+  color: var(--button);
+  align-items: center;
+}
+#login .main-login form div.links {
+  margin: 5px 0;
+  align-self: center;
+  margin-bottom: 20px;
+  flex-direction: column;
+}
+#login .main-login form div.links a {
+  text-decoration: none;
+  color: var(--font);
+  font-size: 20px;
+}
+#login .main-login form button {
+  width: 300px;
+  height: 75px;
+  border-radius: 20px;
+  background-color: var(--button);
+  border: none;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  font-size: 25px;
+  font-weight: bold;
+}
+#login .footer-login {
+  flex-direction: column;
+  width: 100%;
+  position: static;
+  bottom: 10px;
+  justify-content: center;
+  align-items: center;
+}
+#login .footer-login hr {
+  width: calc(100vw - 60px);
+  height: 2px;
+  background-color: var(--hr);
+}
+#login .footer-login div {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#login .footer-login div span {
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--white);
+}
+#login .footer-login div img {
+  width: 42px;
+  padding-top: 10px;
+}
+
+@media (min-width: 768px) {
+  #login .header-login img {
+    width: 205px;
+  }
+  #login .main-login form header h2 {
+    font-size: 35px;
+  }
+  #login .main-login form div.input span {
+    font-size: 28px;
+  }
+  #login .main-login form div.links a {
+    font-size: 28px;
+  }
+}
+@media (min-width: 1200px) {
+  #login .header-login {
+    max-width: 550px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+  #login .header-login img {
+    width: 300px;
+  }
+  #login .main-login {
+    max-width: 550px;
+    margin: 0 auto;
+  }
+  #login .main-login form div.input {
+    flex-direction: row;
+    align-items: center;
+  }
+  #login .main-login form div.input span {
+    margin: 0;
+    padding: 0;
+    margin-right: 20px;
+    text-align: right;
+  }
+  #login .main-login form div.links {
+    min-width: 500px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #login .main-login form div.links a {
+    font-size: 20px;
+  }
+  #login .footer-login div {
+    flex-direction: row;
+  }
+  #login .footer-login div span {
+    margin-right: 20px;
+  }
+}
+@media (min-width: 1920px) {
+  #login .header-login img {
+    width: 400px;
+  }
+  #login .main-login {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  #login .main-login header h2 {
+    font-size: 40px;
+  }
+  #login .main-login form {
+    max-width: 800px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #login .main-login form div.input span {
+    font-size: 30px;
+  }
+  #login .main-login form div.input input {
+    width: 650px;
+  }
+  #login .main-login form div.links {
+    min-width: 550px;
+    max-width: 650px;
+    justify-content: space-between;
+  }
+  #login .main-login form div.links a {
+    margin-right: 20px;
+  }
+}
+.conteudo {
+  top: 210px;
+  min-height: calc(100vh - 660px);
 }
 
 #footer {
   width: 100%;
   min-width: 320px;
-  height: 680px;
   flex-direction: column;
   background-color: var(--footer);
 }
 #footer .footer-colums {
   width: 100%;
-  min-width: 320px;
   flex-direction: column;
 }
 #footer .footer-colums .links {
@@ -338,10 +527,13 @@ body {
 }
 #footer .footer-colums .social-icons {
   justify-content: space-between;
-  padding: 10px 40px 0 25px;
+  padding: 20px 30px;
 }
 #footer .footer-colums .social-icons div {
   position: relative;
+}
+#footer .footer-colums .social-icons div svg {
+  width: 75px;
 }
 #footer .footer-colums .social-icons div span {
   display: none;
@@ -351,25 +543,27 @@ body {
   justify-content: center;
 }
 #footer .footer-colums .contact-footer .contact {
-  padding: 10px;
   align-items: center;
-  margin-left: 15px;
+  padding: 10px 25px;
+}
+#footer .footer-colums .contact-footer .contact svg {
+  width: 48px;
 }
 #footer .footer-colums .contact-footer .contact span {
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 22px;
   color: var(--white);
-  padding: 0 10px;
+  padding: 0 20px;
 }
 #footer .footer-colums .logo-footer {
   flex-direction: column;
   align-items: center;
 }
+#footer .footer-colums .logo-footer img {
+  width: 177px;
+}
 #footer .copy {
   flex-direction: column;
-  text-align: center;
-  margin: 0;
-  padding: 0;
+  padding-bottom: 10px;
 }
 #footer .copy div {
   flex-direction: column;
@@ -377,167 +571,44 @@ body {
   align-items: center;
 }
 #footer .copy hr {
-  width: 309px;
-  height: 1px;
+  width: calc(100vw - 60px);
+  height: 2px;
   background-color: var(--hr);
-  border: none;
 }
 #footer .copy p {
   font-size: 15px;
   font-weight: bold;
   color: var(--white);
+  margin: 0;
 }
 
 @media (min-width: 768px) {
-  #footer {
-    height: 370px;
-  }
-  #footer .footer-colums {
-    flex-direction: row;
-  }
-  #footer .footer-colums .links {
-    display: none;
-  }
   #footer .footer-colums .social-icons {
-    flex-direction: column;
-    margin: 0;
+    padding: 15px 50px;
   }
-  #footer .footer-colums .social-icons div {
-    padding: 4px;
-  }
-  #footer .footer-colums .social-icons div span {
-    display: flex;
-    align-items: center;
-  }
-  #footer .footer-colums .social-icons div span a {
-    text-decoration: none;
-    color: var(--white);
-    font-size: 25px;
-    padding-left: 20px;
-  }
-  #footer .footer-colums .contact-footer .contact {
-    margin: 0;
-    padding: 0;
-    padding-top: 20px;
-    padding-bottom: 20px;
+  #footer .footer-colums .contact-footer {
+    padding-left: 30px;
   }
   #footer .footer-colums .contact-footer .contact span {
-    font-size: 18px;
-  }
-  #footer .footer-colums .logo-footer {
-    width: 300px;
-    justify-content: center;
-  }
-  #footer .copy {
-    background-color: var(--footer);
-    padding-bottom: 20px;
-    flex-direction: column;
-  }
-  #footer .copy hr {
-    width: 700px;
-  }
-  #footer .copy div {
-    flex-direction: row;
-  }
-  #footer .copy div P {
-    font-size: 20px;
-  }
-  #footer .copy div svg {
-    padding-left: 10px;
-  }
-}
-@media (min-width: 992px) {
-  #footer {
-    height: 370px;
-  }
-  #footer .footer-colums {
-    flex-direction: row;
-  }
-  #footer .footer-colums .links {
-    display: flex;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 25px;
-  }
-  #footer .footer-colums .links h4 {
-    text-transform: uppercase;
-    font-weight: bold;
     font-size: 30px;
-    color: var(--white);
-    padding: 0;
-    margin: 0;
-    padding-bottom: 10px;
-  }
-  #footer .footer-colums .links a {
-    text-transform: uppercase;
-    text-decoration: none;
-    color: var(--white);
-    padding: 2px;
-    font-size: 20px;
-  }
-  #footer .footer-colums .social-icons {
-    flex-direction: column;
-    margin: 0;
-  }
-  #footer .footer-colums .social-icons div {
-    padding: 4px;
-  }
-  #footer .footer-colums .social-icons div span {
-    display: flex;
-    align-items: center;
-  }
-  #footer .footer-colums .social-icons div span a {
-    text-decoration: none;
-    color: var(--white);
-    font-size: 25px;
-    padding-left: 20px;
-  }
-  #footer .footer-colums .contact-footer .contact {
-    margin: 0;
-    padding: 0;
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-  #footer .footer-colums .contact-footer .contact span {
-    font-size: 18px;
-  }
-  #footer .footer-colums .logo-footer {
-    width: 300px;
-    justify-content: center;
-  }
-  #footer .copy {
-    background-color: var(--footer);
-    padding-bottom: 20px;
-    flex-direction: column;
-  }
-  #footer .copy hr {
-    width: 940px;
   }
   #footer .copy div {
     flex-direction: row;
   }
-  #footer .copy div P {
-    font-size: 20px;
-  }
-  #footer .copy div svg {
-    padding-left: 10px;
+  #footer .copy div p {
+    padding-right: 15px;
   }
 }
 @media (min-width: 1200px) {
   #footer {
-    width: initial;
-    min-width: 1200px;
+    width: 100%;
     height: 450px;
   }
   #footer .footer-colums {
-    height: 450px;
     flex-direction: row;
     justify-content: space-between;
   }
   #footer .footer-colums .links {
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -593,91 +664,8 @@ body {
     width: 300px;
     justify-content: center;
   }
-  #footer .copy {
-    background-color: var(--footer);
-    padding-bottom: 20px;
-    flex-direction: column;
-  }
-  #footer .copy hr {
-    width: 1740px;
-  }
-  #footer .copy div {
-    flex-direction: row;
-  }
   #footer .copy div P {
     font-size: 20px;
-  }
-  #footer .copy div svg {
-    padding-left: 10px;
-  }
-}
-@media (min-width: 1920px) {
-  #footer {
-    width: initial;
-    height: 450px;
-    min-width: 1920px;
-  }
-  #footer .footer-colums {
-    height: 450px;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  #footer .footer-colums .links {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 30px;
-  }
-  #footer .footer-colums .links h4 {
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 35px;
-    color: var(--white);
-    padding: 0;
-    margin: 0;
-    padding-bottom: 10px;
-  }
-  #footer .footer-colums .links a {
-    text-transform: uppercase;
-    text-decoration: none;
-    color: var(--white);
-    padding: 2px;
-    font-size: 25px;
-  }
-  #footer .footer-colums .social-icons {
-    flex-direction: column;
-    justify-content: center;
-    margin: 0;
-  }
-  #footer .footer-colums .social-icons div {
-    padding: 0;
-    padding: 10px;
-  }
-  #footer .footer-colums .social-icons div span {
-    display: flex;
-    align-items: center;
-  }
-  #footer .footer-colums .social-icons div span a {
-    text-decoration: none;
-    color: var(--white);
-    font-size: 25px;
-    padding-left: 20px;
-  }
-  #footer .footer-colums .contact-footer {
-    justify-content: center;
-    font-size: 32px;
-    font-weight: bold;
-  }
-  #footer .footer-colums .contact-footer .contact {
-    padding: 20px;
-  }
-  #footer .footer-colums .contact-footer .contact span {
-    font-size: 25px;
-  }
-  #footer .footer-colums .logo-footer {
-    width: 400px;
-    justify-content: center;
   }
 }
 .align {
