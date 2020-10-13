@@ -48,6 +48,7 @@
   --button-header: #AE632C;
   --button: #AC9043;
   --font: #BA3825;
+  --bath-clinic: #FF9457;
 }
 
 * {
@@ -776,6 +777,133 @@ body {
   }
   .calendar .days li {
     font-size: 38px;
+  }
+}
+#bath, #clinic {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-items: center;
+}
+#bath header, #clinic header {
+  width: 100%;
+  height: 150px;
+  background-color: var(--bath-clinic);
+}
+#bath header h1, #clinic header h1 {
+  font-weight: bold;
+  font-size: 40px;
+  color: var(--white);
+  text-align: center;
+  margin: 44px;
+}
+#bath h2, #clinic h2 {
+  color: var(--bath-clinic);
+  font-size: 25px;
+  margin: 36px 0 0 0;
+  text-align: center;
+  font-weight: bold;
+}
+#bath hr, #clinic hr {
+  width: 70%;
+  height: 5px;
+  background-color: var(--bath-clinic);
+  border: none;
+  margin-bottom: 10px;
+}
+#bath .services-bath h2, #bath .services-clinic h2, #clinic .services-bath h2, #clinic .services-clinic h2 {
+  text-align: left;
+  font-weight: bold;
+  position: absolute;
+}
+#bath .services-bath img, #bath .services-clinic img, #clinic .services-bath img, #clinic .services-clinic img {
+  margin-top: 120px;
+  margin-bottom: 130px;
+}
+#bath .services-bath p, #bath .services-clinic p, #clinic .services-bath p, #clinic .services-clinic p {
+  position: absolute;
+  color: var(--bath-clinic);
+  align-self: flex-end;
+  font-size: 22px;
+}
+
+@media (min-width: 576px) {
+  #bath .services-bath, #bath .services-clinic, #clinic .services-bath, #clinic .services-clinic {
+    align-items: flex-start;
+  }
+  #bath .services-bath h2, #bath .services-clinic h2, #clinic .services-bath h2, #clinic .services-clinic h2 {
+    left: 340px;
+    margin: 50px 0;
+  }
+  #bath .services-bath img, #bath .services-clinic img, #clinic .services-bath img, #clinic .services-clinic img {
+    margin: 50px 0 0 0;
+    margin-right: 440px;
+  }
+  #bath .services-bath p, #bath .services-clinic p, #clinic .services-bath p, #clinic .services-clinic p {
+    left: 340px;
+    margin-bottom: 80px;
+  }
+
+  #clinic header {
+    margin-top: 50px;
+  }
+  #clinic .services-clinic p {
+    margin-bottom: 50px;
+  }
+  #clinic .services-clinic:last-child {
+    margin-bottom: 50px;
+  }
+}
+@media (min-width: 992px) {
+  #bath header {
+    margin-right: 0;
+  }
+  #bath header h1 {
+    font-size: 50px;
+    margin: 50px 0 60px 60px;
+  }
+
+  #clinic header {
+    margin-right: 0;
+    margin-top: 100px;
+  }
+  #clinic header h1 {
+    font-size: 50px;
+    margin: 40px 0 50px 50px;
+  }
+
+  #bath h2, #clinic h2 {
+    margin-top: 50px;
+    font-size: 40px;
+  }
+  #bath hr, #clinic hr {
+    width: 50%;
+    margin-bottom: -20px;
+  }
+  #bath .services-bath h2, #bath .services-clinic h2, #clinic .services-bath h2, #clinic .services-clinic h2 {
+    align-self: flex-start;
+    margin-top: 130px;
+    left: 470px;
+    font-size: 30px;
+  }
+  #bath .services-bath img, #bath .services-clinic img, #clinic .services-bath img, #clinic .services-clinic img {
+    position: relative;
+    right: 200px;
+    width: 400px;
+    height: 300px;
+    margin-bottom: 20px;
+    margin-top: 90px;
+  }
+  #bath .services-bath p, #bath .services-clinic p, #clinic .services-bath p, #clinic .services-clinic p {
+    font-size: 25px;
+    margin-top: 70px;
+    left: 422px;
+    align-self: center;
+    padding: 50px;
+  }
+  #bath .services-clinic:last-child, #clinic .services-clinic:last-child {
+    margin-bottom: 100px;
   }
 }
 
