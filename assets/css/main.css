@@ -69,135 +69,177 @@ body {
   flex-direction: column;
 }
 body > main {
-  min-height: calc(100vh - 400px);
+  min-height: calc(100vh - calc(62px));
+}
+body > main#home {
+  background-color: var(--purple-2);
 }
 
 #header {
+  min-width: 320px;
   height: 62px;
   width: 100%;
-  min-width: 320px;
-  flex-direction: row;
-  background-color: var(--white);
   position: relative;
   align-items: center;
-}
-#header .flags {
-  flex-direction: row;
-  margin-left: calc(var(--space) - 10px);
+  background-color: var(--white);
 }
 #header .flags img {
-  padding: 0 2px;
+  width: 32px;
+  margin-left: 5px;
 }
 #header .logo {
-  height: 90px;
-  position: absolute;
-  right: calc(50vw - 38px);
+  width: 70px;
   top: 25px;
-  z-index: 4;
+  position: absolute;
+  right: calc(50vw - 35px);
+  z-index: 6;
+  transition: right 0.5s ease-in-out;
+}
+#header .overlay {
+  right: -320px;
+  transition: right 0.5s ease-in-out;
+}
+#header .overlay nav {
+  right: -320px;
+  display: none;
 }
 #header .btn-menu {
   position: absolute;
-  right: var(--space);
+  right: 20px;
+  width: 42px;
 }
-#header .menu {
-  transition: 0.3s ease-in-out right;
-  display: none;
-  right: -300px;
+#header.open-menu .logo {
+  right: calc(140px - 35px);
 }
 #header.open-menu .overlay {
+  display: flex;
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   height: 100vh;
   width: 100vw;
   background-color: var(--black-1);
   flex-direction: column;
+  z-index: 2;
 }
-#header.open-menu .overlay .menu {
+#header.open-menu .overlay nav {
   display: flex;
+}
+#header.open-menu .overlay nav .menu {
+  position: absolute;
+  width: 280px;
+  right: 0;
   flex-direction: column;
-  height: 100%;
   background-color: var(--purple-2);
-  width: 300px;
-  position: absolute;
-  right: 0;
-  top: 0;
+  height: 100vh;
 }
-#header.open-menu .overlay .menu .white {
-  height: 66px;
-  width: 100%;
+#header.open-menu .overlay nav .menu .white {
   background-color: var(--white);
-  z-index: 3;
-  position: absolute;
-  top: 0;
-  right: 0;
-  align-items: center;
-}
-#header.open-menu .overlay .menu .white .btn-close {
-  position: absolute;
-  right: var(--space);
-}
-#header.open-menu .overlay .menu > hr {
-  border: none;
-  border-top: var(--white) 1px solid;
-  margin-top: 140px;
-  margin-bottom: 0;
-  width: 200px;
-}
-#header.open-menu .overlay .menu nav {
   width: 100%;
+  height: 65px;
   justify-content: center;
   align-items: center;
 }
-#header.open-menu .overlay .menu nav ul {
-  flex-direction: column;
+#header.open-menu .overlay nav .menu .white img {
+  width: 42px;
+  position: absolute;
+  right: 20px;
+}
+#header.open-menu .overlay nav .menu hr {
+  border: none;
+  border-bottom: var(--white) 1px solid;
+  width: calc(100% - 50px);
+  margin-top: 60px;
+}
+#header.open-menu .overlay nav .menu ul {
   width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   margin: 0;
   padding: 0;
-  align-items: center;
 }
-#header.open-menu .overlay .menu nav ul li {
-  margin-top: calc(var(--space));
+#header.open-menu .overlay nav .menu ul li {
+  margin-top: 20px;
 }
-#header.open-menu .overlay .menu nav ul li a {
-  text-decoration: none;
+#header.open-menu .overlay nav .menu ul li a {
   color: var(--white);
+  text-decoration: none;
   font-size: 20px;
 }
-#header.open-menu .overlay .menu nav + hr {
-  margin-top: var(--space);
+#header.open-menu .overlay nav .menu ul + hr {
+  margin-top: 20px;
 }
-#header.open-menu .overlay .menu .wrap {
+#header.open-menu .overlay nav .menu .wrap {
+  width: 100%;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin-top: var(--space);
+  margin-top: 30px;
 }
-#header.open-menu .overlay .menu .wrap a {
+#header.open-menu .overlay nav .menu .wrap .btn-login {
   width: 150px;
   height: 35px;
-  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  border: none;
   background-color: var(--pink-1);
   border-radius: 5px;
-  padding: 6px 15px;
-  align-items: center;
-  justify-content: center;
 }
-#header.open-menu .overlay .menu .wrap a span {
+#header.open-menu .overlay nav .menu .wrap .btn-login span {
   color: var(--white);
   font-size: 19px;
   font-weight: bold;
-  margin: 0 5px;
+  margin-left: 5px;
 }
-#header.open-menu .overlay .menu .wrap .social-icons {
-  margin-top: calc(var(--space) * 2);
+#header.open-menu .overlay nav .menu .wrap .social-icons {
+  margin-top: 30px;
 }
-#header.open-menu .overlay .menu .wrap .social-icons img {
-  padding: 0 12px;
+#header.open-menu .overlay nav .menu .wrap .social-icons img + img {
+  margin-left: 23px;
 }
-#header.open-menu .overlay .logo {
-  position: absolute;
-  right: 110px;
-  top: 25px;
+
+@media (min-width: 375px) {
+  #header .flags img {
+    margin-left: 10px;
+  }
+  #header .logo {
+    width: 78px;
+    right: calc(50vw - 39px);
+  }
+  #header .overlay {
+    right: -375px;
+  }
+  #header .btn-menu {
+    right: 37px;
+  }
+  #header.open-menu .logo {
+    right: calc(150px - 39px);
+  }
+  #header.open-menu .overlay nav .menu {
+    width: 300px;
+  }
+  #header.open-menu .overlay nav .menu .white img {
+    right: 30px;
+  }
+  #header.open-menu .overlay nav .menu hr {
+    margin-top: 100px;
+  }
+  #header.open-menu .overlay nav .menu ul li {
+    margin-top: 30px;
+  }
+  #header.open-menu .overlay nav .menu ul + hr {
+    margin-top: 70px;
+  }
+  #header.open-menu .overlay nav .menu .wrap {
+    margin-top: 90px;
+  }
+  #header.open-menu .overlay nav .menu .wrap .social-icons {
+    margin-top: 60px;
+  }
+  #header.open-menu .overlay nav .menu .wrap .social-icons img + img {
+    margin-left: 23px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

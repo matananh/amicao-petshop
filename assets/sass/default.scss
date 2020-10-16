@@ -14,6 +14,9 @@ body {
     margin: 0;
     flex-direction: column;
     > main {
-        min-height: calc(100vh - 400px);
+        min-height: calc(100vh - calc(62px));
+        &#home {
+            background-color: var(--purple-2);
+        }
     }
 }

@@ -30,62 +30,62 @@
 
 </head>
 <body>
-
-    <header id="header" >
-
-        <div class="overlay">
-
-            <div class="flags">
-                <img src="/assets/images/icons/flag-brazil.svg" alt="Bandeira do Brasil" />
-                <img src="/assets/images/icons/flag-united-states.svg" alt="Bandeira dos Estados Unidos" />
-                <img src="/assets/images/icons/flag-spain.svg" alt="Bandeira da Espanha" />
-            </div>
-
-            <img src="/assets/images/logo/logo.png" alt="Logo" class="logo" />
-
-            <img src="/assets/images/icons/menu.svg" alt="Botão menu" class="btn-menu">
-
-            <div class="menu">
-
-                <div class="white">
-
-                    <img src="/assets/images/icons/close.svg" alt="Botão Fechar" class="btn-close" />
-
-                </div>
-                
-                <hr />
-
-                <nav>
-                    <ul>
-                        <li><a href="">Aquários</a></li>
-                        <li><a href="">Banho e Tosa</a></li>
-                        <li><a href="">Clínica</a></li>
-                        <li><a href="">Hotel</a></li>
-                        <li><a href="">Loja</a></li>
-                    </ul>
-                </nav>
-
-                <hr />
-
-                <div class="wrap">  
-
-                    <a href="#" class="btn-login">
-                        <img src="/assets/images/icons/cat.svg" alt="Gato" />
-                        <span>Login</span>
-                    </a>
-                            
-                    <div class="social-icons">
-                        <img src="/assets/images/icons/youtube.svg" alt="Logo Youtube" />
-                        <img src="/assets/images/icons/facebook.svg" alt="Logo Facebook" />
-                        <img src="/assets/images/icons/instagram.svg" alt="Logo Instagram" />
-                    </div>
-
-                </div>
-
-            </div>
-
+    <header id="header" class="open-menu">
+        <div class="flags">
+            <img src="/assets/images/icons/flag-brazil.svg" alt="Bandeira do Brasil" />
+            <img src="/assets/images/icons/flag-united-states.svg" alt="Bandeira dos Estados Unidos" />
+            <img src="/assets/images/icons/flag-spain.svg" alt="Bandeira da Espanha" />
         </div>
+        <img src="/assets/images/logo/logo.png" alt="Logo" class="logo" />
+        <div class="overlay">
+            <nav>
+                <div class="menu">
+                    <div class="white">
+                        <img src="/assets/images/icons/close.svg" alt="Botão Fechar" class="btn-close" id="btn-close" />
+                    </div>
+                    <hr />
+                    <ul>
+                        <li><a href="#">Aquários</a></li>
+                        <li><a href="#">Banho e Tosa</a></li>
+                        <li><a href="#">Clínica</a></li>
+                        <li><a href="#">Hotel</a></li>
+                        <li><a href="#">Loja</a></li>
+                    </ul>
+                    <hr />
+                    <div class="wrap">  
+                        <button type="button" class="btn-login">
+                            <img src="/assets/images/icons/cat.svg" alt="Gato" />
+                            <span>Login</span>
+                        </button>     
+                        <div class="social-icons">
+                            <img src="/assets/images/icons/youtube.svg" alt="Logo Youtube" />
+                            <img src="/assets/images/icons/facebook.svg" alt="Logo Facebook" />
+                            <img src="/assets/images/icons/instagram.svg" alt="Logo Instagram" />
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <img src="/assets/images/icons/menu.svg" alt="Botão menu" class="btn-menu" id="btn-menu">
     </header>
+    <main id="home">
+
+    </main>
     
+
+    <script>
+        const btnOpen = document.querySelector('#btn-menu');
+          btnOpen.addEventListener('click', e=> {
+            const header = document.querySelector('#header');
+            header.classList.toggle('open-menu');
+          }
+        );
+        const btnClose = document.querySelector('#btn-close');
+          btnClose.addEventListener('click', e=> {
+            const header = document.querySelector('#header');
+            header.classList.toggle('open-menu');
+          }
+        );
+      </script>
 </body>
 </html>
