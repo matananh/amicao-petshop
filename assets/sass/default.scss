@@ -41,3 +41,11 @@ hr {
         margin-top: 60px;
     }
 }
+
+@media (min-width: 1200px) {
+    body {
+        main {
+            min-height: calc(100vh - calc(50px + 250px));  
+        }
+    }
+}

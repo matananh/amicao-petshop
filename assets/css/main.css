@@ -95,6 +95,11 @@ hr.divider {
   margin-top: 60px;
 }
 
+@media (min-width: 1200px) {
+  body main {
+    min-height: calc(100vh - calc(50px + 250px));
+  }
+}
 #header {
   min-width: 320px;
   height: 62px;
@@ -499,11 +504,13 @@ hr.divider {
   }
   #footer div .ssl {
     display: flex;
+    width: calc(100vw - 50px);
     position: absolute;
     left: 50px;
   }
   #footer div .links {
     display: flex;
+    width: calc(100vw - 200px);
     color: var(--white);
     position: absolute;
     left: 200px;

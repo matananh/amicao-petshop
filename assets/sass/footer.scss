@@ -128,11 +128,13 @@
       align-items: center;
       .ssl {
         display: flex;
+        width: calc(100vw - 50px);
         position: absolute;
         left: 50px;
       }
       .links{
         display: flex;
+        width: calc(100vw - 200px);
         color: var(--white);
         position: absolute;
         left: 200px;
