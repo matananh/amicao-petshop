@@ -184,9 +184,158 @@
 }
 
 @media (min-width: 768px) {
-
+    #header {
+        .logo {
+            width: 78px;
+            right: calc(50vw - 39px);
+        }
+        .overlay {
+            right: -450px;
+        }
+        .btn-menu {
+            right: 37px;
+        }
+        &.open-menu {
+            .logo {
+                right: calc(225px - 50px);
+                width: 100px;
+            }
+            .overlay {
+                nav{
+                    .menu {
+                        width: 450px;
+                        .white {
+                            img {
+                                right: 30px;
+                            }
+                        }
+                        hr {
+                            margin-top: 150px;
+                        }
+                        ul{
+                            li {
+                                margin-top: 40px;
+                            }
+                        }
+                        ul + hr {
+                            margin-top: 90px;
+                        }
+                        .wrap {
+                            margin-top: 120px;
+                            .social-icons {
+                                margin-top: 80px;
+                                img + img {
+                                    margin-left: 23px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (min-width: 1200px) {
+    #header {
+        flex-direction: row;
+        height: 50px;
+        .flags {
+            flex-direction: column;
+            position: absolute;
+            top: 520px;
+            right: 30px;
+            img {
+                padding-bottom: 20px;
+            }
+        }
+        .btn-menu {
+            display: none;
+        }
+        .logo {
+            position: absolute;
+            width: 100px;
+            top: 10px;
+            left: 30px;
+        }
+        .overlay {
+            nav {
+                display: flex;
+                .white {
+                    display: none;
+                }
+                ul {
+                    position: absolute;
+                    margin: 0;
+                    padding: 0;
+                    justify-content: center;
+                    align-self: center;
+                    left: 180px;
+                    li + li {
+                       margin-left: 50px;
+                    }
+                    li {
+                        a {
+                            text-decoration: none;
+                            color: var(--purple-3);
+                            font-size: 20px;
+                        }
+                    }
+                }
+                .wrap {
+                    flex-direction: row-reverse;
+                    position: absolute;
+                    right: 25px;
+                    margin: 0;
+                    padding: 0;
+                    align-self: center;
+                    justify-content: center;
+                    align-items: center;
+                    .btn-login {
+                        margin-left: 30px;
+                        width: 150px;
+                        height: 35px;
+                        justify-content: center;
+                        align-items: center;
+                        border: none;
+                        background-color: var(--pink-1);
+                        border-radius: 5px;
+                        top: 5px;
+                        span{
+                            color: var(--white);
+                            font-size: 19px;
+                            font-weight: bold;
+                            margin-left: 5px;
+                        }
+                    }
+                    .social-icons{
+                        img + img {
+                            margin-left: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
+@media(min-width: 1920px) {
+    #header {
+        .overlay {
+            nav{
+                .menu {
+                    ul {
+                        li {
+                            margin-left: 70px;
+                        }
+                    }
+                    .wrap {
+                        .btn-login {
+                            margin-left: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

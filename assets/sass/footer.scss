@@ -1,0 +1,199 @@
+#footer {
+  position: relative;
+  min-width: 320px;
+  width: 100%;
+  height: 377px;
+  margin: 0;
+  padding: 0;
+  background-color: var(--purple-1);
+  bottom: 0;
+  color: var(--white);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  div {
+    width: 100%;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    .ssl {
+      display: none;
+    }
+    .links {
+      display: none;
+    }
+    .logo {
+      flex-direction: column;
+      img {
+        width: 68px;
+        position: absolute;
+        bottom: 336px;
+        left: calc(50vw - 34px);
+      }
+    }
+    .sociais-icon {
+      width: 100%;
+      flex-direction: row;
+      position: absolute;
+      bottom: 266px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: var(--space);
+        svg {
+          path {
+            fill: #fff;
+          }
+        }
+        svg + svg {
+          margin-left: 24px;
+        }
+      }
+    .contact {
+      flex-direction: column;
+      padding-left: 40px;
+      position: absolute;
+      bottom: 68px;
+      ul {
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        li {
+          margin-bottom: 20px;
+          font-size: 18px;
+          a{
+            flex-direction: row;
+            img {
+              margin-right: 10px;
+            }
+            span {
+              color: var(--white);
+            }
+          }
+          .title {
+            font-weight: bold;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+  .copyright {
+    flex-direction: column;
+    position: absolute;
+    bottom: 15px;
+    align-self: flex-end;
+    span {
+      font-size: 13px;
+      font-weight: bold;
+      color: var(--white);
+      text-align: center;
+    }
+  }
+}
+
+@media(min-width: 375px) {
+  #footer {
+    div {
+      .contact {
+        padding-left: 60px;
+        ul{
+          li{
+            a{
+              img{
+                margin-right: var(--space);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(min-width: 768px) {
+  #footer {
+    div {
+      .contact {
+        padding-left: 250px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  #footer {
+    height: 250px;
+    div{
+      flex-direction: row;
+      align-items: center;
+      .ssl {
+        display: flex;
+        position: absolute;
+        left: 50px;
+      }
+      .links{
+        display: flex;
+        color: var(--white);
+        position: absolute;
+        left: 200px;
+        bottom: 50px;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        ul {
+          flex-direction: column;
+          li {
+            .title {
+              font-size: 18px;
+              font-weight: bold;
+              text-transform: uppercase;
+            }
+            font-size: 16px;
+            margin-bottom: 2px;
+            a{
+              text-decoration: none;
+              color: var(--white);
+            }
+          }
+        }
+      }
+      .logo {
+        img{
+          bottom: 200px;
+        }
+      }
+      .sociais-icon{
+        bottom: 90px;
+        svg + svg {
+          margin-left: 30px;
+        }
+      }
+      .contact {
+        padding-left: 850px;
+        bottom: 50px;
+        ul{
+          font-size: 16px;
+          li{
+            .title {
+              font-size: 18px;
+            }
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+    .copyright {
+      bottom: 10px;
+      span {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  #footer {
+    width: 100%;
+    bottom: 0;
+  }
+}

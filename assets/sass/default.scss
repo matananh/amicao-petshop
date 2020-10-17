@@ -14,9 +14,30 @@ body {
     margin: 0;
     flex-direction: column;
     > main {
-        min-height: calc(100vh - calc(62px));
+        min-height: calc(100vh - calc(62px + 377px));
         &#home {
             background-color: var(--purple-2);
+            flex-direction: column;
+            .test1 {
+                width: 100vw;
+                margin: 0;
+                padding: 0;
+                height: 720px;
+            }
+            .test2 {
+                width: 100vw;
+                margin: 0;
+                padding: 0;
+                background-color: var(--white);
+            }
         }
+    }
+}
+hr {
+    &.divider {
+        border: none;
+        border-bottom: var(--white) 1px solid;
+        width: calc(100% - 50px);
+        margin-top: 60px;
     }
 }
