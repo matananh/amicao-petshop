@@ -822,6 +822,166 @@ hr.divider {
     margin-bottom: 5px;
   }
 }
+#clinic {
+  flex-direction: column;
+  position: relative;
+}
+#clinic .clinic-services-1, #clinic .clinic-services-2 {
+  flex-direction: column;
+  text-align: center;
+}
+#clinic .clinic-services-1 h1, #clinic .clinic-services-2 h1 {
+  font-size: 35px;
+  color: var(--gray-1);
+  margin-bottom: -16px;
+}
+#clinic .clinic-services-1 h1 b, #clinic .clinic-services-2 h1 b {
+  font-weight: bold;
+}
+#clinic .clinic-services-1 h1 .desktop, #clinic .clinic-services-2 h1 .desktop {
+  display: none;
+}
+#clinic .clinic-services-1 h1 hr, #clinic .clinic-services-2 h1 hr {
+  position: relative;
+  width: 210px;
+  height: 2px;
+  background-color: var(--gray-1);
+  top: -12px;
+}
+#clinic .clinic-services-1 .service-1, #clinic .clinic-services-1 .service-2, #clinic .clinic-services-2 .service-1, #clinic .clinic-services-2 .service-2 {
+  flex-direction: column;
+}
+#clinic .clinic-services-1 .service-1 img, #clinic .clinic-services-1 .service-2 img, #clinic .clinic-services-2 .service-1 img, #clinic .clinic-services-2 .service-2 img {
+  align-self: center;
+  width: 300px;
+  height: 232px;
+}
+#clinic .clinic-services-1 .service-1 .clinic-box, #clinic .clinic-services-1 .service-2 .clinic-box, #clinic .clinic-services-2 .service-1 .clinic-box, #clinic .clinic-services-2 .service-2 .clinic-box {
+  margin-top: 34px;
+  flex-direction: column;
+  height: 200px;
+  background-color: var(--gray-2);
+  width: 300px;
+  height: 344px;
+  text-align: center;
+  align-self: center;
+}
+#clinic .clinic-services-1 .service-1 .clinic-box h2, #clinic .clinic-services-1 .service-2 .clinic-box h2, #clinic .clinic-services-2 .service-1 .clinic-box h2, #clinic .clinic-services-2 .service-2 .clinic-box h2 {
+  font-size: 20px;
+  color: var(--gray-1);
+  font-weight: bold;
+}
+#clinic .clinic-services-1 .service-1 .clinic-box p, #clinic .clinic-services-1 .service-2 .clinic-box p, #clinic .clinic-services-2 .service-1 .clinic-box p, #clinic .clinic-services-2 .service-2 .clinic-box p {
+  font-size: 16px;
+  color: var(--gray-6);
+}
+#clinic .clinic-services-1 .service-2 img, #clinic .clinic-services-2 .service-2 img {
+  width: 207px;
+  height: 310px;
+}
+
+@media (min-width: 375px) {
+  #clinic .clinic-services-1 .service-1 img, #clinic .clinic-services-1 .service-2 img, #clinic .clinic-services-2 .service-1 img, #clinic .clinic-services-2 .service-2 img {
+    width: 352px;
+    height: 322px;
+  }
+  #clinic .clinic-services-1 .service-1 .clinic-box, #clinic .clinic-services-1 .service-2 .clinic-box, #clinic .clinic-services-2 .service-1 .clinic-box, #clinic .clinic-services-2 .service-2 .clinic-box {
+    width: 358px;
+  }
+}
+@media (min-width: 768px) {
+  #clinic .clinic-services-1 h1, #clinic .clinic-services-2 h1 {
+    align-self: center;
+  }
+  #clinic .clinic-services-1 h1 .desktop, #clinic .clinic-services-2 h1 .desktop {
+    display: flex;
+  }
+  #clinic .clinic-services-1 h1 .mobile, #clinic .clinic-services-2 h1 .mobile {
+    display: none;
+  }
+  #clinic .clinic-services-1 .service-1, #clinic .clinic-services-1 .service-2, #clinic .clinic-services-2 .service-1, #clinic .clinic-services-2 .service-2 {
+    flex-direction: row;
+  }
+  #clinic .clinic-services-1 .service-1, #clinic .clinic-services-2 .service-1 {
+    align-self: center;
+  }
+  #clinic .clinic-services-1 .service-1 img, #clinic .clinic-services-2 .service-1 img {
+    position: relative;
+    left: 400px;
+    width: 300px;
+  }
+  #clinic .clinic-services-1 .service-1 .clinic-box, #clinic .clinic-services-2 .service-1 .clinic-box {
+    position: relative;
+    top: -17px;
+    right: 335px;
+    height: 322px;
+    width: 340px;
+  }
+  #clinic .clinic-services-1 .service-2, #clinic .clinic-services-2 .service-2 {
+    align-self: center;
+  }
+}
+@media (min-width: 1200px) {
+  #clinic .clinic-services-1 h1, #clinic .clinic-services-2 h1 {
+    margin-bottom: -27px;
+  }
+  #clinic .clinic-services-1 h1 .desktop, #clinic .clinic-services-2 h1 .desktop {
+    display: flex;
+  }
+  #clinic .clinic-services-1 h1 .mobile, #clinic .clinic-services-2 h1 .mobile {
+    display: none;
+  }
+  #clinic .clinic-services-1 .service-1, #clinic .clinic-services-1 .service-2, #clinic .clinic-services-2 .service-1, #clinic .clinic-services-2 .service-2 {
+    flex-direction: row;
+  }
+  #clinic .clinic-services-1 .service-1 h2, #clinic .clinic-services-1 .service-2 h2, #clinic .clinic-services-2 .service-1 h2, #clinic .clinic-services-2 .service-2 h2 {
+    margin-bottom: 0;
+  }
+  #clinic .clinic-services-1 .service-1, #clinic .clinic-services-2 .service-1 {
+    display: flex;
+    align-self: center;
+  }
+  #clinic .clinic-services-1 .service-1 img, #clinic .clinic-services-2 .service-1 img {
+    position: relative;
+    left: 550px;
+    width: 457px;
+    height: 305px;
+  }
+  #clinic .clinic-services-1 .service-1 .clinic-box, #clinic .clinic-services-2 .service-1 .clinic-box {
+    position: relative;
+    right: 450px;
+    height: 305px;
+    top: -17px;
+    width: 550px;
+    padding: 0 40px 0 30px;
+    text-align: left;
+  }
+  #clinic .clinic-services-1 .service-2, #clinic .clinic-services-2 .service-2 {
+    position: relative;
+    align-self: center;
+  }
+  #clinic .clinic-services-1 .service-2 img, #clinic .clinic-services-2 .service-2 img {
+    height: 310px;
+  }
+  #clinic .clinic-services-1 .service-2 .clinic-box, #clinic .clinic-services-2 .service-2 .clinic-box {
+    position: relative;
+    width: 650px;
+    padding: 0 40px 0 30px;
+    text-align: left;
+    height: 310px;
+    top: -17px;
+  }
+  #clinic .clinic-services-1 h1 {
+    align-self: flex-start;
+    position: relative;
+    left: 180px;
+  }
+  #clinic .clinic-services-2 h1 {
+    align-self: flex-end;
+    position: relative;
+    right: 180px;
+  }
+}
 #footer {
   position: relative;
   min-width: 320px;
