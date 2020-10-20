@@ -279,6 +279,10 @@
                             text-decoration: none;
                             color: var(--purple-3);
                             font-size: 20px;
+                            &:hover{
+                                color: var(--pink-1);
+                                transition: all .3s ease-in-out;
+                            }
                         }
                     }
                 }
