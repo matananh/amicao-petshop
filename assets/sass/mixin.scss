@@ -1,0 +1,19 @@
+@mixin button-pink{
+    width: 150px;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: var(--pink-1);
+    border-radius: 5px;
+    color: var(--white);
+    font-size: 19px;
+    font-weight: bold;
+    transition: all .3s ease-in-out;
+    &:hover {
+        background-color: var(--white);
+        color: var(--pink-1);
+        border: 1px solid var(--pink-1);
+        cursor: pointer;
+    }
+}
