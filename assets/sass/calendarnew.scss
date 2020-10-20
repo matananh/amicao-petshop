@@ -1,6 +1,7 @@
 #align {
     width: 100%;
     position: relative;
+    display: flex;
     justify-content: center;
     .negativelogo {
         width: 100%;
@@ -9,23 +10,27 @@
         position: absolute;
     }
     
-   
-    .headerdate {
-        h1 {  
-            display: flex;
-            top: 50px;  
-            font-size: 22px;
-            font-weight: bold;
-            color: var(--button);
-            margin: 40px;
-            color: var(--pink-1);
-            justify-content: space-around;
-            position: absolute;
-            }
-    }
     main {
+        
+        .headerdate {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            
+
+            h1 {
+                width: 100%; 
+                height: 100%;
+                margin: 0 67px;        
+                top: 100px;  
+                font-size: 22px;
+                font-weight: bold;  
+                color: var(--purple-2);
+                position: absolute;
+            }
+        }
         .calendar {
-            min-width: 280px;
+            min-width: 300px;
             margin-top: 200px;
             flex-direction: column;
             padding: none;
@@ -108,22 +113,32 @@
             
         }
         .select-date {
-              position: relative;
-              flex-direction: row;
+                width: 145px;
+                height: 19px;
+                position: absolute;
+                bottom: -55px;
+                flex-direction: row;
+              
             div {
                 
-                width: 100%;
-                height: 30px;
-                left: 250px;
-                top: 600px;
-                padding: 0;
-                width: 100%;
-                position: absolute;
-                flex-direction: row;
+                font-size: 10px;
+                color: var(--purple-3);
+                flex-direction: column;
+                margin-left: 10px;
+                align-items: center;
+                button {
+                    width: 135px;
+                    margin-top: 5px;
+                    color: gray;
+                }
                 
-                left: -246px;
+                
+                
+                
+        
                 
             }
+            
         }
        
     }
