@@ -1,0 +1,182 @@
+#clinic {
+    flex-direction: column;
+    position: relative;
+    .clinic-services-1, .clinic-services-2 {
+        flex-direction: column;
+        text-align: center;
+        h1 {
+            font-size: 35px;
+            color: var(--gray-1);
+            margin-bottom: -16px;
+            b {
+                font-weight: bold;
+            }
+            .desktop {
+                display: none;
+            }
+            hr {
+                position: relative;
+                width: 210px;
+                height: 2px;
+                background-color: var(--gray-1);
+                top: -12px;
+            }
+        }
+        .service-1, .service-2 {
+            flex-direction: column;
+            img {
+                align-self: center;
+                width: 300px;
+                height: 232px;
+            }
+            .clinic-box {
+                margin-top: 34px;
+                flex-direction: column;
+                height: 200px;
+                background-color: var(--gray-2);
+                width: 300px;
+                height: 344px;
+                text-align: center;
+                align-self: center;
+                h2 {
+                    font-size: 20px;
+                    color: var(--gray-1);
+                    font-weight: bold;
+                }
+                p {
+                    font-size: 16px;
+                    color: var(--gray-6);
+                }
+            }
+        }
+        .service-2 {
+            img {
+                width: 207px;
+                height: 310px;
+            }
+        }
+    }
+}
+
+@media (min-width: 375px) {
+    #clinic {
+        .clinic-services-1, .clinic-services-2 {
+            .service-1, .service-2 {
+                img {
+                    width: 352px;
+                    height: 322px;
+                }
+                .clinic-box {
+                    width: 358px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:768px) {
+    #clinic {
+        .clinic-services-1, .clinic-services-2 {
+            h1 {
+                align-self: center;
+                .desktop {
+                    display: flex;
+                }
+                .mobile {
+                    display: none;
+                }
+            }
+            .service-1, .service-2 {
+                flex-direction: row;
+            }
+            .service-1 {
+                align-self: center;
+                img {
+                    position: relative;
+                    left: 400px;
+                    width: 300px;
+                }
+                .clinic-box {
+                    position: relative;
+                    top: -17px;
+                    right: 335px;
+                    height: 322px;
+                    width: 340px;
+                }
+            }
+            .service-2 {
+                align-self: center;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    #clinic {
+        .clinic-services-1, .clinic-services-2 {
+            h1 {
+                margin-bottom: -27px;
+                .desktop {
+                    display: flex;
+                }
+                .mobile {
+                    display: none;
+                }
+            }
+            .service-1, .service-2 {
+                flex-direction: row;
+                h2 {
+                    margin-bottom: 0;
+                }
+            }
+            .service-1 {
+                display: flex;
+                align-self: center;
+                img {
+                    position: relative;
+                    left: 550px;
+                    width: 457px;
+                    height: 305px;
+                }
+                .clinic-box {
+                    position: relative;
+                    right: 450px;
+                    height: 305px;
+                    top: -17px;
+                    width: 550px;
+                    padding: 0 40px 0 30px;
+                    text-align: left;
+                }
+            }
+            .service-2 {
+                position: relative;
+                align-self: center;
+                img {
+                    height: 310px;
+                }
+                .clinic-box {
+                    position: relative;
+                    width: 650px;
+                    padding: 0 40px 0 30px;
+                    text-align: left;
+                    height: 310px;
+                    top: -17px;
+                }
+            }
+        }
+        .clinic-services-1 {
+            h1 {
+                align-self: flex-start;
+                position: relative;
+                left: 180px;
+            }
+        }
+        .clinic-services-2 {
+            h1 {
+                align-self: flex-end;
+                position: relative;
+                right: 180px;
+            }
+        }
+    }
+}
