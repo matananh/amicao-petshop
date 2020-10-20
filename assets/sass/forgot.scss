@@ -1,4 +1,4 @@
-#login {
+#forgot {
   flex-direction: column;
   position: relative;
   width: 100vw;
@@ -85,7 +85,7 @@
         }
         button {
           position: absolute;
-          bottom: 15px;
+          bottom: 10px;
           font-size: 16px;
           width: 190px;
           height: 40px;
@@ -121,7 +121,7 @@
 }
 
 @media (min-width: 375px) {
-  #login {
+  #forgot {
     header {
       h2 {
         margin-top: 100px;
@@ -161,7 +161,7 @@
 }
 
 @media (min-width: 768px) {
-  #login {
+  #forgot {
     header {
       h2 {
         font-size: 40px;
@@ -204,7 +204,7 @@
 }
 
 @media (min-width: 1200px) {
-  #login {
+  #forgot {
     header {
       h2 {
         margin-top: 50px;
