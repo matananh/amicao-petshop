@@ -90,29 +90,6 @@
                 }
             }
         }
-        .contact {
-            flex-direction: column;
-            width: 100%;
-            justify-content: center;
-            h2 {
-                font-size: 30px;
-                font-family: 'Open Sans';
-                color: var(--gray-1);
-                text-align: center;
-                margin: 0;
-                padding: 0;
-            }
-            hr {
-                padding: 0;
-                margin: 20px;
-                width: 210px;
-                border-top: 2px solid var(--gray-1);
-                align-self: center;
-            }
-            form {
-                margin-bottom: calc( var(--space) * 3 );
-            }
-        }
     }
 }
 
@@ -128,11 +105,6 @@
                     p.mobile {
                         display: none;
                     }
-                }
-            }
-            .contact {
-                h2 {
-                    padding: 0px 80px;
                 }
             }
         } 

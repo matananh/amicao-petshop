@@ -92,6 +92,29 @@ body > main#home .test2 {
   padding: 0;
   background-color: var(--white);
 }
+body .contact {
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+}
+body .contact h2 {
+  font-size: 30px;
+  font-family: "Open Sans";
+  color: var(--gray-1);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+body .contact hr {
+  padding: 0;
+  margin: 20px;
+  width: 210px;
+  border-top: 2px solid var(--gray-1);
+  align-self: center;
+}
+body .contact form {
+  margin-bottom: calc( var(--space) * 3 );
+}
 
 hr.divider {
   border: none;
@@ -100,6 +123,11 @@ hr.divider {
   margin-top: 60px;
 }
 
+@media (min-width: 768px) {
+  .contact h2 {
+    padding: 0px 80px;
+  }
+}
 @media (min-width: 1200px) {
   body main {
     min-height: calc(100vh - calc(50px + 250px));
@@ -1888,29 +1916,6 @@ hr.divider {
   color: var(--pink-1);
   border-color: var(--pink-1);
 }
-#hotel > div .contact {
-  flex-direction: column;
-  width: 100%;
-  justify-content: center;
-}
-#hotel > div .contact h2 {
-  font-size: 30px;
-  font-family: "Open Sans";
-  color: var(--gray-1);
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
-#hotel > div .contact hr {
-  padding: 0;
-  margin: 20px;
-  width: 210px;
-  border-top: 2px solid var(--gray-1);
-  align-self: center;
-}
-#hotel > div .contact form {
-  margin-bottom: calc( var(--space) * 3 );
-}
 
 @media (min-width: 768px) {
   #hotel > div section .card {
@@ -1921,9 +1926,6 @@ hr.divider {
   }
   #hotel > div section .card p.mobile {
     display: none;
-  }
-  #hotel > div .contact h2 {
-    padding: 0px 80px;
   }
 }
 @media (min-width: 1200px) {
