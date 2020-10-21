@@ -11,72 +11,61 @@
     }
     
     main {
+        width: 100%;
+        height: 100%;
         
-        .headerdate {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            
-
-            h1 {
-                width: 100%; 
-                height: 100%;
-                margin: 0 67px;        
-                top: 100px;  
-                font-size: 22px;
-                font-weight: bold;  
-                color: var(--purple-2);
-                position: absolute;
-            }
-        }
+        
         .calendar {
-            min-width: 300px;
-            margin-top: 200px;
+            width: 100%;
+            margin-top: 120px;
+            position: absolute;
             flex-direction: column;
-            padding: none;
-            top: 50px;
-            
-            
-           
-            .month {
-                
+            padding: 0 20px;  
+            .headerdate {
+                display: flex;
+                justify-content: center;
+                margin-top: -27px;
+                margin-bottom: 45px;
+                ;
+                h1 {       
+                    font-size: 22px;
+                    font-weight: bold;  
+                    color: var(--purple-2);
+                    
+                }
+            }
+            .month { 
                 justify-content: space-between;
                 align-items: center;
-                color: black;
+                color: gray;
                 margin-bottom: 10px;
                 text-transform: uppercase;
                 margin-top: -30px;
-                
                 h2 {
-                   
                     font-size: 14px;
                     font-weight: 600;
                     margin-left: 20px;
                     margin-right: 10px;
-                }
-               
+                }  
                 nav{
-                   
+                    size: 15px;
                     button + button {
                         margin-left: 10px;
                     }
                 }
-                .btn-today {
-                    display: none;
-                }
-                
             }
             ul {
                 margin: 0;
                 padding: 0;
             }
             .weekdays {
-                
+                font-size: 15px;
                 font-weight: bold;
                 text-transform: uppercase;
-                color: var(--gray-0);
+                color: gray;
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+               
                 li {
                     justify-content: center;
                     padding: 8px 0;
@@ -90,7 +79,7 @@
                 grid-template-columns: repeat(7, 1fr);
                 grid-template-rows: repeat(5, 12vw);
                 grid-gap: 10px;
-                color: var(--dark-0);
+                color: black;
                 li {
                     font-size: 16px;
                     justify-content: center;
@@ -100,46 +89,44 @@
                     cursor: pointer;
                     transition:  all .1s ease-in-out;
                     &:hover {
-                        background-color: var(--button);
+                        background-color:#ccc
                     }
                     &.active {
-                        background-color: var(--button);
+                        background-color: var(--purple-3);
                         color: white;
                        
                     }
                 }
         
             }
+            .select-date {
+                margin-top: 10px;
+                justify-content: center;
+                  
+                div {
+                    
+                    font-size: 10px;
+                    color: var(--purple-3);
+                    flex-direction: column;
+                    margin: 10px;
+                    align-items: center;
+                    button {
+                        width: 135px;
+                        margin-top: 5px;
+                        color: gray;
+                    }
+                    
+                    
+                    
+                    
             
-        }
-        .select-date {
-                width: 145px;
-                height: 19px;
-                position: absolute;
-                bottom: -55px;
-                flex-direction: row;
-              
-            div {
-                
-                font-size: 10px;
-                color: var(--purple-3);
-                flex-direction: column;
-                margin-left: 10px;
-                align-items: center;
-                button {
-                    width: 135px;
-                    margin-top: 5px;
-                    color: gray;
+                    
                 }
-                
-                
-                
-                
-        
                 
             }
             
         }
+        
        
     }
     form {
@@ -148,13 +135,11 @@
             position: fixed;
             bottom: 0;
             background-color: var(--purple-2);
-            height: 90px;
+            height: 80px;
             left: 0;
-            justify-content: space-around;
-            align-items: center;
-            padding: 20px;
-            z-index: 4;
-
+            justify-content: center;
+            padding: 10px;
+            
             button, a {
                 min-width: 110px;
                 border: none;
@@ -169,6 +154,7 @@
                 outline: none;
                 background-color: var(--pink-1);
                 color: white;
+                margin: 10px;
                 cursor: pointer;
                 
                 border-radius: 5px;
@@ -211,12 +197,85 @@
                     background-color: gray;
                 }   
             }
-            
-            
-
-            
-            
         }
     }
 
 }
+@media (min-width: 768px) {
+    #align {
+        main {
+            .calendar {
+                max-width: 768px;
+                .headerdate {
+                   
+                    h1 {
+                        font-size: 45px;
+                        margin-top: 0;
+                        margin-bottom: 0;
+                    }
+                }
+                .month {
+                    margin: 20px 0;
+                    h2 {
+                        font-size: 30px;
+                    }
+                   
+                    
+                }
+                .weekdays {
+                    li {
+                        font-size: 21px;
+                        font-weight: bold;
+                    }
+                }
+                .days {
+                    grid-template-rows: repeat(5, calc(992px / 7));
+                    li {
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 992px) {
+    #align {
+        .negativelogo {
+            height: 75px;
+           
+        }
+        main {
+            .calendar {
+                max-width: 992px;
+                .headerdate {
+                   
+                    h1 {
+                        font-size: 45px;
+                    }
+                }
+                .month {
+                    margin: 20px 0;
+                    h2 {
+                        font-size: 44px;
+                    }
+                   
+                    
+                }
+                .weekdays {
+                    li {
+                        font-size: 25px;
+                        font-weight: bold;
+                    }
+                }
+                .days {
+                    grid-template-rows: repeat(5, calc(992px / 7));
+                    li {
+                        font-size: 32px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
