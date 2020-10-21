@@ -656,6 +656,71 @@ hr.divider {
     padding: var(--space);
   }
 }
+form.form {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 40px;
+}
+form.form .field {
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 50px;
+}
+form.form .field label {
+  font-family: "Open Sans";
+  font-size: 20px;
+  color: var(--gray-1);
+  transition: color 0.2s ease-in-out;
+}
+form.form .field input {
+  border: none;
+  border-bottom: 1px solid var(--gray-1);
+  font-size: 22px;
+  transition: border-color 0.2s ease-in-out;
+}
+form.form .field input:focus {
+  border: none;
+  border-bottom: 1px solid var(--pink-1);
+  outline: none;
+}
+form.form .field input:focus + label {
+  color: var(--pink-1);
+}
+form.form button {
+  width: 150px;
+  height: 35px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: var(--pink-1);
+  border-radius: 5px;
+  color: var(--white);
+  font-size: 19px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+form.form button:hover {
+  background-color: var(--white);
+  color: var(--pink-1);
+  border: 1px solid var(--pink-1);
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  form.form {
+    padding: 40px 80px;
+  }
+}
+@media (min-width: 1200px) {
+  form.form {
+    border: 1px solid var(--gray-1);
+    padding-top: 90px;
+    padding-right: 200px;
+    padding-left: 200px;
+  }
+}
 #login {
   flex-direction: column;
   position: relative;
@@ -1228,69 +1293,147 @@ hr.divider {
     height: 283px;
   }
 }
-form.form {
+#banho-e-tosa {
   flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+#banho-e-tosa .banner {
+  height: 290px;
+  width: 100%;
+}
+#banho-e-tosa > div {
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  padding: 40px;
 }
-form.form .field {
-  flex-direction: column;
-  width: 100%;
-  margin-bottom: 50px;
-}
-form.form .field label {
+#banho-e-tosa > div h2 {
+  font-size: 30px;
   font-family: "Open Sans";
-  font-size: 20px;
   color: var(--gray-1);
-  transition: color 0.2s ease-in-out;
+  text-align: center;
+  padding: var(--space);
+  width: 100%;
 }
-form.form .field input {
-  border: none;
-  border-bottom: 1px solid var(--gray-1);
-  font-size: 22px;
-  transition: border-color 0.2s ease-in-out;
+#banho-e-tosa > div h2 span {
+  font-weight: bold;
 }
-form.form .field input:focus {
-  border: none;
-  border-bottom: 1px solid var(--pink-1);
-  outline: none;
+#banho-e-tosa > div .desktop {
+  display: none;
 }
-form.form .field input:focus + label {
-  color: var(--pink-1);
+#banho-e-tosa > div hr {
+  margin: 0;
+  padding: 0;
+  width: 210px;
+  border-top: 2px solid var(--gray-1);
 }
-form.form button {
-  width: 150px;
-  height: 35px;
+#banho-e-tosa > div section {
+  flex-direction: column;
+  width: 100%;
+  margin-top: 50px;
   justify-content: center;
   align-items: center;
-  border: none;
-  background-color: var(--pink-1);
-  border-radius: 5px;
+  padding: 0 30px;
+}
+#banho-e-tosa > div section .card {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 967px;
+}
+#banho-e-tosa > div section .card img {
+  width: 277px;
+  height: 373px;
+  margin-bottom: 0;
+}
+#banho-e-tosa > div section .card .text {
+  flex-direction: column;
+  background-color: var(--purple-3);
+  overflow: auto;
+}
+#banho-e-tosa > div section .card .text h2 {
   color: var(--white);
-  font-size: 19px;
+  font-size: 30px;
+  font-weight: 300;
+}
+#banho-e-tosa > div section .card .text p {
+  margin: 0;
+  padding: 0 20px;
+  color: var(--white);
+  font-size: 20px;
+}
+#banho-e-tosa > div section .card .text > a {
+  width: 150px;
+  height: 36px;
+  padding: 4px;
+  margin-top: 32px;
+  background-color: var(--pink-1);
+  text-decoration: none;
+  color: var(--white);
+  font-size: 18px;
   font-weight: bold;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  border: 1px solid var(--pink-2);
+  border-radius: 5px;
   transition: all 0.3s ease-in-out;
 }
-form.form button:hover {
+#banho-e-tosa > div section .card .text > a:hover {
   background-color: var(--white);
   color: var(--pink-1);
-  border: 1px solid var(--pink-1);
-  cursor: pointer;
+  border-color: var(--pink-1);
+}
+#banho-e-tosa > div .contact {
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+}
+#banho-e-tosa > div .contact p {
+  font-size: 30px;
+  font-family: "Open Sans";
+  color: var(--gray-1);
+  text-align: center;
+  margin: 0;
+  padding: 0 var(--space);
+}
+#banho-e-tosa > div .contact p span {
+  font-weight: bold;
+}
+#banho-e-tosa > div .contact hr {
+  padding: 0;
+  margin: 20px;
+  width: 210px;
+  border-top: 2px solid var(--gray-1);
+  align-self: center;
+}
+#banho-e-tosa > div .contact form {
+  margin-bottom: calc( var(--space) * 3 );
 }
 
 @media (min-width: 768px) {
-  form.form {
-    padding: 40px 80px;
+  #banho-e-tosa > div section .card {
+    flex-direction: row;
+  }
+  #banho-e-tosa > div section .card .text {
+    height: 373px;
+  }
+  #banho-e-tosa > div .contact h2 {
+    padding: 0px 80px;
   }
 }
 @media (min-width: 1200px) {
-  form.form {
-    border: 1px solid var(--gray-1);
-    padding-top: 90px;
-    padding-right: 200px;
-    padding-left: 200px;
+  #banho-e-tosa > div .desktop {
+    display: flex;
+  }
+  #banho-e-tosa > div .mobile {
+    display: none;
+  }
+  #banho-e-tosa > div section .card .text {
+    padding: 35px 30px;
   }
 }
 
