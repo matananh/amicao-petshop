@@ -943,17 +943,8 @@ hr.divider {
     margin-bottom: 5px;
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 #forgot {
   flex-direction: column;
-=======
-#footer {
->>>>>>> 44722a30187ca67941ea1ed5f50c3b4f2c5f6810
-=======
-#forgot {
-  flex-direction: column;
->>>>>>> 7f483fd7ae5ae4f4c2466d7c1f090a7c6acfdf4a
   position: relative;
   width: 100vw;
   min-width: 320px;
@@ -1651,191 +1642,249 @@ hr.divider {
     margin-bottom: 5px;
   }
 }
-#footer {
+#align {
+  width: 100%;
   position: relative;
-  min-width: 320px;
-  width: 100%;
-  height: 377px;
-  margin: 0;
-  padding: 0;
-  background-color: var(--purple-1);
-  bottom: 0;
-  color: var(--white);
-  flex-direction: column;
-  align-items: center;
+  display: flex;
   justify-content: center;
 }
-#footer div {
+#align .negativelogo {
   width: 100%;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-}
-#footer div .ssl {
-  display: none;
-}
-#footer div .links {
-  display: none;
-}
-#footer div .logo {
-  flex-direction: column;
-}
-#footer div .logo img {
-  width: 68px;
+  height: 60px;
+  background-color: var(--purple-2);
   position: absolute;
-  bottom: 336px;
-  left: calc(50vw - 34px);
 }
-#footer div .sociais-icon {
+#align .calendar {
   width: 100%;
-  flex-direction: row;
+  margin: 75px;
   position: absolute;
-  bottom: 266px;
-  align-items: center;
+  flex-direction: column;
+  padding: 0 20px;
+}
+#align .calendar .headerdate {
   justify-content: center;
-  margin-bottom: var(--space);
+  margin-top: -27px;
+  margin-bottom: 40px;
 }
-#footer div .sociais-icon svg path {
-  fill: #fff;
+#align .calendar .headerdate h1 {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--purple-2);
 }
-#footer div .sociais-icon svg + svg {
-  margin-left: 24px;
+#align .calendar .month {
+  justify-content: space-between;
+  align-items: center;
+  color: gray;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  margin-top: -30px;
 }
-#footer div .contact {
-  flex-direction: column;
-  padding-left: 40px;
-  position: absolute;
-  bottom: 68px;
-}
-#footer div .contact ul {
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-}
-#footer div .contact ul li {
-  margin-bottom: 20px;
-  font-size: 18px;
-}
-#footer div .contact ul li a {
-  flex-direction: row;
-}
-#footer div .contact ul li a img {
+#align .calendar .month h2 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 20px;
   margin-right: 10px;
 }
-#footer div .contact ul li a span {
-  color: var(--white);
+#align .calendar .month nav {
+  size: 15px;
 }
-#footer div .contact ul li .title {
+#align .calendar .month nav button + button {
+  margin-left: 10px;
+}
+#align .calendar ul {
+  margin: 0;
+  padding: 0;
+}
+#align .calendar .weekdays {
+  font-size: 15px;
   font-weight: bold;
   text-transform: uppercase;
+  color: gray;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
-#footer .copyright {
-  flex-direction: column;
-  position: absolute;
-  bottom: 15px;
-  align-self: flex-end;
-}
-#footer .copyright span {
-  font-size: 13px;
+#align .calendar .weekdays li {
+  justify-content: center;
+  padding: 8px 0;
+  font-size: 12px;
   font-weight: bold;
-  color: var(--white);
-  text-align: center;
+}
+#align .calendar .days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 12vw);
+  grid-gap: 10px;
+  color: black;
+}
+#align .calendar .days li {
+  font-size: 16px;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+#align .calendar .days li:hover {
+  background-color: #ccc;
+}
+#align .calendar .days li.active {
+  background-color: var(--purple-3);
+  color: white;
+}
+#align .calendar .select-date {
+  margin-top: 10px;
+  justify-content: center;
+}
+#align .calendar .select-date div {
+  font-size: 10px;
+  color: var(--purple-3);
+  flex-direction: column;
+  margin: 10px;
+  align-items: center;
+}
+#align .calendar .select-date div button {
+  width: 135px;
+  margin-top: 5px;
+  color: gray;
+}
+
+form footer.fixed {
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  background-color: var(--purple-2);
+  height: 70px;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+form footer.fixed button, form footer.fixed a {
+  min-width: 110px;
+  border: none;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  background-color: var(--pink-1);
+  color: white;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+form footer.fixed button:hover, form footer.fixed a:hover {
+  background-color: black;
+}
+form footer.fixed button:active, form footer.fixed a:active {
+  background-color: blue;
+}
+form footer.fixed button {
+  min-width: 110px;
+  border: none;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  background-color: #EBE8E8;
+  color: var(--pink-1);
+  cursor: pointer;
+  border-radius: 5px;
+  background: #EBE8E8;
+}
+form footer.fixed button:hover {
+  background-color: #5D5D5D;
+}
+form footer.fixed button:active {
+  background-color: gray;
 }
 
 @media (min-width: 375px) {
-  #footer div .contact {
-    padding-left: 60px;
-  }
-  #footer div .contact ul li a img {
-    margin-right: var(--space);
+  #align .calendar {
+    width: 100%;
+    margin-top: 125px;
   }
 }
 @media (min-width: 768px) {
-  #footer div .contact {
-    padding-left: 250px;
+  #align .calendar {
+    max-width: 768px;
   }
-}
-@media (min-width: 1200px) {
-  #footer {
-    height: 250px;
+  #align .calendar .headerdate h1 {
+    font-size: 45px;
+    margin-top: 0;
+    margin-bottom: 0;
   }
-  #footer div {
-    flex-direction: row;
-    align-items: center;
+  #align .calendar .month {
+    margin: 20px 0;
   }
-  #footer div .ssl {
-    display: flex;
-    width: calc(100vw - 50px);
-    position: absolute;
-    left: 50px;
+  #align .calendar .month h2 {
+    font-size: 30px;
   }
-  #footer div .links {
-    display: flex;
-    width: calc(100vw - 200px);
-    color: var(--white);
-    position: absolute;
-    left: 200px;
-    bottom: 50px;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-  }
-  #footer div .links ul {
-    flex-direction: column;
-  }
-  #footer div .links ul li {
-    font-size: 16px;
-    margin-bottom: 2px;
-  }
-  #footer div .links ul li .title {
-    font-size: 18px;
+  #align .calendar .weekdays li {
+    font-size: 21px;
     font-weight: bold;
-    text-transform: uppercase;
   }
-  #footer div .links ul li a {
-    text-decoration: none;
-    color: var(--white);
+  #align .calendar .days {
+    grid-template-rows: repeat(5, calc(992px / 7));
   }
-  #footer div .logo img {
-    bottom: 200px;
+  #align .calendar .days li {
+    font-size: 25px;
   }
-  #footer div .sociais-icon {
-    bottom: 90px;
+  #align .calendar .select-date {
+    margin-bottom: 10px;
   }
-  #footer div .sociais-icon svg + svg {
-    margin-left: 30px;
+  #align .calendar .select-date div {
+    font-size: 25px;
+    color: var(--purple-3);
+    flex-direction: column;
+    margin: 10px;
+    align-items: center;
   }
-  #footer div .contact {
-    padding-left: 850px;
-    bottom: 50px;
-  }
-  #footer div .contact ul {
-    font-size: 16px;
-  }
-  #footer div .contact ul li {
-    margin-bottom: 15px;
-  }
-  #footer div .contact ul li .title {
-    font-size: 18px;
-  }
-  #footer .copyright {
-    bottom: 10px;
-  }
-  #footer .copyright span {
-    font-size: 18px;
-  }
-}
-@media (min-width: 1920px) {
-  #footer {
-    width: 100%;
-    bottom: 0;
-  }
-<<<<<<< HEAD
-  #forgot footer.footer_form div {
+  #align .calendar .select-date div button {
+    width: 250px;
+    height: 40px;
+    margin-top: 5px;
+    color: gray;
+    font-size: 20px;
     justify-content: center;
     align-items: center;
-    margin-left: 20px;
-    margin-bottom: 5px;
+  }
+}
+@media (min-width: 992px) {
+  #align .negativelogo {
+    height: 75px;
+  }
+  #align .calendar {
+    max-width: 992px;
+  }
+  #align .calendar .headerdate h1 {
+    font-size: 45px;
+  }
+  #align .calendar .month {
+    margin: 20px 0;
+  }
+  #align .calendar .month h2 {
+    font-size: 44px;
+  }
+  #align .calendar .weekdays li {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  #align .calendar .days {
+    grid-template-rows: repeat(5, calc(992px / 7));
+  }
+  #align .calendar .days li {
+    font-size: 32px;
   }
 }
 #footer {
@@ -2016,7 +2065,7 @@ hr.divider {
   #footer {
     width: 100%;
     bottom: 0;
-=======
+  }
 }
 #hotel {
   flex-direction: column;
@@ -2215,7 +2264,6 @@ form.form button:hover {
     padding-top: 90px;
     padding-right: 200px;
     padding-left: 200px;
->>>>>>> 44722a30187ca67941ea1ed5f50c3b4f2c5f6810
   }
 }
 #clinic {
@@ -2469,332 +2517,6 @@ form.form button:hover {
   #clinic .clinic-services-2 h1 {
     align-self: flex-end;
     position: relative;
-<<<<<<< HEAD
-    right: 180px;
-  }
-}
-#align {
-  width: 100%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-#align .negativelogo {
-  width: 100%;
-  height: 60px;
-  background-color: var(--purple-2);
-  position: absolute;
-}
-#align main {
-  width: 100%;
-  height: 100%;
-}
-#align main .calendar {
-  width: 100%;
-  margin-top: 120px;
-  position: absolute;
-  flex-direction: column;
-  padding: 0 20px;
-}
-#align main .calendar .headerdate {
-  display: flex;
-  justify-content: center;
-  margin-top: -27px;
-  margin-bottom: 45px;
-}
-#align main .calendar .headerdate h1 {
-  font-size: 22px;
-  font-weight: bold;
-  color: var(--purple-2);
-}
-#align main .calendar .month {
-  justify-content: space-between;
-  align-items: center;
-  color: gray;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  margin-top: -30px;
-}
-#align main .calendar .month h2 {
-  font-size: 14px;
-  font-weight: 600;
-  margin-left: 20px;
-  margin-right: 10px;
-}
-#align main .calendar .month nav {
-  size: 15px;
-}
-#align main .calendar .month nav button + button {
-  margin-left: 10px;
-}
-#align main .calendar ul {
-  margin: 0;
-  padding: 0;
-}
-#align main .calendar .weekdays {
-  font-size: 15px;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: gray;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-}
-#align main .calendar .weekdays li {
-  justify-content: center;
-  padding: 8px 0;
-  font-size: 12px;
-  font-weight: bold;
-}
-#align main .calendar .days {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(5, 12vw);
-  grid-gap: 10px;
-  color: black;
-}
-#align main .calendar .days li {
-  font-size: 16px;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: all 0.1s ease-in-out;
-}
-#align main .calendar .days li:hover {
-  background-color: #ccc;
-}
-#align main .calendar .days li.active {
-  background-color: var(--purple-3);
-  color: white;
-}
-#align main .calendar .select-date {
-  margin-top: 10px;
-  justify-content: center;
-}
-#align main .calendar .select-date div {
-  font-size: 10px;
-  color: var(--purple-3);
-  flex-direction: column;
-  margin: 10px;
-  align-items: center;
-}
-#align main .calendar .select-date div button {
-  width: 135px;
-  margin-top: 5px;
-  color: gray;
-}
-#align form footer.fixed {
-  width: 100vw;
-  position: fixed;
-  bottom: 0;
-  background-color: var(--purple-2);
-  height: 80px;
-  left: 0;
-  justify-content: center;
-  padding: 10px;
-}
-#align form footer.fixed button, #align form footer.fixed a {
-  min-width: 110px;
-  border: none;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 16px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
-  outline: none;
-  background-color: var(--pink-1);
-  color: white;
-  margin: 10px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-#align form footer.fixed button:hover, #align form footer.fixed a:hover {
-  background-color: black;
-}
-#align form footer.fixed button:active, #align form footer.fixed a:active {
-  background-color: blue;
-}
-#align form footer.fixed button {
-  min-width: 110px;
-  border: none;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 16px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
-  outline: none;
-  background-color: #EBE8E8;
-  color: var(--pink-1);
-  cursor: pointer;
-  border-radius: 5px;
-  background: #EBE8E8;
-}
-#align form footer.fixed button:hover {
-  background-color: #5D5D5D;
-}
-#align form footer.fixed button:active {
-  background-color: gray;
-}
-
-@media (min-width: 768px) {
-  #align main .calendar {
-    max-width: 768px;
-  }
-  #align main .calendar .headerdate h1 {
-    font-size: 45px;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  #align main .calendar .month {
-    margin: 20px 0;
-  }
-  #align main .calendar .month h2 {
-    font-size: 30px;
-  }
-  #align main .calendar .weekdays li {
-    font-size: 21px;
-    font-weight: bold;
-  }
-  #align main .calendar .days {
-    grid-template-rows: repeat(5, calc(992px / 7));
-  }
-  #align main .calendar .days li {
-    font-size: 25px;
-  }
-}
-@media (min-width: 992px) {
-  #align .negativelogo {
-    height: 75px;
-  }
-  #align main .calendar {
-    max-width: 992px;
-  }
-  #align main .calendar .headerdate h1 {
-    font-size: 45px;
-  }
-  #align main .calendar .month {
-    margin: 20px 0;
-  }
-  #align main .calendar .month h2 {
-    font-size: 44px;
-  }
-  #align main .calendar .weekdays li {
-    font-size: 25px;
-    font-weight: bold;
-  }
-  #align main .calendar .days {
-    grid-template-rows: repeat(5, calc(992px / 7));
-  }
-  #align main .calendar .days li {
-    font-size: 32px;
-  }
-}
-#footer {
-  position: relative;
-  min-width: 320px;
-  width: 100%;
-  height: 377px;
-  margin: 0;
-  padding: 0;
-  background-color: var(--purple-1);
-  bottom: 0;
-  color: var(--white);
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-#footer div {
-  width: 100%;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-}
-#footer div .ssl {
-  display: none;
-}
-#footer div .links {
-  display: none;
-}
-#footer div .logo {
-  flex-direction: column;
-}
-#footer div .logo img {
-  width: 68px;
-  position: absolute;
-  bottom: 336px;
-  left: calc(50vw - 34px);
-}
-#footer div .sociais-icon {
-  width: 100%;
-  flex-direction: row;
-  position: absolute;
-  bottom: 266px;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: var(--space);
-}
-#footer div .sociais-icon svg path {
-  fill: #fff;
-}
-#footer div .sociais-icon svg + svg {
-  margin-left: 24px;
-}
-#footer div .contact {
-  flex-direction: column;
-  padding-left: 40px;
-  position: absolute;
-  bottom: 68px;
-}
-#footer div .contact ul {
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-}
-#footer div .contact ul li {
-  margin-bottom: 20px;
-  font-size: 18px;
-}
-#footer div .contact ul li a {
-  flex-direction: row;
-}
-#footer div .contact ul li a img {
-  margin-right: 10px;
-}
-#footer div .contact ul li a span {
-  color: var(--white);
-}
-#footer div .contact ul li .title {
-  font-weight: bold;
-  text-transform: uppercase;
-}
-#footer .copyright {
-  flex-direction: column;
-  position: absolute;
-  bottom: 15px;
-  align-self: flex-end;
-}
-#footer .copyright span {
-  font-size: 13px;
-  font-weight: bold;
-  color: var(--white);
-  text-align: center;
-}
-
-@media (min-width: 375px) {
-  #footer div .contact {
-    padding-left: 60px;
-  }
-  #footer div .contact ul li a img {
-    margin-right: var(--space);
-=======
->>>>>>> 44722a30187ca67941ea1ed5f50c3b4f2c5f6810
   }
 }
 @media (min-width: 1920px) {
