@@ -2312,47 +2312,44 @@ form.form button:hover {
   background-color: var(--gray-2);
   width: 300px;
   height: 344px;
-  text-align: center;
+  padding: 0 40px 0 10px;
+  text-align: left;
   align-self: center;
 }
 #clinic .clinic-services-1 .service-1 .clinic-box h2, #clinic .clinic-services-1 .service-2 .clinic-box h2, #clinic .clinic-services-2 .service-1 .clinic-box h2, #clinic .clinic-services-2 .service-2 .clinic-box h2 {
   font-size: 20px;
   color: var(--gray-1);
   font-weight: bold;
+  text-align: center;
 }
 #clinic .clinic-services-1 .service-1 .clinic-box p, #clinic .clinic-services-1 .service-2 .clinic-box p, #clinic .clinic-services-2 .service-1 .clinic-box p, #clinic .clinic-services-2 .service-2 .clinic-box p {
   font-size: 16px;
   color: var(--gray-6);
 }
+#clinic .clinic-services-1 .service-1 .imagem-1, #clinic .clinic-services-2 .service-1 .imagem-1 {
+  background: var(--purple-3);
+  width: 300px;
+  height: 232px;
+  opacity: 20%;
+  position: absolute;
+  z-index: 99;
+  align-self: center;
+}
+#clinic .clinic-services-1 .service-2 .imagem-2, #clinic .clinic-services-2 .service-2 .imagem-2 {
+  background: var(--purple-3);
+  width: 207px;
+  height: 310px;
+  opacity: 20%;
+  position: absolute;
+  z-index: 99;
+  align-self: center;
+}
 #clinic .clinic-services-1 .service-2 img, #clinic .clinic-services-2 .service-2 img {
   width: 207px;
   height: 310px;
 }
-#clinic .contact {
-  flex-direction: column;
-  width: 100%;
-  justify-content: center;
-}
-#clinic .contact h2 {
-  font-size: 30px;
-  font-family: "Open Sans";
-  color: var(--gray-1);
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
 #clinic .contact b {
   font-weight: bold;
-}
-#clinic .contact hr {
-  padding: 0;
-  margin: 20px;
-  width: 210px;
-  border-top: 2px solid var(--gray-1);
-  align-self: center;
-}
-#clinic .contact form {
-  margin-bottom: calc( var(--space) * 3 );
 }
 
 @media (min-width: 375px) {
@@ -2362,6 +2359,10 @@ form.form button:hover {
   }
   #clinic .clinic-services-1 .service-1 .clinic-box, #clinic .clinic-services-1 .service-2 .clinic-box, #clinic .clinic-services-2 .service-1 .clinic-box, #clinic .clinic-services-2 .service-2 .clinic-box {
     width: 358px;
+  }
+  #clinic .clinic-services-1 .service-1 .imagem-1, #clinic .clinic-services-2 .service-1 .imagem-1 {
+    width: 352px;
+    height: 322px;
   }
   #clinic .clinic-services-1 .service-2 img, #clinic .clinic-services-2 .service-2 img {
     width: 207px;
@@ -2381,6 +2382,9 @@ form.form button:hover {
   #clinic .clinic-services-1 .service-1, #clinic .clinic-services-1 .service-2, #clinic .clinic-services-2 .service-1, #clinic .clinic-services-2 .service-2 {
     flex-direction: row;
   }
+  #clinic .clinic-services-1 .service-1 .clinic-box h2, #clinic .clinic-services-1 .service-2 .clinic-box h2, #clinic .clinic-services-2 .service-1 .clinic-box h2, #clinic .clinic-services-2 .service-2 .clinic-box h2 {
+    text-align: left;
+  }
   #clinic .clinic-services-1 .service-1, #clinic .clinic-services-2 .service-1 {
     box-sizing: border-box;
     width: 95%;
@@ -2388,6 +2392,11 @@ form.form button:hover {
     float: left;
     align-self: center;
     align-self: center;
+  }
+  #clinic .clinic-services-1 .service-1 .imagem-1, #clinic .clinic-services-2 .service-1 .imagem-1 {
+    width: 297px;
+    height: 232px;
+    left: 449px;
   }
   #clinic .clinic-services-1 .service-1 img, #clinic .clinic-services-2 .service-1 img {
     position: relative;
@@ -2402,7 +2411,6 @@ form.form button:hover {
     height: 232px;
     width: 430px;
     padding: 0 40px 0 30px;
-    text-align: left;
   }
   #clinic .clinic-services-1 .service-2, #clinic .clinic-services-2 .service-2 {
     box-sizing: border-box;
@@ -2440,9 +2448,6 @@ form.form button:hover {
     float: left;
     align-self: center;
   }
-  #clinic .contact h2 {
-    padding: 0px 80px;
-  }
 }
 @media (min-width: 1200px) {
   #clinic .clinic-services-1 h1, #clinic .clinic-services-2 h1 {
@@ -2463,6 +2468,11 @@ form.form button:hover {
   #clinic .clinic-services-1 .service-1, #clinic .clinic-services-2 .service-1 {
     display: flex;
     align-self: center;
+  }
+  #clinic .clinic-services-1 .service-1 .imagem-1, #clinic .clinic-services-2 .service-1 .imagem-1 {
+    left: 735px;
+    width: 417px;
+    height: 305px;
   }
   #clinic .clinic-services-1 .service-1 img, #clinic .clinic-services-2 .service-1 img {
     position: relative;
@@ -2531,14 +2541,19 @@ form.form button:hover {
     float: left;
     align-self: center;
   }
+  #clinic .clinic-services-1 .service-1 .imagem-1, #clinic .clinic-services-2 .service-1 .imagem-1 {
+    left: 1330px;
+    height: 390px;
+    width: 350px;
+  }
   #clinic .clinic-services-1 .service-1 img, #clinic .clinic-services-2 .service-1 img {
     height: 390px;
     position: relative;
-    left: 1455px;
+    left: 1090px;
   }
   #clinic .clinic-services-1 .service-1 .clinic-box, #clinic .clinic-services-2 .service-1 .clinic-box {
     position: relative;
-    right: 450px;
+    right: 350px;
     width: 1445px;
     height: 390px;
   }
