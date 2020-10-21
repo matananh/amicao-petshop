@@ -1,0 +1,260 @@
+#aquario {
+    flex-direction: column;
+    align-items   : center;
+
+    .outdoor {
+        width           : 100%;
+        height          : 379px;
+        background-color: var(--pink-1);
+    }
+
+    .banners {
+        display: none;
+    }
+
+    .aquario-projects {
+        flex-direction: column;
+        align-items   : center;
+
+        .title-1 {
+            flex-direction : column;
+            justify-content: center;
+            width          : 100%;
+            margin-top     : 30px;
+
+            h1 {
+                color    : var(--gray-1);
+                margin   : 0;
+                padding  : 0;
+                font-size: 35px;
+
+                span {
+                    font-weight: bold;
+                }
+            }
+
+            hr {
+                padding         : 0;
+                border          : none;
+                width           : 210px;
+                height          : 2px;
+                background-color: var(--gray-1);
+                margin-top      : 15px;
+                margin-right    : 0;
+            }
+        }
+
+        .title-2 {
+            display: none;
+        }
+
+        .article-1,
+        .article-2 {
+            flex-direction  : column;
+            background-color: var(--gray-2);
+            align-items     : center;
+            width           : 254px;
+            margin-top      : 30px;
+            margin-bottom   : calc(var(--space) * 2);
+            position        : relative;
+
+            .overlay {
+                position        : absolute;
+                width           : 254px;
+                height          : 305px;
+                background-color: var(--purple-3);
+                opacity         : 0.4;
+            }
+
+            div {
+                flex-direction: column;
+
+                h2 {
+                    text-align : center;
+                    font-size  : 20px;
+                    font-weight: bold;
+                    color      : var(--gray-6);
+                }
+
+                p {
+                    text-align: justify;
+                    padding   : 5px;
+                    font-size : 16px;
+                    color     : var(--gray-1);
+
+                }
+            }
+
+
+        }
+
+    }
+}
+
+@media (min-width:768px) {
+
+    #aquario {
+        .aquario-projects {
+            flex-direction : row;
+            justify-content: space-around;
+            width          : 95%;
+
+            .title-1 {
+
+                width: 160px;
+
+                hr {
+                    margin-left: 0;
+                    width      : 160px;
+                }
+            }
+        }
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    #aquario {
+        .banners {
+            display        : flex;
+            justify-content: center;
+            width          : 100%;
+            height         : 351px;
+
+            .container {
+                width          : 100%;
+                height         : 350px;
+                justify-content: space-around;
+                margin-top     : var(--space);
+
+                div {
+                    position       : relative;
+                    justify-content: center;
+
+                    .overlay {
+                        position        : absolute;
+                        width           : 233px;
+                        height          : 350px;
+                        background-color: var(--purple-3);
+                        opacity         : 0.4;
+                    }
+                }
+
+            }
+        }
+
+        .aquario-projects {
+            flex-direction: column;
+
+            .title-1 {
+
+                width      : 95%;
+                align-items: flex-start;
+
+                hr {
+                    margin-left: 0;
+                    width      : 160px;
+                }
+            }
+
+            .title-2 {
+                display        : flex;
+                width          : 95%;
+                align-items    : flex-end;
+                flex-direction : column;
+                justify-content: center;
+
+
+                h1 {
+                    color    : var(--gray-1);
+                    margin   : 0;
+                    padding  : 0;
+                    font-size: 35px;
+
+                    span {
+                        font-weight: bold;
+                    }
+                }
+
+                hr {
+                    padding         : 0;
+                    border          : none;
+                    width           : 210px;
+                    height          : 2px;
+                    background-color: var(--gray-1);
+                    margin-top      : 15px;
+                    margin-right    : 0;
+                }
+
+            }
+
+            .article-1 {
+                width         : 95%;
+                flex-direction: row-reverse;
+
+                div {
+                    flex-direction: column;
+                    align-items   : flex-start;
+                    padding       : var(--space);
+                }
+            }
+
+            .article-2 {
+                width         : 95%;
+                flex-direction: row;
+
+                div {
+                    flex-direction: column;
+                    align-items   : flex-start;
+                    padding       : var(--space);
+                }
+            }
+        }
+    }
+
+}
+
+
+
+@media (min-width: 1200px) {
+    #aquario {
+        .banners {
+            .container {
+                width: 90%;
+            }
+        }
+
+        .aquario-projects {
+            width: 90%;
+
+            .title-1 {
+                h1 {
+                    font-size: 50px;
+                }
+            }
+
+            .title-2 {
+                h1 {
+                    font-size: 50px;
+                }
+            }
+        }
+    }
+
+}
+
+
+@media (min-width: 1920px) {
+    #aquario {
+        .banners {
+            .container {
+                width: 60%;
+            }
+        }
+
+        .aquario-projects {
+            width: 60%;
+        }
+    }
+}
