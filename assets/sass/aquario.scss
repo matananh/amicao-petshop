@@ -3,8 +3,19 @@
   
     .outdoor {
         width           : 100%;
-        height          : 379px;
-        background-color: var(--pink-1);
+        height          : 634px;
+        position: relative;
+        background-image: url('/amicao-petshop/assets/images/banners/banner-aquario.webp');
+        background-position: center; 
+        background-size: cover; 
+
+        .overlay {
+            width: 100%;
+            height: 634px;
+            position: absolute;
+            background-color: var(--pink-1);
+            opacity: 0.2;
+        }
     }
 
     .banners {
@@ -89,35 +100,7 @@
         }
 
     }
-
-    .contact-aquario {
-       flex-direction: column;
-       margin-bottom: calc(var(--space)* 2);     
-      
-       .title {
-           align-items: center;
-           text-align: center;
-           flex-direction: column;
-           h2 { 
-            padding: 10px;   
-            font-size: 28px;
-            color: var(--gray-1);
-            margin: 0;
-            span {
-                font-weight: bold;
-            }            
-        }
-        hr { 
-          display: flex;               
-          width: 210px;
-          border: none;
-          height: 2px;
-          background-color: var(--gray-1);
-          margin: 0;
-          padding: 0;
-        }
-       }
-    }
+  
 }
 
 @media (min-width:768px) {
@@ -137,13 +120,7 @@
                 }
             }
         }
-        .contact-aquario {           
-            .title {
-                hr {
-                    display: none;
-                }
-            }
-        }
+      
     }
 
 }
@@ -170,7 +147,7 @@
                     .overlay {
                         position        : absolute;
                         width           : 233px;
-                        height          : 350px;
+                        height          : 305px;
                         background-color: var(--purple-3);
                         opacity         : 0.4;
                     }
@@ -245,10 +222,7 @@
                 }
             }
         }
-        .contact-aquario {
-            width: 100%;
-            align-items: center;
-        }
+       
     }
 
 }
@@ -295,13 +269,7 @@
                 }
             }
         }
-
-        .contact-aquario {           
-            align-items: center;
-            width: 90%;
-           margin: 0 auto;
-           margin-bottom: 50px;
-        }
+      
     }
 
 }

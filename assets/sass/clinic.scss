@@ -2,9 +2,20 @@
     flex-direction: column;
     position: relative;
     header {
-        background-color: var(--purple-1);
-        height: 200px;
-        width: 100%;
+        width           : 100%;
+        height          : 451px;
+        position: relative;
+        background-image: url('/amicao-petshop/assets/images/banner-clinica.webp');
+        background-repeat: no-repeat;
+        background-position: center;  
+
+        .overlay {
+            width: 100%;
+            height: 451px;
+            position: absolute;
+            background-color: var(--pink-1);
+            opacity: 0.2;
+        }
     }
     .clinic-services-1, .clinic-services-2 {
         flex-direction: column;
@@ -41,12 +52,14 @@
                 background-color: var(--gray-2);
                 width: 300px;
                 height: 344px;
-                text-align: center;
+                padding: 0 40px 0 10px;
+                text-align: left;
                 align-self: center;
                 h2 {
                     font-size: 20px;
                     color: var(--gray-1);
                     font-weight: bold;
+                    text-align: center;
                 }
                 p {
                     font-size: 16px;
@@ -54,7 +67,27 @@
                 }
             }
         }
+        .service-1 {
+            .imagem-1 {
+                background: var(--purple-3);
+                width: 300px;
+                height: 232px;
+                opacity: 20%;
+                position: absolute;
+                z-index: 99;
+                align-self: center;
+            }
+        }
         .service-2 {
+            .imagem-2 {
+                background: var(--purple-3);
+                width: 207px;
+                height: 310px;
+                opacity: 20%;
+                position: absolute;
+                z-index: 99;
+                align-self: center;
+            }
             img {
                 width: 207px;
                 height: 310px;
@@ -62,29 +95,8 @@
         }
     }
     .contact {
-        flex-direction: column;
-        width: 100%;
-        justify-content: center;
-        h2 {
-            font-size: 30px;
-            font-family: 'Open Sans';
-            color: var(--gray-1);
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
         b {
             font-weight: bold;
-        }
-        hr {
-            padding: 0;
-            margin: 20px;
-            width: 210px;
-            border-top: 2px solid var(--gray-1);
-            align-self: center;
-        }
-        form {
-            margin-bottom: calc( var(--space) * 3 );
         }
     }
 }
@@ -99,6 +111,12 @@
                 }
                 .clinic-box {
                     width: 358px;
+                }
+            }
+            .service-1 {
+                .imagem-1 {
+                    width: 352px;
+                    height: 322px;
                 }
             }
             .service-2 {
@@ -125,6 +143,11 @@
             }
             .service-1, .service-2 {
                 flex-direction: row;
+                .clinic-box {
+                    h2 {
+                        text-align: left;
+                    }
+                }
             }
             .service-1 {
                 box-sizing: border-box;
@@ -133,6 +156,11 @@
                 float: left;
                 align-self: center;
                 align-self: center;
+                .imagem-1 {
+                    width: 297px;
+                    height: 232px;
+                    left: 449px;
+                }
                 img {
                     position: relative;
                     width: 300px;
@@ -146,7 +174,6 @@
                     height: 232px;
                     width: 430px;
                     padding: 0 40px 0 30px;
-                    text-align: left;
                 }
             }
             .service-2 {
@@ -189,9 +216,6 @@
             border: none;
             float: left;
             align-self: center;
-            h2 {
-                padding: 0px 80px;
-            }
         }
     }
 }
@@ -217,6 +241,11 @@
             .service-1 {
                 display: flex;
                 align-self: center;
+                .imagem-1 {
+                    left: 735px;
+                    width: 417px;
+                    height: 305px;
+                }
                 img {
                     position: relative;
                     left: 540px;
@@ -291,14 +320,19 @@
                 align-self: center;
             }
             .service-1 {
+                .imagem-1 {
+                    left: 1330px;
+                    height: 390px;
+                    width: 350px;
+                }
                 img {
                     height: 390px;
                     position: relative;
-                    left: 1455px;
+                    left: 1090px;
                 }
                 .clinic-box {
                     position: relative;
-                    right: 450px;
+                    right: 350px;
                     width: 1445px;
                     height: 390px;
                     h2 {
