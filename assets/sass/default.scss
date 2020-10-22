@@ -53,9 +53,43 @@ body {
         }
         form {
             margin-bottom: calc( var(--space) * 3 );
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 40px;
+            .field {
+                flex-direction: column;
+                width: 100%;
+                margin-bottom: 50px;
+                label {
+                    font-family: 'Open Sans';
+                    font-size: 20px;
+                    color: var(--gray-1);
+                    transition: color .2s ease-in-out;
+                }
+                input {
+                    border: none;
+                    border-bottom: 1px solid var(--gray-1);
+                    font-size: 22px;
+                    transition: border-color .2s ease-in-out;
+                    &:focus {
+                        border: none;
+                        border-bottom: 1px solid var(--pink-1);
+                        outline: none;
+                        + label {
+                            color: var(--pink-1);
+                        }
+                    }
+                }
+            }
+            button {
+                @include button-pink;
+            }
         }
     }
 }
+
 hr {
     &.divider {
         border: none;
@@ -64,10 +98,14 @@ hr {
         margin-top: 60px;
     }
 }
+
 @media (min-width: 768px) {
     .contact {
-        h2 {
+        h2 { 
             padding: 0px 80px;
+        }
+        form {
+            padding: 40px 80px;
         }
     }
 }
@@ -76,6 +114,15 @@ hr {
     body {
         main {
             min-height: calc(100vh - calc(50px + 250px));  
+        }
+        .contact {
+            padding: 0 100px;
+            form {
+                border: 1px solid var(--gray-1);
+                margin-top: 60px;
+                padding: 40px 200px;
+               
+            }
         }
     }
 }
