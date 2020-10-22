@@ -1,7 +1,6 @@
 #aquario {
     flex-direction: column;
-    align-items   : center;
-
+  
     .outdoor {
         width           : 100%;
         height          : 379px;
@@ -14,7 +13,7 @@
 
     .aquario-projects {
         flex-direction: column;
-        align-items   : center;
+        margin: 0 auto;
 
         .title-1 {
             flex-direction : column;
@@ -53,6 +52,7 @@
             flex-direction  : column;
             background-color: var(--gray-2);
             align-items     : center;
+            margin: 0 auto;
             width           : 254px;
             margin-top      : 30px;
             margin-bottom   : calc(var(--space) * 2);
@@ -89,6 +89,35 @@
         }
 
     }
+
+    .contact-aquario {
+       flex-direction: column;
+       margin-bottom: calc(var(--space)* 2);     
+      
+       .title {
+           align-items: center;
+           text-align: center;
+           flex-direction: column;
+           h2 { 
+            padding: 10px;   
+            font-size: 28px;
+            color: var(--gray-1);
+            margin: 0;
+            span {
+                font-weight: bold;
+            }            
+        }
+        hr { 
+          display: flex;               
+          width: 210px;
+          border: none;
+          height: 2px;
+          background-color: var(--gray-1);
+          margin: 0;
+          padding: 0;
+        }
+       }
+    }
 }
 
 @media (min-width:768px) {
@@ -96,16 +125,22 @@
     #aquario {
         .aquario-projects {
             flex-direction : row;
-            justify-content: space-around;
-            width          : 95%;
-
+            width: 97%;
+          
             .title-1 {
-
+                margin-left: 10px;
                 width: 160px;
 
                 hr {
                     margin-left: 0;
                     width      : 160px;
+                }
+            }
+        }
+        .contact-aquario {           
+            .title {
+                hr {
+                    display: none;
                 }
             }
         }
@@ -145,13 +180,12 @@
         }
 
         .aquario-projects {
-            flex-direction: column;
-
-            .title-1 {
-
-                width      : 95%;
-                align-items: flex-start;
-
+            flex-direction: column;           
+            margin-top: var(--space);
+            .title-1 {             
+               width: 305px;
+               margin-left: var(--space);
+               
                 hr {
                     margin-left: 0;
                     width      : 160px;
@@ -211,6 +245,10 @@
                 }
             }
         }
+        .contact-aquario {
+            width: 100%;
+            align-items: center;
+        }
     }
 
 }
@@ -229,16 +267,40 @@
             width: 90%;
 
             .title-1 {
+                width: 432px;
+                align-items: flex-end;
+                
                 h1 {
                     font-size: 50px;
                 }
             }
 
             .title-2 {
+              
+               width: 97%;
+               
                 h1 {
                     font-size: 50px;
                 }
             }
+
+            .article-1,.article-2 {
+                div {
+                    h2 {
+                        font-size: 25px;
+                    }
+                    p{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+
+        .contact-aquario {           
+            align-items: center;
+            width: 90%;
+           margin: 0 auto;
+           margin-bottom: 50px;
         }
     }
 
