@@ -671,7 +671,7 @@ hr.divider {
   text-align: center;
   padding: 5px;
   margin-bottom: 10px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 #home .store {
   flex-direction: column;
@@ -721,7 +721,7 @@ hr.divider {
   text-align: center;
   padding: 5px;
   margin-bottom: 10px;
-  border-radius: 10px;
+  border-radius: 5px;
   z-index: 2;
 }
 #home .aquarius {
@@ -818,18 +818,21 @@ hr.divider {
   z-index: 2;
   align-self: center;
 }
-#home .address .address_1 {
+#home .address div {
+  flex-direction: column;
+}
+#home .address div .address_1 {
   margin-bottom: var(--space);
 }
-#home .address .address_1, #home .address .address_2 {
+#home .address div .address_1, #home .address div .address_2 {
   justify-content: center;
   flex-direction: column;
 }
-#home .address .address_1 img, #home .address .address_2 img {
+#home .address div .address_1 img, #home .address div .address_2 img {
   width: 280px;
   align-self: center;
 }
-#home .address .address_1 .background_banner, #home .address .address_2 .background_banner {
+#home .address div .address_1 .background_banner, #home .address div .address_2 .background_banner {
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -839,22 +842,22 @@ hr.divider {
   z-index: 2;
   margin-top: 30px;
 }
-#home .address .address_1 .background_banner img, #home .address .address_2 .background_banner img {
+#home .address div .address_1 .background_banner img, #home .address div .address_2 .background_banner img {
   width: 170px;
   height: 150px;
   transform: rotateX(180deg);
 }
-#home .address .address_1 .background_banner .square, #home .address .address_2 .background_banner .square {
+#home .address div .address_1 .background_banner .square, #home .address div .address_2 .background_banner .square {
   position: absolute;
   flex-direction: column;
   width: 165px;
-  height: 120px;
+  height: 125px;
   background-color: var(--pink-1);
   align-items: center;
   justify-content: center;
   padding: 0 15px;
 }
-#home .address .address_1 .background_banner .square .title_banner, #home .address .address_2 .background_banner .square .title_banner {
+#home .address div .address_1 .background_banner .square .title_banner, #home .address div .address_2 .background_banner .square .title_banner {
   font-size: 15px;
   color: var(--white);
   font-weight: 300;
@@ -863,25 +866,12 @@ hr.divider {
   align-self: start;
   margin-bottom: 5px;
 }
-#home .address .address_1 .background_banner .square .text_banner, #home .address .address_2 .background_banner .square .text_banner {
+#home .address div .address_1 .background_banner .square .text_banner, #home .address div .address_2 .background_banner .square .text_banner {
   font-size: 12px;
   color: var(--white);
   margin: 0;
   padding: 0;
   align-self: start;
-}
-#home .address .address_1 .background_banner .square .btn-pink, #home .address .address_2 .background_banner .square .btn-pink {
-  text-decoration: none;
-  color: var(--white);
-  font-size: 18px;
-  font-weight: bold;
-  width: 144px;
-  height: 36px;
-  border: var(--white) 1px Solid;
-  text-align: center;
-  padding: 5px;
-  border-radius: 5px;
-  margin-bottom: 5px;
 }
 #home .space {
   width: 100%;
@@ -898,6 +888,823 @@ hr.divider {
   font-weight: bold;
 }
 
+@media (min-width: 375px) {
+  #home .banner {
+    height: 400px;
+  }
+  #home .banner div {
+    width: 100%;
+    margin-top: 70px;
+    margin-right: 30px;
+  }
+  #home .banner div div.hr {
+    width: 88%;
+    height: 60px;
+  }
+  #home .banner div div.hr h1 {
+    font-size: 27px;
+  }
+  #home .banner div div.hr h2 {
+    font-size: 20px;
+  }
+  #home .banho_tosa {
+    height: 470px;
+  }
+  #home .banho_tosa .background_tosa img {
+    margin-top: 150px;
+  }
+  #home .banho_tosa .background_tosa .background_color {
+    height: 470px;
+  }
+  #home .banho_tosa .content_tosa {
+    height: 470px;
+  }
+  #home .banho_tosa .content_tosa .btn-pink-2 {
+    margin-bottom: 30px;
+  }
+  #home .store {
+    height: 500px;
+  }
+  #home .store .background_store {
+    height: 500px;
+  }
+  #home .store .background_banner {
+    display: none;
+  }
+  #home .store .store_products {
+    margin-bottom: 20px;
+  }
+  #home .store .store_products img {
+    width: 315px;
+  }
+  #home .aquarius {
+    height: 926px;
+  }
+  #home .aquarius .background_aquarius {
+    height: 926px;
+  }
+  #home .aquarius .background_banner img {
+    width: 315px;
+    height: 276px;
+  }
+  #home .aquarius .background_banner .square {
+    left: 35px;
+    width: 302px;
+    height: 227px;
+  }
+  #home .address {
+    height: 915px;
+  }
+  #home .address .background_address {
+    height: 915px;
+  }
+  #home .address div .address_1 img, #home .address div .address_2 img {
+    width: 315px;
+  }
+}
+@media (min-width: 768px) {
+  #home .banner {
+    height: 500px;
+  }
+  #home .banner div {
+    width: 100%;
+    margin-top: 80px;
+    margin-right: 100px;
+  }
+  #home .banner div div.hr {
+    width: 65%;
+    height: 80px;
+    border-left: var(--white) 2px Solid;
+  }
+  #home .banner div div.hr h1 {
+    font-size: 35px;
+  }
+  #home .banner div div.hr h2 {
+    font-size: 25px;
+  }
+  #home .hotel {
+    width: 100%;
+    height: 700px;
+  }
+  #home .hotel div {
+    justify-content: center;
+  }
+  #home .hotel div img.arrow {
+    display: none;
+  }
+  #home .hotel div .carrosel img {
+    width: 220px;
+    margin: 0 10px;
+  }
+  #home .hotel div .carrosel img.img1 {
+    display: flex;
+  }
+  #home .hotel div .carrosel img.img3 {
+    display: flex;
+  }
+  #home .hotel div .carrosel img + img {
+    margin-left: 15px;
+  }
+  #home .banho_tosa {
+    height: 500px;
+  }
+  #home .banho_tosa .background_tosa img {
+    margin-top: 50px;
+  }
+  #home .banho_tosa .background_tosa .background_color {
+    height: 500px;
+  }
+  #home .banho_tosa .content_tosa {
+    height: 500px;
+  }
+  #home .banho_tosa .content_tosa .btn-pink-2 {
+    margin-bottom: 20px;
+  }
+  #home .store {
+    height: 500px;
+  }
+  #home .store .background_store {
+    height: 500px;
+  }
+  #home .store .store_products {
+    margin-bottom: 20px;
+  }
+  #home .store .store_products img {
+    width: 280px;
+  }
+  #home .aquarius {
+    height: 1200px;
+  }
+  #home .aquarius .background_aquarius {
+    height: 1200px;
+  }
+  #home .aquarius > img {
+    align-self: center;
+    max-width: 600px;
+    height: 600px;
+  }
+  #home .aquarius .background_banner .square {
+    left: 230px;
+  }
+  #home .address {
+    height: 650px;
+  }
+  #home .address .background_address {
+    height: 650px;
+  }
+  #home .address div {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  #home .address div .address_1 {
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
+  #home .address div .address_1, #home .address div .address_2 {
+    justify-content: center;
+    flex-direction: column;
+  }
+  #home .address div .address_1 img, #home .address div .address_2 img {
+    width: 350px;
+    align-self: center;
+  }
+  #home .address div .address_1 .background_banner, #home .address div .address_2 .background_banner {
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+  #home .address div .address_1 .background_banner img, #home .address div .address_2 .background_banner img {
+    width: 250px;
+    height: 200px;
+  }
+  #home .address div .address_1 .background_banner .square, #home .address div .address_2 .background_banner .square {
+    width: 220px;
+    height: 170px;
+  }
+  #home .address div .address_1 .background_banner .square .title_banner, #home .address div .address_2 .background_banner .square .title_banner {
+    font-size: 20px;
+  }
+  #home .address div .address_1 .background_banner .square .text_banner, #home .address div .address_2 .background_banner .square .text_banner {
+    font-size: 16px;
+  }
+  #home .title {
+    font-size: 40px;
+  }
+}
+@media (min-width: 1200px) {
+  #home .banner {
+    width: 100%;
+    height: 720px;
+    justify-content: center;
+  }
+  #home .banner div {
+    margin-top: 50px;
+    margin-right: 150px;
+  }
+  #home .banner div div.hr {
+    width: 76%;
+    height: 150px;
+  }
+  #home .banner div div.hr h1 {
+    font-size: 70px;
+  }
+  #home .banner div div.hr h2 {
+    font-size: 50px;
+  }
+  #home .banner div button {
+    margin-top: 50px;
+    width: 200px;
+    height: 50px;
+    font-size: 18px;
+  }
+  #home .banner img {
+    width: 90%;
+  }
+  #home .hotel {
+    height: 715px;
+    flex-direction: row;
+    margin: 0;
+    padding: 10px;
+    position: relative;
+  }
+  #home .hotel h3.title {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    top: 30px;
+    left: 40px;
+  }
+  #home .hotel div {
+    width: 50vw;
+  }
+  #home .hotel div .carrosel img {
+    width: 280px;
+  }
+  #home .hotel div .carrosel img.img1 {
+    position: absolute;
+    top: 300px;
+    left: 300px;
+  }
+  #home .hotel div .carrosel img.img2 {
+    position: absolute;
+    top: 196px;
+    left: 30px;
+  }
+  #home .hotel div .carrosel img.img3 {
+    position: absolute;
+    top: 136px;
+    left: 310px;
+  }
+  #home .hotel .background_banner {
+    width: 50vw;
+    margin-bottom: 20px;
+  }
+  #home .hotel .background_banner img {
+    width: 570px;
+    height: 525px;
+  }
+  #home .hotel .background_banner .square {
+    left: 20px;
+    width: 530px;
+    height: 480px;
+    background-color: var(--gray-2);
+  }
+  #home .hotel .background_banner .square .title_banner {
+    font-size: 30px;
+    color: var(--purple-2);
+    font-weight: 300;
+  }
+  #home .hotel .background_banner .square .text_banner {
+    display: flex;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--purple-2);
+  }
+  #home .hotel .background_banner .square .btn-pink {
+    background-color: var(--pink-1);
+    border: none;
+    position: absolute;
+    bottom: -100px;
+    left: -90px;
+    z-index: 2;
+  }
+  #home .banho_tosa {
+    height: 780px;
+  }
+  #home .banho_tosa .background_tosa img {
+    width: 100%;
+    margin-top: 130px;
+    z-index: 0;
+  }
+  #home .banho_tosa .background_tosa .background_color {
+    width: 100%;
+    height: 780px;
+    z-index: 2;
+  }
+  #home .banho_tosa .content_tosa {
+    flex-direction: column;
+    z-index: 2;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 780px;
+  }
+  #home .banho_tosa .content_tosa div {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    justify-content: center;
+    align-items: center;
+  }
+  #home .banho_tosa .content_tosa div .title {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  #home .banho_tosa .content_tosa div .text_tosa {
+    display: flex;
+    color: var(--white);
+    width: 310px;
+    height: 55px;
+    background-color: var(--purple-3);
+    opacity: 85%;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+  }
+  #home .banho_tosa .content_tosa .btn-pink {
+    display: flex;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: var(--pink-1);
+    width: 166px;
+    height: 36px;
+    text-align: center;
+    justify-content: center;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 15px;
+  }
+  #home .banho_tosa .content_tosa .btn-pink-2 {
+    display: none;
+  }
+  #home .store {
+    flex-direction: column;
+    width: 100%;
+    height: 792px;
+    align-items: center;
+    background-color: var(--white);
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+  #home .store .background_store {
+    background-color: var(--purple-3);
+    opacity: 30%;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    height: 792px;
+  }
+  #home .store > h3 {
+    z-index: 3;
+    position: absolute;
+    top: 60px;
+    left: 50px;
+    margin: 0;
+    padding: 0;
+  }
+  #home .store .background_banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+  #home .store .background_banner img {
+    width: 570px;
+    height: 525px;
+    position: absolute;
+    top: 150px;
+    left: 50px;
+  }
+  #home .store .background_banner .square {
+    left: 20px;
+    width: 530px;
+    height: 480px;
+    background-color: var(--pink-1);
+    position: absolute;
+    flex-direction: column;
+    padding: 15px;
+    top: 180px;
+    left: 60px;
+  }
+  #home .store .background_banner .square .title_banner {
+    color: var(--white);
+    font-size: 35px;
+    font-weight: 300;
+    margin: 0;
+  }
+  #home .store .background_banner .square .text_banner {
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 300;
+  }
+  #home .store .store_products {
+    z-index: 0;
+    margin-bottom: 10px;
+  }
+  #home .store .store_products img {
+    width: 544px;
+    position: absolute;
+    right: 50px;
+    top: 130px;
+  }
+  #home .store .btn-pink {
+    display: flex;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: var(--pink-1);
+    width: 186px;
+    height: 36px;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    z-index: 3;
+    position: absolute;
+    justify-content: center;
+    bottom: 25px;
+  }
+  #home .store .btn-pink2 {
+    display: none;
+  }
+  #home .aquarius {
+    width: 100%;
+    height: 768px;
+    margin: 0;
+    padding: 0;
+  }
+  #home .aquarius .background_aquarius {
+    height: 768px;
+    z-index: 2;
+  }
+  #home .aquarius > img {
+    width: 641px;
+    height: 768px;
+    margin-top: 100px;
+    z-index: 1;
+    position: absolute;
+    margin: 0;
+    top: 0;
+    left: 0;
+  }
+  #home .aquarius > h3.title {
+    z-index: 3;
+    position: absolute;
+    align-self: center;
+    margin: 0;
+    padding: 0;
+    top: 15px;
+    right: 85px;
+  }
+  #home .aquarius .background_banner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    flex-direction: column;
+    z-index: 2;
+  }
+  #home .aquarius .background_banner img {
+    margin: 0;
+    padding: 0;
+    width: 550px;
+    height: 525px;
+    position: absolute;
+    right: 20px;
+    z-index: 3;
+  }
+  #home .aquarius .background_banner .square {
+    position: relative;
+    flex-direction: column;
+    left: 300px;
+    width: 510px;
+    height: 470px;
+    background-color: var(--gray-2);
+    justify-content: center;
+    padding: 0 15px;
+    z-index: 4;
+    margin: 0;
+    padding: 15px;
+  }
+  #home .aquarius .background_banner .square .title_banner {
+    font-size: 30px;
+    color: var(--purple-2);
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+  }
+  #home .aquarius .background_banner .square .text_banner {
+    display: flex;
+    font-size: 20px;
+    color: var(--purple-2);
+  }
+  #home .aquarius .background_banner .square .btn-pink {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 18px;
+    font-weight: bold;
+    width: 144px;
+    height: 36px;
+    background-color: var(--pink-1);
+    border: none;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    position: absolute;
+    bottom: -100px;
+    left: -20px;
+  }
+  #home .address {
+    background-color: var(--white);
+    flex-direction: column;
+    width: 100%;
+    height: 864px;
+    position: relative;
+  }
+  #home .address .background_address {
+    background-color: var(--blue-2);
+    opacity: 30%;
+    position: absolute;
+    width: 100%;
+    height: 864px;
+    z-index: 0;
+  }
+  #home .address .title {
+    z-index: 2;
+    align-self: flex-start;
+    padding-left: 115px;
+  }
+  #home .address div {
+    flex-direction: row;
+  }
+  #home .address div .address_1 img {
+    width: 518px;
+    align-self: center;
+  }
+  #home .address div .address_1 .background_banner img {
+    width: 315px;
+    height: 275px;
+  }
+  #home .address div .address_1 .background_banner .square {
+    width: 302px;
+    height: 227px;
+  }
+  #home .address div .address_1 .background_banner .square .title_banner {
+    font-size: 35px;
+  }
+  #home .address div .address_1 .background_banner .square .text_banner {
+    font-size: 20px;
+  }
+  #home .address div .address_2 {
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+  #home .address div .address_2 img {
+    width: 518px;
+    align-self: center;
+  }
+  #home .address div .address_2 .background_banner {
+    margin-bottom: 20px;
+    margin-top: 30px;
+  }
+  #home .address div .address_2 .background_banner img {
+    width: 315px;
+    height: 275px;
+    transform: rotateX(0deg);
+  }
+  #home .address div .address_2 .background_banner .square {
+    width: 302px;
+    height: 227px;
+  }
+  #home .address div .address_2 .background_banner .square .title_banner {
+    font-size: 35px;
+  }
+  #home .address div .address_2 .background_banner .square .text_banner {
+    font-size: 20px;
+  }
+  #home .space {
+    display: none;
+  }
+  #home .title {
+    font-size: 50px;
+  }
+}
+@media (min-width: 1920px) {
+  #home .banner {
+    height: 1029px;
+  }
+  #home .banner div div.hr {
+    width: 45%;
+  }
+  #home .hotel {
+    height: 1080px;
+  }
+  #home .hotel div {
+    width: 50vw;
+  }
+  #home .hotel div .carrosel img {
+    width: 315px;
+  }
+  #home .hotel div .carrosel img.img1 {
+    top: 400px;
+    left: 400px;
+  }
+  #home .hotel div .carrosel img.img2 {
+    top: 300px;
+    left: 50px;
+  }
+  #home .hotel div .carrosel img.img3 {
+    top: 150px;
+    left: 410px;
+  }
+  #home .hotel .background_banner {
+    width: 50vw;
+    margin-bottom: 20px;
+  }
+  #home .hotel .background_banner img {
+    width: 590px;
+    height: 570px;
+  }
+  #home .hotel .background_banner .square {
+    left: 190px;
+    width: 550px;
+    height: 510px;
+  }
+  #home .hotel .background_banner .square .title_banner {
+    font-size: 35px;
+    margin: 0;
+    padding: 0;
+  }
+  #home .hotel .background_banner .square .text_banner {
+    display: flex;
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--purple-2);
+  }
+  #home .hotel .background_banner .square .btn-pink {
+    bottom: -270px;
+    left: -290px;
+  }
+  #home .banho_tosa {
+    height: 1080px;
+  }
+  #home .banho_tosa .background_tosa img {
+    width: 100vw;
+    margin-top: 60px;
+  }
+  #home .banho_tosa .background_tosa .background_color {
+    width: 100vw;
+    height: 1080px;
+  }
+  #home .banho_tosa .content_tosa {
+    height: 1080px;
+  }
+  #home .banho_tosa .content_tosa div {
+    right: 100px;
+  }
+  #home .banho_tosa .content_tosa div .title {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  #home .banho_tosa .content_tosa div .text_tosa {
+    width: 350px;
+    height: 70px;
+    font-size: 18px;
+  }
+  #home .store {
+    width: 100%;
+    height: 1080px;
+  }
+  #home .store .background_store {
+    height: 1080px;
+  }
+  #home .store > h3 {
+    left: 100px;
+  }
+  #home .store .background_banner img {
+    width: 590px;
+    height: 570px;
+    top: 250px;
+    left: 90px;
+  }
+  #home .store .background_banner .square {
+    width: 530px;
+    height: 510px;
+    top: 270px;
+    left: 110px;
+  }
+  #home .store .store_products {
+    z-index: 0;
+    margin-bottom: 10px;
+  }
+  #home .store .store_products img {
+    width: 650px;
+    position: absolute;
+    right: 150px;
+    top: 220px;
+  }
+  #home .aquarius {
+    width: 100%;
+    height: 1080px;
+  }
+  #home .aquarius .background_aquarius {
+    height: 1080px;
+  }
+  #home .aquarius > img {
+    width: 1000px;
+    height: 1080px;
+  }
+  #home .aquarius > h3.title {
+    top: 30px;
+    right: 115px;
+  }
+  #home .aquarius .background_banner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    flex-direction: column;
+    z-index: 2;
+  }
+  #home .aquarius .background_banner img {
+    width: 590px;
+    height: 570px;
+    right: 80px;
+  }
+  #home .aquarius .background_banner .square {
+    left: 580px;
+    width: 550px;
+    height: 510px;
+  }
+  #home .aquarius .background_banner .square .btn-pink {
+    bottom: -150px;
+  }
+  #home .address {
+    height: 1080px;
+  }
+  #home .address .background_address {
+    height: 1080px;
+  }
+  #home .address div .address_1 {
+    margin-right: 100px;
+  }
+  #home .address div .address_1 img {
+    width: 600px;
+  }
+  #home .address div .address_1 .background_banner img {
+    width: 350px;
+    height: 300px;
+  }
+  #home .address div .address_1 .background_banner .square {
+    width: 330px;
+    height: 250px;
+  }
+  #home .address div .address_2 img {
+    width: 600px;
+  }
+  #home .address div .address_2 .background_banner img {
+    width: 350px;
+    height: 300px;
+  }
+  #home .address div .address_2 .background_banner .square {
+    width: 330px;
+    height: 250px;
+  }
+  #home .space {
+    display: none;
+  }
+  #home .title {
+    font-size: 50px;
+  }
+}
 #store {
   flex-direction: column;
   align-items: center;
