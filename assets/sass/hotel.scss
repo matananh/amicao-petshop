@@ -30,7 +30,7 @@
             width: 210px;
             border-top: 2px solid var(--gray-1);
         }
-        section {
+        section.hotel {
             flex-direction: column;
             width: 100%;
             margin-top: 50px;
@@ -96,7 +96,7 @@
 @media(min-width: 768px) {
     #hotel {
         > div {
-            section {
+            section.hotel {
                 .card {
                     margin: 14px 32px 0px 32px;
                     p.desktop {
@@ -119,7 +119,7 @@
                 font-size: 50px;
                 width: 500px;
             }
-            section {
+            > section.hotel {
                 flex-direction: row;
                 padding: 0 100px;
                 &.reverse {
@@ -139,6 +139,9 @@
                 .image-2 {
                     width: 476px;
                     height: 283px;                    
+                }
+                &.contact {
+                    flex-direction: column;
                 }
             }
         }
