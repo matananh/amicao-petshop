@@ -11,13 +11,24 @@
             margin-left: 5px;
         }
     }
-    .logo {
-        width: 70px;
-        top: 25px;
-        position: absolute;
-        right: calc(50vw - 35px);
-        z-index: 6;
-        transition: right .5s ease-in-out;
+    div {
+        .logo {
+            width: 70px;
+            top: 25px;
+            position: absolute;
+            right: calc(50vw - 35px);
+            z-index: 6;
+            transition: right .5s ease-in-out;
+        }
+        .background_logo {
+            width: 100vw;
+            height: 70px;
+            position: absolute;
+            left: 0;
+            top: 62px;
+            background-color: var(--purple-3);
+            z-index: 1;
+        }
     }
     .overlay {
         right: -320px;
@@ -33,8 +44,10 @@
         width: 42px;
     }
     &.open-menu {
-        .logo {
-            right: calc(140px - 35px);
+        div {
+            .logo {
+                right: calc(140px - 35px);
+            }
         }
         .overlay {
             display: flex;
@@ -81,7 +94,7 @@
                         margin: 0;
                         padding: 0;
                         li {
-                            margin-top: 20px;
+                            margin-top: 25px;
                             a{
                                 color: var(--white);
                                 text-decoration: none;
@@ -90,7 +103,7 @@
                         }
                     }
                     ul + hr {
-                        margin-top: 20px;
+                        margin-top: 10px;
                     }
                     .wrap {
                         width: 100%;
@@ -113,10 +126,51 @@
                                 margin-left: 5px;
                             }
                         }
+                        .logged {
+                            display: none;
+                        }
                         .social-icons {
                             margin-top: 30px;
                             img + img {
                                 margin-left: 23px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.logged {
+        .overlay {
+            nav {
+                .menu {
+                    .wrap {
+                        .btn-login {
+                            display: none;
+                        }
+                        .logged {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            img {
+                                width: 40px;
+                                height: 40px;
+                                margin-bottom: 5px;
+                            }
+                            div{
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                .user_name {
+                                    font-size: 15px;
+                                    font-weight: bold;
+                                    color: var(--white);
+                                }
+                                .user_email {
+                                    font-size: 11px;
+                                    color: var(--white);
+                                }
                             }
                         }
                     }
@@ -133,9 +187,11 @@
                 margin-left: 10px;
             }
         }
-        .logo {
-            width: 78px;
-            right: calc(50vw - 39px);
+        div {
+            .logo {
+                width: 78px;
+                right: calc(50vw - 39px);
+            }
         }
         .overlay {
             right: -375px;
@@ -144,8 +200,10 @@
             right: 37px;
         }
         &.open-menu {
-            .logo {
-                right: calc(150px - 39px);
+            div {
+                .logo {
+                    right: calc(150px - 39px);
+                }
             }
             .overlay {
                 nav{
@@ -185,9 +243,11 @@
 
 @media (min-width: 768px) {
     #header {
-        .logo {
-            width: 78px;
-            right: calc(50vw - 39px);
+        div {
+            .logo {
+                width: 78px;
+                right: calc(50vw - 39px);
+            }
         }
         .overlay {
             right: -450px;
@@ -196,9 +256,11 @@
             right: 37px;
         }
         &.open-menu {
-            .logo {
-                right: calc(225px - 50px);
-                width: 100px;
+            div {
+                .logo {
+                    right: calc(225px - 50px);
+                    width: 100px;
+                }
             }
             .overlay {
                 nav{
@@ -214,7 +276,7 @@
                         }
                         ul{
                             li {
-                                margin-top: 40px;
+                                margin-top: 30px;
                             }
                         }
                         ul + hr {
@@ -252,11 +314,21 @@
         .btn-menu {
             display: none;
         }
-        .logo {
-            position: absolute;
-            width: 100px;
-            top: 10px;
-            left: 30px;
+        div {
+            .logo {
+                position: absolute;
+                width: 100px;
+                top: 10px;
+                left: 30px;
+            }
+            .background_logo {
+                width: 150px;
+                height: 80px;
+                position: absolute;
+                top: 50px;
+                background-color: var(--purple-3);
+                z-index: 0;
+            }
         }
         .overlay {
             nav {
@@ -272,7 +344,7 @@
                     align-self: center;
                     left: 180px;
                     li + li {
-                       margin-left: 50px;
+                       margin-left: 40px;
                     }
                     li {
                         a {
@@ -312,9 +384,50 @@
                             margin-left: 5px;
                         }
                     }
+                    .logged {
+                        display: none;
+                    }
                     .social-icons{
                         img + img {
                             margin-left: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        &.logged {
+            .overlay {
+                nav {
+                    .menu {
+                        .wrap {
+                            .btn-login {
+                                display: none;
+                            }
+                            .logged {
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: center;
+                                align-items: center;
+                                img {
+                                    width: 35px;
+                                    height: 35px;
+                                    margin-left: 15px;
+                                }
+                                div{
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+                                    .user_name {
+                                        font-size: 15px;
+                                        font-weight: bold;
+                                        color: var(--purple-2);
+                                    }
+                                    .user_email {
+                                        font-size: 11px;
+                                        color: var(--purple-2);
+                                    }
+                                }
+                            }
                         }
                     }
                 }
