@@ -304,20 +304,25 @@ hr.divider {
   align-items: center;
   margin-top: 30px;
 }
-#header.open-menu .overlay nav .menu .wrap .btn-login {
+#header.open-menu .overlay nav .menu .wrap a {
+  text-decoration: none;
+}
+#header.open-menu .overlay nav .menu .wrap a .btn-login {
   width: 150px;
   height: 35px;
+  padding: 10px;
   justify-content: center;
   align-items: center;
   border: none;
   background-color: var(--pink-1);
   border-radius: 5px;
 }
-#header.open-menu .overlay nav .menu .wrap .btn-login span {
+#header.open-menu .overlay nav .menu .wrap a .btn-login span {
   color: var(--white);
   font-size: 19px;
   font-weight: bold;
   margin-left: 5px;
+  justify-content: center;
 }
 #header.open-menu .overlay nav .menu .wrap .logged {
   display: none;
@@ -328,7 +333,7 @@ hr.divider {
 #header.open-menu .overlay nav .menu .wrap .social-icons img + img {
   margin-left: 23px;
 }
-#header.logged .overlay nav .menu .wrap .btn-login {
+#header.logged .overlay nav .menu .wrap a .btn-login {
   display: none;
 }
 #header.logged .overlay nav .menu .wrap .logged {
@@ -506,7 +511,7 @@ hr.divider {
     justify-content: center;
     align-items: center;
   }
-  #header .overlay nav .wrap .btn-login {
+  #header .overlay nav .wrap a .btn-login {
     margin-left: 30px;
     width: 150px;
     height: 35px;
@@ -517,7 +522,7 @@ hr.divider {
     border-radius: 5px;
     top: 5px;
   }
-  #header .overlay nav .wrap .btn-login span {
+  #header .overlay nav .wrap a .btn-login span {
     color: var(--white);
     font-size: 19px;
     font-weight: bold;
@@ -529,7 +534,7 @@ hr.divider {
   #header .overlay nav .wrap .social-icons img + img {
     margin-left: 20px;
   }
-  #header.logged .overlay nav .menu .wrap .btn-login {
+  #header.logged .overlay nav .menu .wrap a .btn-login {
     display: none;
   }
   #header.logged .overlay nav .menu .wrap .logged {
@@ -562,7 +567,7 @@ hr.divider {
   #header .overlay nav .menu ul li {
     margin-left: 70px;
   }
-  #header .overlay nav .menu .wrap .btn-login {
+  #header .overlay nav .menu .wrap a .btn-login {
     margin-left: 50px;
   }
 }
@@ -1972,15 +1977,15 @@ hr.divider {
 }
 #aquario .outdoor {
   width: 100%;
-  height: 634px;
+  height: 328px;
   position: relative;
-  background-image: url("/amicao-petshop/assets/images/banners/banner-aquario.webp");
+  background-image: url("/amicao-petshop/assets/images/banners/banner-aquario-320.webp");
   background-position: center;
   background-size: cover;
 }
 #aquario .outdoor .overlay {
   width: 100%;
-  height: 634px;
+  height: 328px;
   position: absolute;
   background-color: var(--pink-1);
   opacity: 0.2;
@@ -2034,7 +2039,7 @@ hr.divider {
 #aquario .aquario-projects .article-2 .overlay {
   position: absolute;
   width: 254px;
-  height: 305px;
+  height: 350px;
   background-color: var(--purple-3);
   opacity: 0.4;
 }
@@ -2056,8 +2061,25 @@ hr.divider {
   font-size: 16px;
   color: var(--gray-1);
 }
+#aquario .contact .title {
+  flex-direction: column;
+}
+#aquario .contact .title h2 span {
+  font-weight: bold;
+}
 
 @media (min-width: 768px) {
+  #aquario .outdoor {
+    width: 100%;
+    height: 199px;
+    background-image: url("/amicao-petshop/assets/images/banners/banner-aquario-768.webp");
+    background-position: center;
+    background-size: cover;
+  }
+  #aquario .outdoor .overlay {
+    width: 100%;
+    height: 199px;
+  }
   #aquario .aquario-projects {
     flex-direction: row;
     width: 97%;
@@ -2068,10 +2090,24 @@ hr.divider {
   }
   #aquario .aquario-projects .title-1 hr {
     margin-left: 0;
-    width: 160px;
+    width: 100px;
+  }
+  #aquario .contact .title hr {
+    display: none;
   }
 }
 @media (min-width: 1024px) {
+  #aquario .outdoor {
+    width: 100%;
+    height: 266px;
+    background-image: url("/amicao-petshop/assets/images/banners/banner-aquario-1024.webp");
+    background-position: center;
+    background-size: cover;
+  }
+  #aquario .outdoor .overlay {
+    width: 100%;
+    height: 266px;
+  }
   #aquario .banners {
     display: flex;
     justify-content: center;
@@ -2152,6 +2188,17 @@ hr.divider {
   }
 }
 @media (min-width: 1200px) {
+  #aquario .outdoor {
+    width: 100%;
+    height: 375px;
+    background-image: url("/amicao-petshop/assets/images/banners/banner-aquario-1440.webp");
+    background-position: center;
+    background-size: cover;
+  }
+  #aquario .outdoor .overlay {
+    width: 100%;
+    height: 375px;
+  }
   #aquario .banners .container {
     width: 90%;
   }
@@ -2179,6 +2226,17 @@ hr.divider {
   }
 }
 @media (min-width: 1920px) {
+  #aquario .outdoor {
+    width: 100%;
+    height: 500px;
+    background-image: url("/amicao-petshop/assets/images/banners/banner-aquario-1920.webp");
+    background-position: center;
+    background-size: cover;
+  }
+  #aquario .outdoor .overlay {
+    width: 100%;
+    height: 500px;
+  }
   #aquario .banners .container {
     width: 60%;
   }
@@ -2216,10 +2274,14 @@ hr.divider {
   padding: 0;
   margin-top: 30px;
 }
-#login header img {
+#login header a {
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 2;
+}
+#login header a img {
   width: 100px;
   margin-top: var(--space);
-  z-index: 3;
 }
 #login section {
   position: absolute;
@@ -2272,6 +2334,9 @@ hr.divider {
   width: 100%;
   flex-direction: row;
   justify-content: space-between;
+}
+#login section form div.footer_submit div a {
+  text-decoration: none;
   margin-bottom: var(--space);
   color: var(--gray-4);
 }
@@ -2312,7 +2377,7 @@ hr.divider {
   #login header h2 {
     margin-top: 100px;
   }
-  #login header img {
+  #login header a img {
     margin-top: 40px;
   }
   #login section {
@@ -2385,7 +2450,7 @@ hr.divider {
   #login header h2 {
     margin-top: 50px;
   }
-  #login header img {
+  #login header a img {
     margin-top: 30px;
   }
   #login section {
@@ -2448,10 +2513,12 @@ hr.divider {
   padding: 0;
   margin-top: 30px;
 }
-#forgot header img {
+#forgot header a {
+  z-index: 3;
+}
+#forgot header a img {
   width: 100px;
   margin-top: var(--space);
-  z-index: 3;
 }
 #forgot section {
   position: absolute;
@@ -2544,7 +2611,7 @@ hr.divider {
   #forgot header h2 {
     margin-top: 100px;
   }
-  #forgot header img {
+  #forgot header a img {
     margin-top: 40px;
   }
   #forgot section {
@@ -2617,7 +2684,7 @@ hr.divider {
   #forgot header h2 {
     margin-top: 50px;
   }
-  #forgot header img {
+  #forgot header a img {
     margin-top: 30px;
   }
   #forgot section {
@@ -2680,10 +2747,12 @@ hr.divider {
   padding: 0;
   margin-top: 30px;
 }
-#change_password header img {
+#change_password header a {
+  z-index: 3;
+}
+#change_password header a img {
   width: 100px;
   margin-top: var(--space);
-  z-index: 3;
 }
 #change_password section {
   position: absolute;
@@ -2776,7 +2845,7 @@ hr.divider {
   #change_password header h2 {
     margin-top: 100px;
   }
-  #change_password header img {
+  #change_password header a img {
     margin-top: 40px;
   }
   #change_password section {
@@ -2849,7 +2918,7 @@ hr.divider {
   #change_password header h2 {
     margin-top: 50px;
   }
-  #change_password header img {
+  #change_password header a img {
     margin-top: 30px;
   }
   #change_password section {
@@ -2912,10 +2981,12 @@ hr.divider {
   padding: 0;
   margin-top: 30px;
 }
-#register header img {
+#register header a {
+  z-index: 3;
+}
+#register header a img {
   width: 100px;
   margin-top: var(--space);
-  z-index: 3;
 }
 #register section {
   position: absolute;
@@ -3011,7 +3082,7 @@ hr.divider {
   #register header h2 {
     margin-top: 100px;
   }
-  #register header img {
+  #register header a img {
     margin-top: 40px;
   }
   #register section {
@@ -3084,7 +3155,7 @@ hr.divider {
   #register header h2 {
     margin-top: 50px;
   }
-  #register header img {
+  #register header a img {
     margin-top: 30px;
   }
   #register section {
@@ -3371,10 +3442,10 @@ form footer.fixed button:active {
   width: 100%;
   height: 451px;
   position: relative;
-  background-image: url("/amicao-petshop/assets/images/banner-hotel.png");
+  background-image: url("../images/banners/banner-hotel.jpg");
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100% 100%;
+  background-position-y: center;
+  background-position-x: 50%;
 }
 #hotel .banner .overlay {
   width: 100%;
@@ -3389,6 +3460,7 @@ form footer.fixed button:active {
   height: 100%;
   justify-content: center;
   align-items: center;
+  margin-top: 25px;
 }
 #hotel > div h1 {
   font-size: 30px;
@@ -3471,6 +3543,9 @@ form footer.fixed button:active {
 }
 
 @media (min-width: 768px) {
+  #hotel .banner {
+    background-position: center;
+  }
   #hotel > div section.hotel .card {
     margin: 14px 32px 0px 32px;
   }
@@ -3521,8 +3596,9 @@ form footer.fixed button:active {
   width: 100%;
   height: 500px;
   position: relative;
-  background-image: url("/amicao-petshop/assets/images/banner-banho-e-tosa.webp");
-  background-position: center;
+  background-image: url("../images/banners/banner-banho-e-tosa.webp");
+  background-position-y: center;
+  background-position-x: 47%;
 }
 #banho-e-tosa .banner .overlay {
   width: 100%;
@@ -3649,6 +3725,9 @@ form footer.fixed button:active {
 }
 
 @media (min-width: 768px) {
+  #banho-e-tosa .banner {
+    background-position-x: center;
+  }
   #banho-e-tosa > div section.saloon .card {
     flex-direction: row;
   }
@@ -4060,6 +4139,7 @@ form footer.fixed button:active {
   padding: 0;
 }
 #footer div .contact ul li {
+  cursor: pointer;
   margin-bottom: 20px;
   font-size: 18px;
 }
@@ -4113,13 +4193,13 @@ form footer.fixed button:active {
   }
   #footer div .ssl {
     display: flex;
-    width: calc(100vw - 50px);
+    width: calc(100vw - 150px);
     position: absolute;
     left: 50px;
   }
   #footer div .links {
     display: flex;
-    width: calc(100vw - 200px);
+    width: calc(100vw - 400px);
     color: var(--white);
     position: absolute;
     left: 200px;
@@ -4132,6 +4212,7 @@ form footer.fixed button:active {
     flex-direction: column;
   }
   #footer div .links ul li {
+    cursor: pointer;
     font-size: 16px;
     margin-bottom: 2px;
   }

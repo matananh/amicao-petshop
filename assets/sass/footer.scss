@@ -58,6 +58,7 @@
         margin: 0;
         padding: 0;
         li {
+          cursor: pointer;
           margin-bottom: 20px;
           font-size: 18px;
           a{
@@ -129,13 +130,13 @@
       align-items: center;
       .ssl {
         display: flex;
-        width: calc(100vw - 50px);
+        width: calc(100vw - 150px);
         position: absolute;
         left: 50px;
       }
       .links{
         display: flex;
-        width: calc(100vw - 200px);
+        width: calc(100vw - 400px);
         color: var(--white);
         position: absolute;
         left: 200px;
@@ -146,6 +147,7 @@
         ul {
           flex-direction: column;
           li {
+            cursor: pointer;
             .title {
               font-size: 18px;
               font-weight: bold;

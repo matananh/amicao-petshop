@@ -111,19 +111,24 @@
                         justify-content: center;
                         align-items: center;
                         margin-top: 30px;
-                        .btn-login {
-                            width: 150px;
-                            height: 35px;
-                            justify-content: center;
-                            align-items: center;
-                            border: none;
-                            background-color: var(--pink-1);
-                            border-radius: 5px;
-                            span{
-                                color: var(--white);
-                                font-size: 19px;
-                                font-weight: bold;
-                                margin-left: 5px;
+                        a {
+                            text-decoration: none;
+                            .btn-login {
+                                width: 150px;
+                                height: 35px;
+                                padding: 10px;
+                                justify-content: center;
+                                align-items: center;
+                                border: none;
+                                background-color: var(--pink-1);
+                                border-radius: 5px;
+                                span{
+                                    color: var(--white);
+                                    font-size: 19px;
+                                    font-weight: bold;
+                                    margin-left: 5px;
+                                    justify-content: center;
+                                }
                             }
                         }
                         .logged {
@@ -145,8 +150,10 @@
             nav {
                 .menu {
                     .wrap {
-                        .btn-login {
-                            display: none;
+                        a {
+                            .btn-login {
+                                display: none;
+                            }
                         }
                         .logged {
                             display: flex;
@@ -367,21 +374,23 @@
                     align-self: center;
                     justify-content: center;
                     align-items: center;
-                    .btn-login {
-                        margin-left: 30px;
-                        width: 150px;
-                        height: 35px;
-                        justify-content: center;
-                        align-items: center;
-                        border: none;
-                        background-color: var(--pink-1);
-                        border-radius: 5px;
-                        top: 5px;
-                        span{
-                            color: var(--white);
-                            font-size: 19px;
-                            font-weight: bold;
-                            margin-left: 5px;
+                    a {
+                        .btn-login {
+                            margin-left: 30px;
+                            width: 150px;
+                            height: 35px;
+                            justify-content: center;
+                            align-items: center;
+                            border: none;
+                            background-color: var(--pink-1);
+                            border-radius: 5px;
+                            top: 5px;
+                            span{
+                                color: var(--white);
+                                font-size: 19px;
+                                font-weight: bold;
+                                margin-left: 5px;
+                            }
                         }
                     }
                     .logged {
@@ -400,8 +409,10 @@
                 nav {
                     .menu {
                         .wrap {
-                            .btn-login {
-                                display: none;
+                            a {
+                                .btn-login {
+                                    display: none;
+                                }
                             }
                             .logged {
                                 display: flex;
@@ -447,8 +458,10 @@
                         }
                     }
                     .wrap {
-                        .btn-login {
-                            margin-left: 50px;
+                        a {
+                            .btn-login {
+                                margin-left: 50px;
+                            }
                         }
                     }
                 }
