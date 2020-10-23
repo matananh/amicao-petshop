@@ -240,7 +240,7 @@ hr.divider {
 }
 #header.open-menu .overlay {
   display: flex;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   height: 100vh;
@@ -253,7 +253,7 @@ hr.divider {
   display: flex;
 }
 #header.open-menu .overlay nav .menu {
-  position: absolute;
+  position: fixed;
   width: 280px;
   right: 0;
   flex-direction: column;
@@ -1979,7 +1979,7 @@ hr.divider {
   width: 100%;
   height: 328px;
   position: relative;
-  background-image: url("/amicao-petshop/assets/images/banners/banner-aquario-320.webp");
+  background-image: url("../images/banners/banner-aquario-320.webp");
   background-position: center;
   background-size: cover;
 }
@@ -2072,7 +2072,7 @@ hr.divider {
   #aquario .outdoor {
     width: 100%;
     height: 199px;
-    background-image: url("/amicao-petshop/assets/images/banners/banner-aquario-768.webp");
+    background-image: url("../images/banners/banner-aquario-768.webp");
     background-position: center;
     background-size: cover;
   }
@@ -2100,7 +2100,7 @@ hr.divider {
   #aquario .outdoor {
     width: 100%;
     height: 266px;
-    background-image: url("/amicao-petshop/assets/images/banners/banner-aquario-1024.webp");
+    background-image: url("../images/banners/banner-aquario-1024.webp");
     background-position: center;
     background-size: cover;
   }
@@ -2191,7 +2191,7 @@ hr.divider {
   #aquario .outdoor {
     width: 100%;
     height: 375px;
-    background-image: url("/amicao-petshop/assets/images/banners/banner-aquario-1440.webp");
+    background-image: url("../images/banners/banner-aquario-1440.webp");
     background-position: center;
     background-size: cover;
   }
@@ -2229,7 +2229,7 @@ hr.divider {
   #aquario .outdoor {
     width: 100%;
     height: 500px;
-    background-image: url("/amicao-petshop/assets/images/banners/banner-aquario-1920.webp");
+    background-image: url("../images/banners/banner-aquario-1920.webp");
     background-position: center;
     background-size: cover;
   }
@@ -3193,12 +3193,6 @@ hr.divider {
   position: relative;
   display: flex;
   justify-content: center;
-}
-#align .negativelogo {
-  width: 100%;
-  height: 60px;
-  background-color: var(--purple-2);
-  position: absolute;
 }
 #align .calendar {
   width: 100%;
