@@ -26,10 +26,14 @@
       padding: 0;
       margin-top: 30px;
     }
-    img {
-      width: 100px;
-      margin-top: var(--space);
-      z-index: 3;
+    a {
+      text-decoration: none;
+      cursor: pointer;
+      z-index: 2;
+      img {
+        width: 100px;
+        margin-top: var(--space);
+      }
     }
   }
   section {
@@ -80,8 +84,11 @@
           width: 100%;
           flex-direction: row;
           justify-content: space-between;
-          margin-bottom: var(--space);
-          color: var(--gray-4);
+          a {
+            text-decoration: none;
+            margin-bottom: var(--space);
+            color: var(--gray-4);
+          }
         }
         button {
           position: absolute;
@@ -126,8 +133,10 @@
       h2 {
         margin-top: 100px;
       }
-      img {
-        margin-top: 40px;
+      a {
+        img {
+          margin-top: 40px;
+        }
       }
     }
     section {
@@ -209,8 +218,10 @@
       h2 {
         margin-top: 50px;
       }
-      img {
-        margin-top: 30px;
+      a{ 
+        img {
+          margin-top: 30px;
+        }
       }
     }
     section {

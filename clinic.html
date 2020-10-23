@@ -30,13 +30,23 @@
 
 </head>
 <body>
-    <header id="header" class="">
-        <img src="./assets/images/logo/logo.png" alt="Logo" class="logo" />
+    <header id="header">
+        <div class="flags">
+            <img src="assets/images/icons/flag-brazil.svg" alt="Bandeira do Brasil" />
+            <img src="assets/images/icons/flag-united-states.svg" alt="Bandeira dos Estados Unidos" />
+            <img src="assets/images/icons/flag-spain.svg" alt="Bandeira da Espanha" />
+        </div>
+        <div>
+            <a href="index.html">
+                <img src="assets/images/logo/logo.png" alt="Logo" class="logo" />
+            </a>
+            <div class="background_logo"></div>
+        </div>
         <div class="overlay">
             <nav>
                 <div class="menu">
                     <div class="white">
-                        <img src="./assets/images/icons/close.svg" alt="Botão Fechar" class="btn-close" id="btn-close" />
+                        <img src="assets/images/icons/close.svg" alt="Botão Fechar" class="btn-close" id="btn-close" />
                     </div>
                     <hr />
                     <ul>
@@ -48,21 +58,30 @@
                         <li><a href="loja.html">Loja</a></li>
                     </ul>
                     <hr />
-                    <div class="wrap">  
-                        <button type="button" class="btn-login">
-                            <img src="./assets/images/icons/cat.svg" alt="Gato" />
-                            <span>Login</span>
-                        </button>     
+                    <div class="wrap">
+                        <a href="login.html">
+                            <button type="button" class="btn-login">
+                                <img src="assets/images/icons/cat.svg" alt="Gato" />
+                                <span>Login</span>
+                            </button>
+                        </a>
+                        <div class="logged">
+                            <img src="./assets/images/icons/user.svg" alt="Usuario">
+                            <div>
+                                <span class="user_name">Clã Azul</span>
+                                <span class="user_email">claazul@hcode.com</span>
+                            </div>
+                        </div>
                         <div class="social-icons">
-                            <img src="./assets/images/icons/youtube.svg" alt="Logo Youtube" />
-                            <img src="./assets/images/icons/facebook.svg" alt="Logo Facebook" />
-                            <img src="./assets/images/icons/instagram.svg" alt="Logo Instagram" />
+                            <img src="assets/images/icons/youtube.svg" alt="Logo Youtube" />
+                            <img src="assets/images/icons/facebook.svg" alt="Logo Facebook" />
+                            <img src="assets/images/icons/instagram.svg" alt="Logo Instagram" />
                         </div>
                     </div>
                 </div>
             </nav>
         </div>
-        <img src="./assets/images/icons/menu.svg" alt="Botão menu" class="btn-menu" id="btn-menu">
+        <img src="assets/images/icons/menu.svg" alt="Botão menu" class="btn-menu" id="btn-menu">
     </header>
     <main id="clinic">
         
@@ -85,7 +104,7 @@
 
                 <div class="imagem-1"></div>
 
-                <img src="./assets/images/imagens/clinic-services-1.jpg" alt="Clínica">
+                <img src="./assets/images/img/clinic-services-1.jpg" alt="Clínica">
 
                 <div class="clinic-box">
 
@@ -112,7 +131,7 @@
 
                 <div class="imagem-2"></div>
 
-                <img src="./assets/images/imagens/clinic-services-2.jpg" alt="Clínica">
+                <img src="./assets/images/img/clinic-services-2.jpg" alt="Clínica">
 
                 <div class="clinic-box">
 
@@ -166,16 +185,17 @@
                     <li>
                         <Span class="title">Links</Span>
                     </li>
-                    <li><a href="#">CLINICA</a></li>
-                    <li><a href="#">HOTEL</a></li>
-                    <li><a href="#">LOJA</a></li>
-                    <li><a href="#">BANHO E TOSA</a></li>
-                    <li><a href="#">AQUÁRIOS</a></li>
-                    <li><a href="#">FALE CONOSCO</a></li>
+                    <li><a href="./clinic.html">CLINICA</a></li>
+                    <li><a href="./hotel.html">HOTEL</a></li>
+                    <li><a href="./loja.html">LOJA</a></li>
+                    <li><a href="./banho-e-tosa.html">BANHO E TOSA</a></li>
+                    <li><a href="./aquario.html">AQUÁRIOS</a></li>
                 </ul>
             </div>
             <div class="logo">
-                <img src="./assets/images/logo/logo.png" alt="Logo">
+                <a href="index.html">
+                    <img src="./assets/images/logo/logo.png" alt="Logo">
+                </a>
             </div>
             <div class="sociais-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40.25" height="40.25" viewBox="0 0 40.25 40.25"><path d="M25.676,50.467h1.6v8.667h1.515V50.467h1.631v-1.42H25.676Z" transform="translate(-15.109 -28.876)" fill="#f227ae"/><path d="M52.742,51.526a1.843,1.843,0,0,0-1.408.815V49.046H49.973V59.133h1.362v-.728a1.857,1.857,0,0,0,1.408.832,1.078,1.078,0,0,0,1.088-.845,5.984,5.984,0,0,0,.138-1.515V53.885a5.773,5.773,0,0,0-.138-1.51A1.077,1.077,0,0,0,52.742,51.526Zm-.136,5.459c0,.679-.2,1.014-.593,1.014a.971.971,0,0,1-.679-.335V53.083a.978.978,0,0,1,.679-.332c.393,0,.593.348.593,1.026Z" transform="translate(-29.404 -28.875)" fill="#f227ae"/><path d="M40.2,61.012c-.3.427-.588.637-.861.637-.182,0-.286-.107-.319-.319a4.206,4.206,0,0,1-.012-.529V55.268H37.643V61.21a3.831,3.831,0,0,0,.12,1.118.837.837,0,0,0,.877.56,2.182,2.182,0,0,0,1.557-.923v.82H41.56V55.268H40.2Z" transform="translate(-22.149 -32.53)" fill="#f227ae"/><path d="M45.72,30.938c.443,0,.656-.352.656-1.054V26.689c0-.7-.213-1.053-.656-1.053s-.657.35-.657,1.053v3.195C45.063,30.587,45.276,30.938,45.72,30.938Z" transform="translate(-26.51 -15.086)" fill="#f227ae"/><path d="M20.125,0A20.125,20.125,0,1,0,40.25,20.125,20.125,20.125,0,0,0,20.125,0Zm2.238,9.413h1.367v5.572a3.229,3.229,0,0,0,.016.533c.03.212.138.321.322.321.274,0,.562-.212.866-.642V9.413h1.371v7.568H24.935v-.825a2.2,2.2,0,0,1-1.567.929.842.842,0,0,1-.884-.562,3.824,3.824,0,0,1-.121-1.125V9.413Zm-5.179,2.468a2.941,2.941,0,0,1,.429-1.783,2.034,2.034,0,0,1,3.2,0,2.972,2.972,0,0,1,.425,1.783v2.65a2.962,2.962,0,0,1-.425,1.78,2.036,2.036,0,0,1-3.2,0,2.931,2.931,0,0,1-.429-1.78ZM13.517,6.825l1.08,3.988,1.037-3.988h1.538l-1.829,6.043v4.113h-1.52V12.868a25.012,25.012,0,0,0-.93-3.213c-.32-.943-.654-1.888-.975-2.83h1.6ZM30.959,30.908a2.837,2.837,0,0,1-2.427,2.206,75.423,75.423,0,0,1-8.408.311,75.42,75.42,0,0,1-8.408-.311,2.835,2.835,0,0,1-2.427-2.206A24.021,24.021,0,0,1,8.9,25.6a24.05,24.05,0,0,1,.4-5.308,2.835,2.835,0,0,1,2.426-2.206,75.43,75.43,0,0,1,8.409-.311,75.423,75.423,0,0,1,8.408.311,2.838,2.838,0,0,1,2.428,2.206,24.1,24.1,0,0,1,.388,5.308A24.022,24.022,0,0,1,30.959,30.908Z" fill="#f227ae"/><path d="M64.257,55.046a1.934,1.934,0,0,0-1.631.77,2.931,2.931,0,0,0-.421,1.771V60.22a2.9,2.9,0,0,0,.438,1.767,1.949,1.949,0,0,0,1.648.77,1.883,1.883,0,0,0,1.646-.815,1.94,1.94,0,0,0,.318-.816c.013-.136.029-.438.029-.878v-.2H64.9a8.918,8.918,0,0,1-.03.922.585.585,0,0,1-.609.546c-.468,0-.7-.347-.7-1.042V59.143h2.724V57.586a2.954,2.954,0,0,0-.422-1.771A1.891,1.891,0,0,0,64.257,55.046Zm.666,2.964H63.561v-.7q0-1.043.684-1.043c.45,0,.679.348.679,1.043Z" transform="translate(-36.602 -32.399)" fill="#f227ae"/></svg>
@@ -190,19 +210,19 @@
                         <span class="title">Contatos</span>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="tel:1199999-9999">
                             <img src="./assets/images/icons/whatsapp.svg" alt="Whatsapp">
                             <span>(11) 99999-9999</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="tel:08001002000">
                             <img src="./assets/images/icons/phone.svg" alt="Telefone">
                             <span>0800 100 2000</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="mailto:contato@amicao.com.br">
                             <img src="./assets/images/icons/email.svg" alt="E-mail">
                             <span>contato@amicao.com.br</span>
                         </a>

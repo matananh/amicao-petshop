@@ -26,10 +26,12 @@
       padding: 0;
       margin-top: 30px;
     }
-    img {
-      width: 100px;
-      margin-top: var(--space);
+    a {
       z-index: 3;
+      img {
+        width: 100px;
+        margin-top: var(--space);
+      }
     }
   }
   section {
@@ -127,8 +129,10 @@
       h2 {
         margin-top: 100px;
       }
-      img {
-        margin-top: 40px;
+      a {
+        img {
+          margin-top: 40px;
+        }
       }
     }
     section {
@@ -210,8 +214,10 @@
       h2 {
         margin-top: 50px;
       }
-      img {
-        margin-top: 30px;
+      a{
+        img {
+          margin-top: 30px;
+        }
       }
     }
     section {

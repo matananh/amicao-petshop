@@ -1,3 +1,10 @@
+#header {
+    div {
+        .background_logo {
+            z-index: 2;
+        }
+    }
+}
 #store {
     flex-direction: column;
     align-items   : center;
@@ -6,7 +13,7 @@
         width           : 100%;
         height          : 451px;
         position: relative;
-        background-image: url('/amicao-petshop/assets/images/banner-loja.webp');
+        background-image: url('../images/banners/banner-loja.webp');
         background-repeat: no-repeat;
         background-position: center;  
 

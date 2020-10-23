@@ -58,6 +58,7 @@
         margin: 0;
         padding: 0;
         li {
+          cursor: pointer;
           margin-bottom: 20px;
           font-size: 18px;
           a{
@@ -146,6 +147,7 @@
         ul {
           flex-direction: column;
           li {
+            cursor: pointer;
             .title {
               font-size: 18px;
               font-weight: bold;
