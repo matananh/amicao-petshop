@@ -293,9 +293,12 @@
                             margin-top: 120px;
                             .social-icons {
                                 margin-top: 80px;
-                                img + img {
-                                    margin-left: 23px;
-                                }
+                              
+                                    img + img {
+                                        margin-left: 23px;
+                                    }
+                               
+                                
                             }
                         }
                     }
@@ -376,7 +379,10 @@
                     justify-content: center;
                     align-items: center;
                     a {
+                        text-decoration: none;
+                        
                         .btn-login {
+                           cursor: pointer;
                             margin-left: 30px;
                             width: 150px;
                             height: 35px;
@@ -386,11 +392,17 @@
                             background-color: var(--pink-1);
                             border-radius: 5px;
                             top: 5px;
+                          
                             span{
                                 color: var(--white);
                                 font-size: 19px;
                                 font-weight: bold;
                                 margin-left: 5px;
+                            }
+
+                            &:hover {
+                                background-color: var(--purple-2);
+                                transition: all .4s ease-in-out;
                             }
                         }
                     }

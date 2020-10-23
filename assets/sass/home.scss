@@ -5,6 +5,9 @@
     margin: 0;
     padding: 0;
     position: relative;
+    background-image: url('../images/img/dogs.webp');
+    background-position: center;
+    background-size: cover;
     div{
       width: 100%;
       flex-direction: column;
