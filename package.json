@@ -2,7 +2,7 @@
   "name": "amicao-petshop",
   "version": "1.0.0",
   "description": "Website da Petshop Amicão",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "sass": "sass --watch assets/sass/main.scss:assets/css/main.css",
     "build": "sass assets/sass/main.scss:assets/css/main.css --style=compressed"
