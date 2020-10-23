@@ -231,7 +231,7 @@ hr.divider {
 }
 #header.open-menu .overlay {
   display: flex;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   height: 100vh;
@@ -244,7 +244,7 @@ hr.divider {
   display: flex;
 }
 #header.open-menu .overlay nav .menu {
-  position: absolute;
+  position: fixed;
   width: 280px;
   right: 0;
   flex-direction: column;
@@ -1895,7 +1895,7 @@ hr.divider {
   width: 100%;
   height: 328px;
   position: relative;
-  background-image: url("/amicao-petshop/assets/images/banners/banner-aquario-320.webp");
+  background-image: url("../images/banners/banner-aquario-320.webp");
   background-position: center;
   background-size: cover;
 }
@@ -1988,7 +1988,7 @@ hr.divider {
   #aquario .outdoor {
     width: 100%;
     height: 199px;
-    background-image: url("/amicao-petshop/assets/images/banners/banner-aquario-768.webp");
+    background-image: url("../images/banners/banner-aquario-768.webp");
     background-position: center;
     background-size: cover;
   }
@@ -2016,7 +2016,7 @@ hr.divider {
   #aquario .outdoor {
     width: 100%;
     height: 266px;
-    background-image: url("/amicao-petshop/assets/images/banners/banner-aquario-1024.webp");
+    background-image: url("../images/banners/banner-aquario-1024.webp");
     background-position: center;
     background-size: cover;
   }
@@ -2107,7 +2107,7 @@ hr.divider {
   #aquario .outdoor {
     width: 100%;
     height: 375px;
-    background-image: url("/amicao-petshop/assets/images/banners/banner-aquario-1440.webp");
+    background-image: url("../images/banners/banner-aquario-1440.webp");
     background-position: center;
     background-size: cover;
   }
@@ -2145,7 +2145,7 @@ hr.divider {
   #aquario .outdoor {
     width: 100%;
     height: 500px;
-    background-image: url("/amicao-petshop/assets/images/banners/banner-aquario-1920.webp");
+    background-image: url("../images/banners/banner-aquario-1920.webp");
     background-position: center;
     background-size: cover;
   }
@@ -3345,10 +3345,10 @@ form footer.fixed button:active {
   width: 100%;
   height: 451px;
   position: relative;
-  background-image: url("/amicao-petshop/assets/images/banner-hotel.png");
+  background-image: url("../images/banners/banner-hotel.jpg");
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100% 100%;
+  background-position-y: center;
+  background-position-x: 50%;
 }
 #hotel .banner .overlay {
   width: 100%;
@@ -3363,6 +3363,7 @@ form footer.fixed button:active {
   height: 100%;
   justify-content: center;
   align-items: center;
+  margin-top: 25px;
 }
 #hotel > div h1 {
   font-size: 30px;
@@ -3445,6 +3446,9 @@ form footer.fixed button:active {
 }
 
 @media (min-width: 768px) {
+  #hotel .banner {
+    background-position: center;
+  }
   #hotel > div section.hotel .card {
     margin: 14px 32px 0px 32px;
   }
@@ -3495,8 +3499,9 @@ form footer.fixed button:active {
   width: 100%;
   height: 500px;
   position: relative;
-  background-image: url("/amicao-petshop/assets/images/banner-banho-e-tosa.webp");
-  background-position: center;
+  background-image: url("../images/banners/banner-banho-e-tosa.webp");
+  background-position-y: center;
+  background-position-x: 47%;
 }
 #banho-e-tosa .banner .overlay {
   width: 100%;
@@ -3623,6 +3628,9 @@ form footer.fixed button:active {
 }
 
 @media (min-width: 768px) {
+  #banho-e-tosa .banner {
+    background-position-x: center;
+  }
   #banho-e-tosa > div section.saloon .card {
     flex-direction: row;
   }
@@ -4087,13 +4095,13 @@ form footer.fixed button:active {
   }
   #footer div .ssl {
     display: flex;
-    width: calc(100vw - 50px);
+    width: calc(100vw - 150px);
     position: absolute;
     left: 50px;
   }
   #footer div .links {
     display: flex;
-    width: calc(100vw - 200px);
+    width: calc(100vw - 400px);
     color: var(--white);
     position: absolute;
     left: 200px;

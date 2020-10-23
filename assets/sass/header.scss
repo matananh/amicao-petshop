@@ -38,7 +38,7 @@
         }
         .overlay {
             display: flex;
-            position: absolute;
+            position: fixed;
             top: 0;
             right: 0;
             height: 100vh;
@@ -49,7 +49,7 @@
             nav{
                 display: flex;
                 .menu {
-                    position: absolute;
+                    position: fixed;
                     width: 280px;
                     right: 0;
                     flex-direction: column;
