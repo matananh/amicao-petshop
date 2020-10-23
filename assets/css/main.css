@@ -1170,6 +1170,12 @@ hr.divider {
   font-size: 16px;
   color: var(--gray-1);
 }
+#aquario .contact .title {
+  flex-direction: column;
+}
+#aquario .contact .title h2 span {
+  font-weight: bold;
+}
 
 @media (min-width: 768px) {
   #aquario .aquario-projects {
@@ -1182,7 +1188,10 @@ hr.divider {
   }
   #aquario .aquario-projects .title-1 hr {
     margin-left: 0;
-    width: 160px;
+    width: 100px;
+  }
+  #aquario .contact .title hr {
+    display: none;
   }
 }
 @media (min-width: 1024px) {
