@@ -157,6 +157,7 @@
                 }
             }
             .service-1 {
+                flex-direction: row-reverse;
                 box-sizing: border-box;
                 width: 95%;
                 border: none;
@@ -164,20 +165,17 @@
                 align-self: center;
                 align-self: center;
                 .imagem-1 {
-                    width: 297px;
+                    width: 300px;
                     height: 232px;
-                    left: 449px;
                 }
                 img {
                     position: relative;
                     width: 300px;
                     height: 232px;
-                    left: 427px;
                 }
                 .clinic-box {
                     position: relative;
                     top: -17px;
-                    right: 300px;
                     height: 232px;
                     width: 430px;
                     padding: 0 40px 0 30px;
@@ -217,13 +215,6 @@
                 right: 20px;
             }
         }
-        .contact {
-            box-sizing: border-box;
-            width: 75%;
-            border: none;
-            float: left;
-            align-self: center;
-        }
     }
 }
 
@@ -248,20 +239,18 @@
             .service-1 {
                 display: flex;
                 align-self: center;
+                flex-direction: row-reverse;
                 .imagem-1 {
-                    left: 735px;
                     width: 417px;
                     height: 305px;
                 }
                 img {
                     position: relative;
-                    left: 540px;
                     width: 457px;
                     height: 305px;
                 }
                 .clinic-box {
                     position: relative;
-                    right: 420px;
                     height: 305px;
                     top: -17px;
                     width: 590px;

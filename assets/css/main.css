@@ -3922,6 +3922,7 @@ form footer.fixed button:active {
     text-align: left;
   }
   #clinic .clinic-services-1 .service-1, #clinic .clinic-services-2 .service-1 {
+    flex-direction: row-reverse;
     box-sizing: border-box;
     width: 95%;
     border: none;
@@ -3930,20 +3931,17 @@ form footer.fixed button:active {
     align-self: center;
   }
   #clinic .clinic-services-1 .service-1 .imagem-1, #clinic .clinic-services-2 .service-1 .imagem-1 {
-    width: 297px;
+    width: 300px;
     height: 232px;
-    left: 449px;
   }
   #clinic .clinic-services-1 .service-1 img, #clinic .clinic-services-2 .service-1 img {
     position: relative;
     width: 300px;
     height: 232px;
-    left: 427px;
   }
   #clinic .clinic-services-1 .service-1 .clinic-box, #clinic .clinic-services-2 .service-1 .clinic-box {
     position: relative;
     top: -17px;
-    right: 300px;
     height: 232px;
     width: 430px;
     padding: 0 40px 0 30px;
@@ -3977,13 +3975,6 @@ form footer.fixed button:active {
     position: relative;
     right: 20px;
   }
-  #clinic .contact {
-    box-sizing: border-box;
-    width: 75%;
-    border: none;
-    float: left;
-    align-self: center;
-  }
 }
 @media (min-width: 1200px) {
   #clinic .clinic-services-1 h1, #clinic .clinic-services-2 h1 {
@@ -4004,21 +3995,19 @@ form footer.fixed button:active {
   #clinic .clinic-services-1 .service-1, #clinic .clinic-services-2 .service-1 {
     display: flex;
     align-self: center;
+    flex-direction: row-reverse;
   }
   #clinic .clinic-services-1 .service-1 .imagem-1, #clinic .clinic-services-2 .service-1 .imagem-1 {
-    left: 735px;
     width: 417px;
     height: 305px;
   }
   #clinic .clinic-services-1 .service-1 img, #clinic .clinic-services-2 .service-1 img {
     position: relative;
-    left: 540px;
     width: 457px;
     height: 305px;
   }
   #clinic .clinic-services-1 .service-1 .clinic-box, #clinic .clinic-services-2 .service-1 .clinic-box {
     position: relative;
-    right: 420px;
     height: 305px;
     top: -17px;
     width: 590px;
