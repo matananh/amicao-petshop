@@ -242,6 +242,7 @@ hr.divider {
   width: 42px;
 }
 #header.open-menu div .logo {
+  position: fixed;
   right: calc(140px - 35px);
 }
 #header.open-menu .overlay {
@@ -253,7 +254,7 @@ hr.divider {
   width: 100vw;
   background-color: var(--black-1);
   flex-direction: column;
-  z-index: 2;
+  z-index: 4;
 }
 #header.open-menu .overlay nav {
   display: flex;
@@ -336,7 +337,11 @@ hr.divider {
 #header.open-menu .overlay nav .menu .wrap .social-icons {
   margin-top: 30px;
 }
-#header.open-menu .overlay nav .menu .wrap .social-icons img + img {
+#header.open-menu .overlay nav .menu .wrap .social-icons a {
+  text-decoration: none;
+  cursor: pointer;
+}
+#header.open-menu .overlay nav .menu .wrap .social-icons a + a {
   margin-left: 23px;
 }
 #header.logged .overlay nav .menu .wrap a .btn-login {
@@ -406,7 +411,7 @@ hr.divider {
   #header.open-menu .overlay nav .menu .wrap .social-icons {
     margin-top: 60px;
   }
-  #header.open-menu .overlay nav .menu .wrap .social-icons img + img {
+  #header.open-menu .overlay nav .menu .wrap .social-icons a + a {
     margin-left: 23px;
   }
 }
@@ -446,7 +451,7 @@ hr.divider {
   #header.open-menu .overlay nav .menu .wrap .social-icons {
     margin-top: 80px;
   }
-  #header.open-menu .overlay nav .menu .wrap .social-icons img + img {
+  #header.open-menu .overlay nav .menu .wrap .social-icons a + a {
     margin-left: 23px;
   }
 }
@@ -460,7 +465,7 @@ hr.divider {
     position: absolute;
     top: 300px;
     right: 30px;
-    z-index: 3;
+    z-index: 4;
   }
   #header .flags img {
     padding-bottom: 20px;
@@ -518,7 +523,11 @@ hr.divider {
     justify-content: center;
     align-items: center;
   }
+  #header .overlay nav .wrap a {
+    text-decoration: none;
+  }
   #header .overlay nav .wrap a .btn-login {
+    cursor: pointer;
     margin-left: 30px;
     width: 150px;
     height: 35px;
@@ -535,10 +544,14 @@ hr.divider {
     font-weight: bold;
     margin-left: 5px;
   }
+  #header .overlay nav .wrap a .btn-login:hover {
+    background-color: var(--purple-2);
+    transition: all 0.4s ease-in-out;
+  }
   #header .overlay nav .wrap .logged {
     display: none;
   }
-  #header .overlay nav .wrap .social-icons img + img {
+  #header .overlay nav .wrap .social-icons a + a {
     margin-left: 20px;
   }
   #header.logged .overlay nav .menu .wrap a .btn-login {
@@ -584,6 +597,10 @@ hr.divider {
   margin: 0;
   padding: 0;
   position: relative;
+  background-image: url("../images/img/dogs.webp");
+  background-position-x: center;
+  background-position-y: bottom;
+  background-size: cover;
 }
 #home .banner div {
   width: 100%;
@@ -594,7 +611,7 @@ hr.divider {
 }
 #home .banner div div.hr {
   width: 80%;
-  height: 60px;
+  height: 55px;
   flex-direction: column;
   border: none;
   border-left: var(--white) 1px Solid;
@@ -616,7 +633,7 @@ hr.divider {
   margin: 0;
 }
 #home .banner div button {
-  margin-top: 30px;
+  margin-top: 5px;
   width: 144px;
   height: 36px;
   background-color: var(--pink-1);
@@ -627,13 +644,6 @@ hr.divider {
   font-weight: bold;
   border: none;
   border-radius: 5px;
-}
-#home .banner img {
-  position: absolute;
-  width: 100%;
-  bottom: 0px;
-  justify-content: center;
-  align-items: center;
 }
 #home .hotel {
   background-color: var(--white);
@@ -998,6 +1008,9 @@ hr.divider {
   #home .banner div div.hr h2 {
     font-size: 20px;
   }
+  #home .banner div button {
+    margin-top: 10px;
+  }
   #home .banho_tosa {
     height: 470px;
   }
@@ -1072,6 +1085,9 @@ hr.divider {
   }
   #home .banner div div.hr h2 {
     font-size: 25px;
+  }
+  #home .banner div button {
+    margin-top: 30px;
   }
   #home .hotel {
     width: 100%;
@@ -1806,7 +1822,7 @@ hr.divider {
 }
 #store .outdoor {
   width: 100%;
-  height: 451px;
+  height: 500px;
   position: relative;
   background-image: url("../images/banners/banner-loja.webp");
   background-repeat: no-repeat;
@@ -1814,10 +1830,31 @@ hr.divider {
 }
 #store .outdoor .overlay {
   width: 100%;
-  height: 451px;
+  height: 500px;
   position: absolute;
   background-color: var(--pink-1);
   opacity: 0.2;
+}
+#store .title {
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 200px;
+}
+#store .title h1 {
+  color: var(--gray-1);
+  margin: 0;
+  padding: 0;
+  font-size: 28px;
+}
+#store .title hr {
+  padding: 0;
+  border: none;
+  width: 210px;
+  height: 2px;
+  background-color: var(--gray-1);
+  margin-top: 15px;
 }
 #store .products {
   width: 100%;
@@ -2206,14 +2243,14 @@ hr.divider {
 @media (min-width: 1200px) {
   #aquario .outdoor {
     width: 100%;
-    height: 375px;
+    height: 500px;
     background-image: url("../images/banners/banner-aquario-1440.webp");
     background-position: center;
     background-size: cover;
   }
   #aquario .outdoor .overlay {
     width: 100%;
-    height: 375px;
+    height: 500px;
   }
   #aquario .banners .container {
     width: 90%;
@@ -2244,14 +2281,12 @@ hr.divider {
 @media (min-width: 1920px) {
   #aquario .outdoor {
     width: 100%;
-    height: 500px;
     background-image: url("../images/banners/banner-aquario-1920.webp");
     background-position: center;
     background-size: cover;
   }
   #aquario .outdoor .overlay {
     width: 100%;
-    height: 500px;
   }
   #aquario .banners .container {
     width: 60%;
@@ -3421,9 +3456,16 @@ form footer.fixed button:active {
   }
 }
 @media (min-width: 992px) {
-  #align .negativelogo {
-    height: 75px;
+  .logo_negativo {
+    width: 100vw;
+    height: 80px;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    background-color: var(--purple-3);
+    z-index: 1;
   }
+
   #align .calendar {
     max-width: 992px;
   }
@@ -3458,7 +3500,7 @@ form footer.fixed button:active {
 }
 #hotel .banner {
   width: 100%;
-  height: 451px;
+  height: 500px;
   position: relative;
   background-image: url("../images/banners/banner-hotel.jpg");
   background-repeat: no-repeat;
@@ -3467,7 +3509,7 @@ form footer.fixed button:active {
 }
 #hotel .banner .overlay {
   width: 100%;
-  height: 451px;
+  height: 500px;
   position: absolute;
   background-color: var(--pink-1);
   opacity: 0.2;
@@ -3575,6 +3617,9 @@ form footer.fixed button:active {
   }
 }
 @media (min-width: 1200px) {
+  #hotel .banner {
+    margin-top: 0;
+  }
   #hotel > div h1 {
     font-size: 50px;
     width: 500px;
@@ -3725,6 +3770,49 @@ form footer.fixed button:active {
   padding: 0 30px;
   margin-bottom: 30px;
 }
+#banho-e-tosa > div section.vip-treatment .background_banner {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+#banho-e-tosa > div section.vip-treatment .background_banner img {
+  width: 300px;
+  height: 250px;
+}
+#banho-e-tosa > div section.vip-treatment .background_banner .square {
+  position: absolute;
+  flex-direction: column;
+  left: 14px;
+  width: 285px;
+  height: 210px;
+  background-color: var(--pink-1);
+  align-items: center;
+  justify-content: center;
+  padding: 0 15px;
+}
+#banho-e-tosa > div section.vip-treatment .background_banner .square .title_banner {
+  font-size: 30px;
+  color: var(--white);
+  font-weight: 300;
+}
+#banho-e-tosa > div section.vip-treatment .background_banner .square .text_banner {
+  display: none;
+}
+#banho-e-tosa > div section.vip-treatment .background_banner .square .btn-pink {
+  text-decoration: none;
+  color: var(--white);
+  font-size: 18px;
+  font-weight: bold;
+  width: 144px;
+  height: 36px;
+  border: var(--white) 1px Solid;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
 #banho-e-tosa > div section.vip-treatment .image {
   position: relative;
   width: 286px;
@@ -3756,6 +3844,12 @@ form footer.fixed button:active {
   #banho-e-tosa > div section.saloon .card .text {
     height: 373px;
   }
+  #banho-e-tosa > div section.vip-treatment {
+    flex-direction: row;
+  }
+  #banho-e-tosa > div section.vip-treatment .background_banner {
+    margin-right: var(--space);
+  }
   #banho-e-tosa > div section.vip-treatment .image {
     width: 336px;
     height: 222px;
@@ -3772,6 +3866,15 @@ form footer.fixed button:active {
     padding: 35px 30px;
     overflow: hidden;
   }
+  #banho-e-tosa > div section.vip-treatment .background_banner img {
+    width: 390px;
+    height: 340px;
+  }
+  #banho-e-tosa > div section.vip-treatment .background_banner .square {
+    left: 14px;
+    width: 370px;
+    height: 280px;
+  }
   #banho-e-tosa > div section.vip-treatment .image {
     height: 380px;
     width: 570px;
@@ -3787,7 +3890,7 @@ form footer.fixed button:active {
 }
 #clinic header {
   width: 100%;
-  height: 451px;
+  height: 500px;
   position: relative;
   background-image: url("../images/banners/banner-clinica.webp");
   background-repeat: no-repeat;
@@ -3795,7 +3898,7 @@ form footer.fixed button:active {
 }
 #clinic header .overlay {
   width: 100%;
-  height: 451px;
+  height: 500px;
   position: absolute;
   background-color: var(--pink-1);
   opacity: 0.2;
@@ -3911,6 +4014,7 @@ form footer.fixed button:active {
     text-align: left;
   }
   #clinic .clinic-services-1 .service-1, #clinic .clinic-services-2 .service-1 {
+    flex-direction: row-reverse;
     box-sizing: border-box;
     width: 95%;
     border: none;
@@ -3919,20 +4023,17 @@ form footer.fixed button:active {
     align-self: center;
   }
   #clinic .clinic-services-1 .service-1 .imagem-1, #clinic .clinic-services-2 .service-1 .imagem-1 {
-    width: 297px;
+    width: 300px;
     height: 232px;
-    left: 449px;
   }
   #clinic .clinic-services-1 .service-1 img, #clinic .clinic-services-2 .service-1 img {
     position: relative;
     width: 300px;
     height: 232px;
-    left: 427px;
   }
   #clinic .clinic-services-1 .service-1 .clinic-box, #clinic .clinic-services-2 .service-1 .clinic-box {
     position: relative;
     top: -17px;
-    right: 300px;
     height: 232px;
     width: 430px;
     padding: 0 40px 0 30px;
@@ -3966,15 +4067,13 @@ form footer.fixed button:active {
     position: relative;
     right: 20px;
   }
-  #clinic .contact {
-    box-sizing: border-box;
-    width: 75%;
-    border: none;
-    float: left;
-    align-self: center;
-  }
 }
 @media (min-width: 1200px) {
+  #header div .background_logo {
+    z-index: 2;
+    width: 150px;
+  }
+
   #clinic .clinic-services-1 h1, #clinic .clinic-services-2 h1 {
     margin-bottom: -27px;
   }
@@ -3993,21 +4092,19 @@ form footer.fixed button:active {
   #clinic .clinic-services-1 .service-1, #clinic .clinic-services-2 .service-1 {
     display: flex;
     align-self: center;
+    flex-direction: row-reverse;
   }
   #clinic .clinic-services-1 .service-1 .imagem-1, #clinic .clinic-services-2 .service-1 .imagem-1 {
-    left: 735px;
     width: 417px;
     height: 305px;
   }
   #clinic .clinic-services-1 .service-1 img, #clinic .clinic-services-2 .service-1 img {
     position: relative;
-    left: 540px;
     width: 457px;
     height: 305px;
   }
   #clinic .clinic-services-1 .service-1 .clinic-box, #clinic .clinic-services-2 .service-1 .clinic-box {
     position: relative;
-    right: 420px;
     height: 305px;
     top: -17px;
     width: 590px;
@@ -4147,10 +4244,14 @@ form footer.fixed button:active {
   justify-content: center;
   margin-bottom: var(--space);
 }
-#footer div .sociais-icon svg path {
+#footer div .sociais-icon a {
+  text-decoration: none;
+  cursor: pointer;
+}
+#footer div .sociais-icon a svg path {
   fill: #fff;
 }
-#footer div .sociais-icon svg + svg {
+#footer div .sociais-icon a + a {
   margin-left: 24px;
 }
 #footer div .contact {
@@ -4216,16 +4317,17 @@ form footer.fixed button:active {
   #footer div {
     flex-direction: row;
     align-items: center;
+    grid-column: 1/4;
   }
   #footer div .ssl {
+    width: 150px;
     display: flex;
-    width: calc(100vw - 150px);
     position: absolute;
     left: 50px;
   }
   #footer div .links {
+    width: 300px;
     display: flex;
-    width: calc(100vw - 400px);
     color: var(--white);
     position: absolute;
     left: 200px;
@@ -4255,13 +4357,19 @@ form footer.fixed button:active {
     bottom: 200px;
   }
   #footer div .sociais-icon {
+    position: absolute;
+    width: 300px;
+    left: 450px;
     bottom: 90px;
   }
   #footer div .sociais-icon svg + svg {
     margin-left: 30px;
   }
   #footer div .contact {
-    padding-left: 850px;
+    position: absolute;
+    width: 400px;
+    left: 800px;
+    padding-left: 0;
     bottom: 50px;
   }
   #footer div .contact ul {
@@ -4275,6 +4383,9 @@ form footer.fixed button:active {
   }
   #footer .copyright {
     bottom: 10px;
+  }
+  #footer .copyright hr {
+    margin-top: 5px;
   }
   #footer .copyright span {
     font-size: 18px;

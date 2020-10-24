@@ -39,12 +39,16 @@
       align-items: center;
       justify-content: center;
       margin-bottom: var(--space);
-        svg {
-          path {
-            fill: #fff;
+        a {
+          text-decoration: none;
+          cursor: pointer;
+          svg {
+            path {
+              fill: #fff;
+            }
           }
         }
-        svg + svg {
+        a + a {
           margin-left: 24px;
         }
       }
@@ -128,15 +132,16 @@
     div{
       flex-direction: row;
       align-items: center;
+      grid-column: 1/4;
       .ssl {
+        width: 150px;
         display: flex;
-        width: calc(100vw - 150px);
         position: absolute;
         left: 50px;
       }
       .links{
+        width: 300px;
         display: flex;
-        width: calc(100vw - 400px);
         color: var(--white);
         position: absolute;
         left: 200px;
@@ -167,14 +172,20 @@
           bottom: 200px;
         }
       }
-      .sociais-icon{
+      .sociais-icon {
+        position: absolute;
+        width: 300px;
+        left: 450px;
         bottom: 90px;
         svg + svg {
           margin-left: 30px;
         }
       }
       .contact {
-        padding-left: 850px;
+        position: absolute;
+        width: 400px;
+        left: 800px;
+        padding-left: 0;
         bottom: 50px;
         ul{
           font-size: 16px;
@@ -189,6 +200,9 @@
     }
     .copyright {
       bottom: 10px;
+      hr {
+        margin-top: 5px;
+      }
       span {
         font-size: 18px;
       }
