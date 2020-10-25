@@ -35,7 +35,7 @@
       width: 100%;
       flex-direction: row;
       position: absolute;
-      bottom: 266px;
+      bottom: 250px;
       align-items: center;
       justify-content: center;
       margin-bottom: var(--space);
@@ -56,7 +56,7 @@
       flex-direction: column;
       padding-left: 40px;
       position: absolute;
-      bottom: 68px;
+      bottom: 60px;
       ul {
         flex-direction: column;
         margin: 0;
@@ -93,6 +93,9 @@
       font-weight: bold;
       color: var(--white);
       text-align: center;
+    }
+    hr {
+      margin-top: 5px;
     }
   }
 }
@@ -175,7 +178,7 @@
       .sociais-icon {
         position: absolute;
         width: 300px;
-        left: 450px;
+        right: calc(50vw - 170px);
         bottom: 90px;
         svg + svg {
           margin-left: 30px;
@@ -184,7 +187,7 @@
       .contact {
         position: absolute;
         width: 400px;
-        left: 800px;
+        right: 30px;
         padding-left: 0;
         bottom: 50px;
         ul{
