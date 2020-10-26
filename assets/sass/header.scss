@@ -28,6 +28,7 @@
             top: 62px;
             background-color: var(--purple-3);
             z-index: 1;
+            transition: right .5s ease-in-out;
         }
     }
     .overlay {
@@ -60,6 +61,7 @@
             background-color: var(--black-1);
             flex-direction: column;
             z-index: 4;
+            transition: right .5s ease-in-out;
             nav{
                 display: flex;
                 .menu {
@@ -69,6 +71,7 @@
                     flex-direction: column;
                     background-color: var(--purple-2);
                     height: 100vh;
+                    transition: right .5s ease-in-out;
                     .white {
                         background-color: var(--white);
                         width: 100%;
@@ -154,7 +157,9 @@
     &.logged {
         .overlay {
             nav {
+                transition: right .5s ease-in-out;
                 .menu {
+                    transition: right .5s ease-in-out;
                     .wrap {
                         a {
                             .btn-login {
